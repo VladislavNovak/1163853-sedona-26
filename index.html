@@ -6,123 +6,143 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <!-- Слева и справа от контентной области должен быть серый фон, на который сайт бросает лёгкую тень -->
+    
   	<header>
-  		<nav class="wraperMenu">
-  			<ul class="siteNavigation">
+  		<nav class="wrapperMenu">
+        <!-- Главное меню -->
+        <!--  Ссылки в главном меню: кликабелен только текст -->
+        <!-- Все четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому -->
+  			<ul class="navigationPart">
+          <!-- пункт «Информация» не является ссылкой на главную страницу -->
   				<li class="listNavigation"><a href="info.html">Информация</a></li>
-  				<li class="listNavigation"><a href="foto.html">Фото и видео</li></a>
-          <li class="listNavigationLogo"><a href=""></a><img src="https://via.placeholder.com/150x100" alt="mainLogo.png" /></li>
+  				<li class="listNavigation"><a href="foto.html">Фото и видео</a></li>
   				<li class="listNavigation"><a href="mapOfStates.html">Карта штата</a></li>
-  				<li class="listNavigation"><a href="inner.html">Гостиницы</li></a>
+  				<li class="listNavigation"><a href="inner.html">Гостиницы</a></li>
   			</ul>
-  		</nav>	
-  	</header>
-  	<main>
-      <ul class="listOfBenefits">
-    		<!-- 1 -->
-    		<li class="firstAdvantage">
-    			<img src="https://via.placeholder.com/150x100" alt="fotoGrandCanion.png" />
-    		</li>
-    		<!-- 2 -->
-    		<li class="secondAdvantage">
-      		<h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-      		<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-    		</li>
-    		<!-- 3 -->
-    		<li class="thirdAdvantage">
-    			<div class="leftSide">
-    				<h2 class="">Настоящий городок</h2>
-    				<p class="">&#8470;1</p>
-    				<p class="">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-    			</div>
-    			<div class="rightSide">
-    				<img src="https://via.placeholder.com/150x100" alt="fotoSedona.png" />
-    			</div>
-    		</li>
-    		<!-- 4 -->
-    		<li class="forthAdvantage">
-    			<div class="leftSide">
-            <div class="">
-              <img src="https://via.placeholder.com/150x100" alt="housing.png" />
+        <!-- Логотип не является пунктом меню. Размечается отдельным элементом -->
+        <a class="logoPart">
+          <img src="https://via.placeholder.com/150x100" alt="mainLogo.png">
+        </a>
+  		</nav>
+   	</header>
+    
+
+  	<main class="indexMain">
+  		<section class="wrapperTopOfMain">
+        <div class="photoPart">
+    			<img src="https://via.placeholder.com/150x100" alt="Фото каньона">
+          <!-- Картинка под главным меню с наложенным Welcome: -->
+          <img src="https://via.placeholder.com/150x100" alt="Надпись Welcome">
+          <!-- Крупное фото: фотография занимает всю ширину, в её нижней части есть белая маска: -->
+          <img src="https://via.placeholder.com/150x100" alt="Маска">
+        </div>
+        <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+  		</section>
+
+      <section class="wrapperFiveReasons">
+        <ul>
+          <li>
+            <div class="background">
+              <img src="https://via.placeholder.com/150x100" alt="Синяя подложка">
+              <img src="https://via.placeholder.com/150x100" alt="Фото дома">
             </div>
-            <div class=""></div>
-      				<h2 class="">Жилье</h2>
-      				<p class="">Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+            <h2>Настоящий городок</h2>
+            <p>&#8470;1</p></li>
+            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <ul>
+              <li>
+                <div class="background">
+                  <img src="https://via.placeholder.com/150x100" alt="Изображение дома">
+                  <img src="https://via.placeholder.com/150x100" alt="Изображение еды">
+                  <img src="https://via.placeholder.com/150x100" alt="Изображение подарка">
+                </div>
+                <h3>Жилье</h3>
+                <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+              </li>
+              <li>
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="background">
+              <img src="https://via.placeholder.com/150x100" alt="Фото каньона">
+              <img src="https://via.placeholder.com/150x100" alt="Синяя подложка">
             </div>
-    			</div>
-    			<div class="centerSide">
-            <div class="">
-              <img src="https://via.placeholder.com/150x100" alt="food.png" />
-            </div>
-            <div class="">
-      				<h2 class="">Еда</h2>
-      				<p class="">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </div>
-    			</div>
-    			<div class="rightSide">
-            <div class="">
-              <img src="https://via.placeholder.com/150x100" alt="souvenirs.png" />
-            </div>
-            <div class="">
-      				<h2 class="">Сувениры</h2>
-      				<p class="">Не только китайского, но и местного производства!</p>
-            </div>
-    			</div>
-    		</li>
-    		<!-- 5 -->
-    		<li class="fifthAdvantage">
-    			<div class="">
-    				<img src="https://via.placeholder.com/150x100" alt="fotoGrandCanion2.png" />
-    			</div>
-    			<div class="">
-    				<h2 class="">Там есть мост дьявола</h2>
-    				<p class="">&#8470;2</p>
-    				<p class="">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-    			</div>
-    		</li>
-    		<!-- 6 -->
-    		<li class="sixthAdvantages">
-    			<div class="">
-    				<h2 class="">Небольшая площадь</h2>
-    				<p class="">&#8470;3</p>
-    				<p class="">Все достопримечательности находятся очень близко</p>
-    			</div>
-    			<div class="">
-    				<h2 class="">Красивая дорога</h2>
-    				<p class="">&#8470;4</p>
-    				<p class="">Ехать в седону из лас-вегаса совсем не скучно</p>
-    			</div>
-    			<div class="">
-    				<h2 class="">Мало туристов</h2>
-    				<p class="">&#8470;5</p>
-    				<p class="">Большинство едет в гранд каньон и толпится там</p>
-    			</div>
-    		</li>
-    		<!-- 7 -->
-    		<li class="seventhAdvantages">
-          <div class="topSide">
-      			<h2>Заинтересовались?</h2>
-      			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      			<button type="button" class="jsSearch">Поиск гостиницы в Седоне</button>	
-          </div>
-          <div class="bottomSide">
-            <p>
-              <button type="button" class="jsDropDownSelector">Седона</button>
-              <input type="checkbox" name="jsStar" value="yes">&#9733;</button></p> <!-- &#9734; -->
-              <button type="button" class="jsContact">Связать</button>
-              <button type="button" class="jsEnlargeMap">Увеличить карту</button>
-          </div>
-    		</li>
-    		<!-- 8 -->
-    		<!-- Эта часть - пока это всё заглушка. + будет всплывать форма -->
-    		<li class="map">
-    			<div class="">Карта Google</div>
-    			<div class="">Форма поиска гостиницы</div>
-    		</li>
-      </ul>
+            <h2>Там есть мост дьявола</h2>
+            <p>&#8470;2</p>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </li>
+          <li>
+            <h2>Небольшая площадь</h2>
+            <p>&#8470;3</p>
+            <p>Все достопримечательности находятся очень близко</p>
+          </li>
+          <li>
+            <h2>Красивая дорога</h2>
+            <p>&#8470;4</p>
+            <p>Ехать в седону из лас-вегаса совсем не скучно</p>
+          </li>
+          <li>
+            <h2>Мало туристов</h2>
+            <p>&#8470;5</p>
+            <p>Большинство едет в гранд каньон и толпится там</p>
+            <p>Новый текст</p>
+          </li>
+        </ul>
+      </section>
+
+  		<section class="wrapperSearch">
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button type="button" class="jsSearch">Поиск гостиницы в Седоне</button>  
+        <!-- По умолчанию форма поиска гостиницы должна быть открыта -->
+          <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы. Вёрстка модального окна обязательна (смотрите папку слоёв «search form») -->
+          <!-- Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом для того, чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря с возможностью выбора даты -->
+      </section>
+
+      <section class="wrapperMap">
+        <!-- Эта часть - пока это всё заглушка. + будет всплывать форма -->
+        <!-- Блок карты: достаточная реализация — обычное изображение -->
+        <!-- Блок карты: интерактивная карта, которая тянется на всю ширину контейнера. Реализация по желанию -->
+        <!--  Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
+        <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы (смотрите папку слоёв «search form»), необходимо дополнить анимацией «выезда» сверху вниз относительно кнопки, а не окна браузера -->
+        <div class="">Карта Google</div>
+          <div class="">Форма поиска гостиницы</div>
+      </section>
   	</main>
+
   	<footer>
-  		
+      <!-- В трёх блоках футера контент расположен по центру -->
+      <a href="#" class="jumpToSedona">#VisitSedona</a>
+      <!-- <div class="setByCenter"> -->
+        <a href="#" class="jumpToTwitter">
+          <img src="https://via.placeholder.com/150x100" alt="Твиттер">
+        </a>
+        <a href="#" class="jumpToTwitter">
+          <img src="https://via.placeholder.com/150x100" alt="Фейсбук">
+        </a>
+        <a href="#" class="jumpToTwitter">
+          <img src="https://via.placeholder.com/150x100" alt="Ютьюб">
+        </a>
+        <!-- Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
+        <a href="https://up.htmlacademy.ru/htmlcss/26" class="jumpToHTMLAcademy">
+          <span class="higjlighte">Website by</span> 
+          <img src="" alt="HTMLAcademy">
+        </a>
+      <!-- </div> -->
   	</footer> 
+
+    <script type="text/javascript">
+      /* При инициализации JS, на форму добавляется класс, который её скрывает */
+
+    </script>
   </body>
 </html>
