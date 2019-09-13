@@ -22,7 +22,7 @@
   			</ul>
         <!-- Логотип не является пунктом меню. Размечается отдельным элементом -->
         <a class="logoPart">
-          <img src="https://via.placeholder.com/150x100" alt="mainLogo.png">
+          <img src="https://via.placeholder.com/150x100" alt="Логотип Citi of Sedona">
         </a>
   		</nav>
    	</header>
@@ -30,34 +30,35 @@
 
   	<main class="indexMain">
   		<section class="wrapperTopOfMain">
-        <div class="photoPart">
+        <h3 class="visually-hidden">Картинка с презентацией Седоны</h3>
+        <figure class="photoPart">
     			<img src="https://via.placeholder.com/150x100" alt="Фото каньона">
           <!-- Картинка под главным меню с наложенным Welcome: -->
           <img src="https://via.placeholder.com/150x100" alt="Надпись Welcome">
           <!-- Крупное фото: фотография занимает всю ширину, в её нижней части есть белая маска: -->
           <img src="https://via.placeholder.com/150x100" alt="Маска">
-        </div>
+        </figure>
+  		</section>
+        
+      <section class="wrapperFiveReasons">
         <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-  		</section>
-
-      <section class="wrapperFiveReasons">
         <ul>
           <li>
-            <div class="background">
+            <figure class="background">
               <img src="https://via.placeholder.com/150x100" alt="Синяя подложка">
               <img src="https://via.placeholder.com/150x100" alt="Фото дома">
-            </div>
+            </figure>
             <h2>Настоящий городок</h2>
-            <p>&#8470;1</p></li>
+            <p>&#8470;1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
             <ul>
               <li>
-                <div class="background">
+                <figure class="background">
                   <img src="https://via.placeholder.com/150x100" alt="Изображение дома">
                   <img src="https://via.placeholder.com/150x100" alt="Изображение еды">
                   <img src="https://via.placeholder.com/150x100" alt="Изображение подарка">
-                </div>
+                </figure>
                 <h3>Жилье</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
               </li>
@@ -72,10 +73,10 @@
             </ul>
           </li>
           <li>
-            <div class="background">
+            <figure class="background">
               <img src="https://via.placeholder.com/150x100" alt="Фото каньона">
               <img src="https://via.placeholder.com/150x100" alt="Синяя подложка">
-            </div> 
+            </figure> 
             <h2>Там есть мост дьявола</h2>
             <p>&#8470;2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -102,42 +103,77 @@
   		<section class="wrapperSearch">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button" class="jsSearch">Поиск гостиницы в Седоне</button>  
-        <!-- По умолчанию форма поиска гостиницы должна быть открыта -->
+        <button type="button" class="jsOpenPopUp">Поиск гостиницы в Седоне</button>  
+
+          <!-- По умолчанию форма поиска гостиницы должна быть открыта -->
           <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы. Вёрстка модального окна обязательна (смотрите папку слоёв «search form») -->
           <!-- Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом для того, чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря с возможностью выбора даты -->
+          <!--<div class="popUpContainer" id="idPopUpContainer"> -->
+            <form action="#" method="post">
+              <label for="idArrival_date">Дата заезда:</label>
+              <input type="date" id="idArrival_date" name="arrival_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
+
+              <label for="idDeparture_date">Дата выезда:</label>
+              <input type="date" id="idDeparture_date" name="departure_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
+
+              <div class="counter">
+                <label>Взрослых:</label>
+                <button type="button" class="button_minus">-</button>
+                <input type="text" name="dependsOn" value="0">
+                <button type="button" class="button_plus">+</button>
+
+                <label>Детей:</label>
+                <button type="button">-</button>
+                <input type="text" name="dependsOn" value="0">
+                <button type="button">+</button>
+              </div>
+
+              <button type="button" class="jsSearchOnPopUp">Найти</button>
+            </form>
+          <!-- </div> -->
       </section>
 
       <section class="wrapperMap">
+        <h3 class="visually-hidden">Карта Яндекс</h3>
         <!-- Эта часть - пока это всё заглушка. + будет всплывать форма -->
         <!-- Блок карты: достаточная реализация — обычное изображение -->
         <!-- Блок карты: интерактивная карта, которая тянется на всю ширину контейнера. Реализация по желанию -->
         <!--  Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
         <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы (смотрите папку слоёв «search form»), необходимо дополнить анимацией «выезда» сверху вниз относительно кнопки, а не окна браузера -->
-        <div class="">Карта Google</div>
-          <div class="">Форма поиска гостиницы</div>
+        <img src="https://via.placeholder.com/150x100" alt="Карта Яндекс">
       </section>
   	</main>
 
   	<footer>
-      <!-- В трёх блоках футера контент расположен по центру -->
-      <a href="#" class="jumpToSedona">#VisitSedona</a>
-      <!-- <div class="setByCenter"> -->
-        <a href="#" class="jumpToTwitter">
-          <img src="https://via.placeholder.com/150x100" alt="Твиттер">
-        </a>
-        <a href="#" class="jumpToTwitter">
-          <img src="https://via.placeholder.com/150x100" alt="Фейсбук">
-        </a>
-        <a href="#" class="jumpToTwitter">
-          <img src="https://via.placeholder.com/150x100" alt="Ютьюб">
-        </a>
-        <!-- Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
-        <a href="https://up.htmlacademy.ru/htmlcss/26" class="jumpToHTMLAcademy">
-          <span class="higjlighte">Website by</span> 
-          <img src="" alt="HTMLAcademy">
-        </a>
-      <!-- </div> -->
+      <!-- !В трёх блоках футера контент расположен по центру -->
+      <!-- Используем текст, а изображение добавим через CSS --> 
+      <ul>
+        <li class="jumpToSedona">
+          <a href="https://visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
+        </li>
+        <li class="jumpToTwitter">
+          <a href="https://twitter.com/"  aria-label="Посетить официальный сайт Твиттер">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+        <li class="jumpToTwitter">
+          <a href="https://facebook.com/"  aria-label="Посетить официальный сайт Фейсбук">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+        <li class="jumpToTwitter">
+          <a href="https://youtube.com/"  aria-label="Посетить официальный сайт Ютьюб">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+        <li class="jumpToHTMLAcademy">
+          <!-- !Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
+            <span class="highlight">Website by</span> 
+            <a href="https://up.htmlacademy.ru/htmlcss/26"><h2 class="visually-hidden">"Логотип Академии ведёт на лендинг интенсива «Профессиональный HTML и CSS"</h2>
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+      </ul>
   	</footer> 
 
     <script type="text/javascript">
@@ -146,3 +182,5 @@
     </script>
   </body>
 </html>
+
+
