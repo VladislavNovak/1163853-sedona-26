@@ -17,10 +17,10 @@
           <li class="listNavigation"><a href="info.html">Информация</a></li>
           <li class="listNavigation"><a href="foto.html">Фото и видео</a></li>
           <li class="listNavigation"><a href="mapOfStates.html">Карта штата</a></li>
-          <li class="listNavigation"><a href="inner.html">Гостиницы</a></li>
+          <li class="listNavigation"><a href="hotels.html">Гостиницы</a></li>
         </ul>
         <!-- Логотип не является пунктом меню. Размечается отдельным элементом -->
-        <a class="logoPart">
+        <a href="index.html" class="logoPart">
           <img src="https://via.placeholder.com/150x100" alt="Логотип Citi of Sedona">
         </a>
       </nav>
@@ -30,11 +30,12 @@
 
   		<section class="wrapperChoice">
         <h2 class="visually-hidden">Панель выбора типа жилья</h2>        
-        <img src="https://via.placeholder.com/150x100" alt="Подложка для формы поиска">
-        <form action="#" method="post">
+        <div class="backgroundUnderSearch"></div>  <!--"Подложка под форму поиска"> -->
+
+        <form action="https://echo.htmlacademy.ru" method="post">
           <ul>
             <li>
-              <h2>Инфраструктура</h2>
+              <h3>Инфраструктура</h3>
               <ul>
                 <li>
                   <input type="checkbox" id="pool" checked>
@@ -51,7 +52,7 @@
               </ul>
             </li>
             <li>
-               <h2>Тип жилья</h2>
+              <h3>Тип жилья</h3>
               <ul>
                 <li>
                   <input type="checkbox" id="hotel" checked>
@@ -68,15 +69,20 @@
               </ul>
             </li>
             <li>
-               <h2>Стоимость в сутки(p):</h2>
+              <h3>Стоимость в сутки(p):</h3>
               <ul>
                 <li>
                   <input type="text" name="costMin">
                   <input type="text" name="costMax">
                 </li>
                 <li>
-                  <!-- тут будет слайдер -->
-                  <button>Пока нереализованный слайдер</button>
+                  <!-- слайдер -->
+                  <input type="range" min="0" max="3000">
+                </li>
+                <li>
+                  <!-- !Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
+                  <!-- !Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы (смотрите папку слоёв «search form»), необходимо дополнить анимацией «выезда» сверху вниз относительно кнопки, а не окна браузера -->
+                  <button type="submit">Показать</button>
                 </li>
               </ul>
             </li>
@@ -87,142 +93,110 @@
       <section class="wrapperResult">
         <h2 class="visually-hidden">Панель сортировки результатов поиска</h2> 
           <div class="numberOfFound">
-            <h3>Найдено:</h3>
-            <span class="">3</span>
+            <h3>Найдено: <span class="">3</span></h3>
+            <h3>Сортировка:</h3>
           </div>
-          <p>Сортировка:</p>
 
           <ul class="sorting">
-            <li><a href="#" class="">По Цене</a></li>
-            <li><a href="#" class="">По типу</a></li>
-            <li><a href="#" class="">По рейтингу</a></li>
             <li>
-              <button type="button" value="sortUp">&#9650;</button>
-              <button type="button" value="sortDown">&#9660;</button>
+              <a href="#" class="">По Цене</a>
+              <a href="#" class="">По типу</a>
+              <a href="#" class="">По рейтингу</a>
+            </li>
+            <li>
+              <a href="#" class="">&#9650;</a>
+              <a href="#" class="">&#9660;</a>
             </li>
           </ul>
       </section>
 
       <section>
         <h2 class="visually-hidden">Найденные отели</h2>
+
         <ul>
-          <li>
-            <ul>
-              <li>
-                <img src="https://via.placeholder.com/150x100" alt="гостиница Amara Resort & spa">
-              </li>
-              <li>
-                <h3>Amara Resort & spa</h3>
-                <p>Гостиница</p>
-                <p>От 4000р.</p>
-              </li>
-              <li>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-              </li>
-              <li>
-                <ul class="rate">
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                </ul>
-              </li>
-              <li>
-                <p>рейтинг:8,5</p>
-              </li>
-            </ul>     
+          <li class="AmaraResort">
+            <div class="amara_leftSide"></div> <!-- фото гостиницы -->
+
+            <div class="amara_middleSide">
+              <h3>Amara Resort & spa</h3>
+              <p>Гостиница</p>
+              <p>От 4000р.</p>
+              <div class="buttons">
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+
+            <div class="amara_rightSide">
+              <div class="rate"></div>
+              <p>рейтинг:8,5</p>
+            </div>
           </li>
-          <li>
-            <ul>
-              <li>
-                <img src="https://via.placeholder.com/150x100" alt="мотель Desert Quail inn">
-              </li>
-              <li>
-                <h3>Desert Quail inn</h3>
-                <p>Мотель</p>
-                <p>От 3000р.</p>
-              </li>
-              <li>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-              </li>
-              <li>
-                <ul class="rate">
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                </ul>
-              </li>
-              <li>
-                <p>рейтинг:8,9</p>
-              </li>
-            </ul>     
+
+          <li class="Desert_Quail">
+            <div class="quail_leftSide"></div> <!-- фото мотеля -->
+
+            <div class="quail_middleSide">
+              <h3>Desert Quail inn</h3>
+              <p>Мотель</p>
+              <p>От 3000р.</p>
+              <div class="buttons">
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+
+            <div class="quail_rightSide">
+              <div class="rate"></div>
+              <p>рейтинг:8,9</p>
+            </div>
           </li>
-          <li>
-            <ul>
-              <li>
-                <img src="https://via.placeholder.com/150x100" alt="апартаменты Villas at Poco Diablo">
-              </li>
-              <li>
-                <h3>Villas at Poco Diablo</h3>
-                <p>Апартаменты</p>
-                <p>От 2000р.</p>
-              </li>
-              <li>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-              </li>
-              <li>
-                <ul class="rate">
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                  <li class="star"></li>
-                </ul>
-              </li>
-              <li>
-                <p>рейтинг:8,9</p>
-              </li>
-            </ul>     
+
+          <li class="Poco_Diablo">
+            <div class="poco_leftSide"></div> <!-- фото апартаментов -->
+
+            <div class="poco_middleSide">
+              <h3>Villas at Poco Diablo</h3>
+              <p>Апартаменты</p>
+              <p>От 2000р.</p>
+              <div class="buttons">
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </div>
+            </div>
+
+            <div class="poco_rightSide">
+              <div class="rate"></div>
+              <p>рейтинг:9,2</p>
+            </div>
           </li>
         </ul>
         
       </section>
   	</main>
 
-    <footer>
+  <footer>
       <!-- !В трёх блоках футера контент расположен по центру -->
       <!-- Используем текст, а изображение добавим через CSS --> 
-      <ul>
-        <li class="jumpToSedona">
+
+        <div class="footer_leftBlock">
           <a href="https://visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
-        </li>
-        <li class="jumpToTwitter">
-          <a href="https://twitter.com/"  aria-label="Посетить официальный сайт Твиттер">
-            <!-- <svg></svg> -->
-          </a>
-        </li>
-        <li class="jumpToTwitter">
-          <a href="https://facebook.com/"  aria-label="Посетить официальный сайт Фейсбук">
-            <!-- <svg></svg> -->
-          </a>
-        </li>
-        <li class="jumpToTwitter">
-          <a href="https://youtube.com/"  aria-label="Посетить официальный сайт Ютьюб">
-            <!-- <svg></svg> -->
-          </a>
-        </li>
-        <li class="jumpToHTMLAcademy">
+        </div>
+
+        <div class="footer_centerBlock">
+            <a href="https://twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"></a>
+            <a href="https://facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"></a>
+            <a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"></a>
+        </div>
+
+        <div class="footer_rightBlock">
           <!-- !Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
             <span class="highlight">Website by</span> 
-            <a href="https://up.htmlacademy.ru/htmlcss/26"><h2 class="visually-hidden">"Логотип Академии ведёт на лендинг интенсива «Профессиональный HTML и CSS"</h2>
-            <!-- <svg></svg> -->
-          </a>
-        </li>
-      </ul>
-    </footer> 
+            <a href="https://up.htmlacademy.ru/htmlcss/26">
+              <h3 class="visually-hidden">"Логотип Академии ведёт на лендинг интенсива «Профессиональный HTML и CSS"</h3>
+            </a>
+        </div>
 
+    </footer> 
   </body>
 </html>
