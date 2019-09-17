@@ -22,7 +22,9 @@
   			</ul>
         <!-- todo: Логотип не является пунктом меню. Размечается отдельным элементом -->
         <!-- todo: Логотип главной страницы лишь подгружает картинку -->
-        <img src="img/logo.png" alt="Логотип Citi of Sedona">
+        <a class="logoPart">
+          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona">
+        </a>
   		</nav>
    	</header>
     
@@ -30,8 +32,8 @@
   	<main class="indexMain">
       <!-- todo: Декоративная фоновая картинка, загружаем фоном из CSS. Три картинки - отсюда и два дополнительных вложенных. В отдельном блоке section смысла нет -->
       <div class="pictureOfSedona"><!-- Общий фон -->
-        <div class="polygonSedona"><!-- Маска фона -->
-          <div class="welcomeToSedona">Фотография с презентацией Седоны</div><!-- Надпись Седона -->
+        <div class="polygonSedona"><!-- Маска фона intro-mask.svg -->
+          <div class="welcomeToSedona">Фотография с презентацией Седоны</div><!-- intro-welcome.svg -->
         </div>
       </div>
 
@@ -88,7 +90,6 @@
             <h2>Мало туристов</h2>
             <p>&ndash; &#8470;5 &ndash;</p>
             <p>Большинство едет в гранд каньон и толпится там</p>
-            <p>Новый текст</p>
           </li>
         </ul>
       </section>
@@ -101,34 +102,34 @@
           <!-- todo: По умолчанию форма поиска гостиницы должна быть открыта -->
           <!-- todo: Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы. Вёрстка модального окна обязательна (смотрите папку слоёв «search form») -->
           <!-- todo: Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом для того, чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря с возможностью выбора даты -->
-            <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post">
 
-              <div class="levelArrival">
-                <label for="idArrival_date">Дата заезда:</label>
-                <input type="date" id="idArrival_date" name="arrival_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
-                <div class="datePicker"></div> <!-- Минималистическое представление календаря -->
-              </div>
-              
-              <div class="levelDeparture">
-                <label for="idDeparture_date">Дата выезда:</label>
-                <input type="date" id="idDeparture_date" name="departure_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
-                <div class="datePicker"></div> <!-- Минималистическое представление календаря -->
-              </div>
+          <div class="levelArrival">
+            <label for="idArrival_date">Дата заезда:</label>
+            <input type="date" id="idArrival_date" name="arrival_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
+            <div class="datePicker"></div> <!-- calendar.svg -->
+          </div>
+          
+          <div class="levelDeparture">
+            <label for="idDeparture_date">Дата выезда:</label>
+            <input type="date" id="idDeparture_date" name="departure_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
+            <div class="datePicker"></div> <!-- calendar.svg -->
+          </div>
 
-              <div class="counter">
-                <label>Взрослых:</label>
-                <button type="button" name="button_minus">-</button>
-                <input type="text" name="dependsOn" value="0" maxlength="2" size="2">
-                <button type="button" name="button_plus">+</button>
+          <div class="counter">
+            <label>Взрослых:</label>
+            <button type="button" name="button_minus">-</button>
+            <input type="text" name="dependsOn" value="0" maxlength="2" size="2">
+            <button type="button" name="button_plus">+</button>
 
-                <label>Детей:</label>
-                <button type="button" name="button_minus">-</button>
-                <input type="text" name="dependsOn" value="0" maxlength="2" size="2">
-                <button type="button" name="button_plus">+</button>
-              </div>
-
-              <button type="submit" name="jsSearchOnPopUp">Найти</button>
-            </form>
+            <label>Детей:</label>
+            <button type="button" name="button_minus">-</button>
+            <input type="text" name="dependsOn" value="0" maxlength="2" size="2">
+            <button type="button" name="button_plus">+</button>
+          </div>
+          
+          <button type="submit" name="jsSearchOnPopUp">Найти</button>
+        </form>
       </section>
 
       <section class="wrapperMap">
@@ -150,9 +151,9 @@
         </div>
 
         <div class="footer_centerBlock">
-            <a href="https://twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер">Твиттер</a>
-            <a href="https://facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук">Фейсбук</a>
-            <a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб">Ютьюб</a>
+            <a href="https://twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter --></a>
+            <a href="https://facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon --></a>
+            <a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube --></a>
         </div>
 
         <div class="footer_rightBlock">
@@ -160,7 +161,7 @@
             <span class="highlight">Website by</span> 
             <a href="https://up.htmlacademy.ru/htmlcss/26">
               <h3 class="visually-hidden">"Логотип Академии ведёт на лендинг интенсива «Профессиональный HTML и CSS"</h3>
-              <div class="logoOfAcademy"></div>
+              <div class="logoOfAcademy"><!-- logo-htmlacademy.png --></div>
             </a>
         </div>
 
