@@ -22,7 +22,7 @@
         </ul>
         <!-- todo: !Логотип не является пунктом меню. Размечается отдельным элементом -->
         <a href="index.html" class="logoPart">
-          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona">
+          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona" width="100">
         </a>
       </nav>
     </header>
@@ -34,15 +34,16 @@
         <h2 class="visually-hidden">Панель выбора типа жилья</h2>        
         <div class="backgroundUnderSearch">
           <div class="maskTop"></div>
-        </div>  <!--"Подложка под форму поиска"> -->
+        </div>  <!-- backgroundundersearch.png -->
 
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="//echo.htmlacademy.ru" method="get">
           <ul>
             <li>
               <h3>Инфраструктура</h3>
               <ul>
                 <li>
-                  <input type="checkbox" id="pool" checked> <!-- checkbox-off.svg/checkbox-on.svg -->
+                  <input type="checkbox" id="pool" checked> 
+                  <!-- заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
                   <label for="pool">Бассейн</label> 
                 </li>
                 <li>
@@ -81,7 +82,8 @@
                 </li>
                 <li>
                   <!-- слайдер -->
-                  <input type="range" min="0" max="3000"><!-- filter-button -->
+                  <input type="range" min="0" max="3000">
+                  <!-- Прикрутить ручки к концам слайдера filter-button.svg -->
                 </li>
                 <li>
                   <!-- todo: !Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
@@ -98,7 +100,7 @@
         <h2 class="visually-hidden">Панель сортировки результатов поиска</h2> 
           <div class="numberOfFound">
             <!-- todo: В span будем передавать количество найденных гостиниц/апартаментов -->
-            <p>Найдено: <span class=""></span></p>
+            <p>Найдено: <span class="showResult"></span></p>
             <p>Сортировка:</p>
           </div>
 
@@ -109,8 +111,8 @@
               <a href="#" class="">По рейтингу</a>
             </li>
             <li>
-              <a href="#" class=""><!-- icon-down-dir --></a>
-              <a href="#" class=""><!-- icon-up-dir --></a>
+              <a href="#" class=""><!-- icon-down-dir.svg --></a>
+              <a href="#" class=""><!-- icon-up-dir.svg --></a>
             </li>
           </ul>
       </section>
@@ -120,7 +122,7 @@
 
         <ul>
           <li class="AmaraResort">
-            <div class="amara_leftSide"></div> <!-- фото гостиницы -->
+            <div class="amara_leftSide"></div> <!-- amara.png -->
 
             <div class="amara_middleSide">
               <h3>Amara Resort & spa</h3>
@@ -133,13 +135,13 @@
             </div>
 
             <div class="amara_rightSide">
-              <div class="rate">Четыре звезды</div>
+              <div class="rate">Четыре звезды</div> <!-- rate.svg -->
               <p>рейтинг:8,5</p>
             </div>
           </li>
 
           <li class="Desert_Quail">
-            <div class="quail_leftSide"></div> <!-- фото мотеля -->
+            <div class="quail_leftSide"></div> <!-- quail.png -->
 
             <div class="quail_middleSide">
               <h3>Desert Quail inn</h3>
@@ -152,13 +154,13 @@
             </div>
 
             <div class="quail_rightSide">
-              <div class="rate">Три звезды</div>
+              <div class="rate">Три звезды</div> <!-- rate.svg -->
               <p>рейтинг:8,9</p>
             </div>
           </li>
 
           <li class="Poco_Diablo">
-            <div class="poco_leftSide"></div> <!-- фото апартаментов -->
+            <div class="poco_leftSide"></div> <!-- poco.png -->
 
             <div class="poco_middleSide">
               <h3>Villas at Poco Diablo</h3>
@@ -171,7 +173,7 @@
             </div>
 
             <div class="poco_rightSide">
-              <div class="rate">Две звезды</div>
+              <div class="rate">Две звезды</div> <!-- rate.svg -->
               <p>рейтинг:9,2</p>
             </div>
           </li>
@@ -192,13 +194,13 @@
         <ul class="footer_centerBlock">
           <p class="visually-hidden">Социальные сети</p>
           <li>
-            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter --></a>
+            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter.svg --></a>
           </li>
           <li>
-            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon --></a>
+            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon.svg --></a>
           </li>
           <li>
-            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube --></a>
+            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube.svg --></a>
           </li>
         </ul>
 

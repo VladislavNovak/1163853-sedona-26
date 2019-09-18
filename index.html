@@ -23,7 +23,7 @@
         <!-- todo: Логотип не является пунктом меню. Размечается отдельным элементом -->
         <!-- todo: Логотип главной страницы лишь подгружает картинку -->
         <a class="logoPart">
-          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona">
+          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona" width="100">
         </a>
   		</nav>
    	</header>
@@ -31,9 +31,9 @@
 
   	<main class="indexMain">
       <!-- todo: Декоративная фоновая картинка, загружаем фоном из CSS. Три картинки - отсюда и два дополнительных вложенных. В отдельном блоке section смысла нет -->
-      <div class="pictureOfSedona"><!-- Общий фон -->
+      <div class="pictureOfSedona"><!-- pictureofsedona.png -->
         <div class="polygonSedona"><!-- Маска фона intro-mask.svg -->
-          <div class="welcomeToSedona">Фотография с презентацией Седоны</div><!-- intro-welcome.svg -->
+          <div class="welcomeToSedona">Фотография с презентацией Седоны</div> <!-- intro-welcome.svg -->
         </div>
       </div>
 
@@ -47,21 +47,21 @@
               <h2>Настоящий городок</h2>
               <p>&ndash; &#8470;1 &ndash;</p>
               <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-              <div class="rightPictureOfTown"></div> <!-- Фото дома справа -->
+              <div class="rightPictureOfTown"></div> <!-- rightpictoftown.png -->
             </div>
             <ul>
               <li>
-                <div class="iconHome"></div> <!-- Декоративная картинка дома -->
+                <div class="iconHome"></div> <!-- icon-1.svg -->
                 <h3>Жилье</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
               </li>
               <li>
-                <div class="iconDish"></div> <!-- Декоративная картинка еды -->
+                <div class="iconDish"></div> <!-- icon-3.svg -->
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <div class="iconSouvenir"></div> <!-- Декоративная картинка сувенира -->
+                <div class="iconSouvenir"></div> <!-- icon-2.svg -->
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
@@ -69,7 +69,7 @@
           </li>
           <li>
             <div class="partCanyon">
-              <div class="leftPictureOfCanyon"></div> <!-- Фото каньона слева -->
+              <div class="leftPictureOfCanyon"></div> <!-- leftpictofcanyon.png -->
                 <h2>Там есть мост дьявола</h2>
                 <p>&ndash; &#8470;2 &ndash;</p>
                 <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -137,7 +137,8 @@
         <!-- todo: Эта часть - пока это всё заглушка. + будет всплывать форма -->
         <!-- todo: !Блок карты: достаточная реализация — обычное изображение -->
         <!-- todo: !Блок карты: интерактивная карта, которая тянется на всю ширину контейнера. Реализация по желанию -->
-        <img src="https://via.placeholder.com/150x100" alt="Карта Яндекс"> <!-- Контекстное изображение? -->
+        <img src="img/map.png" alt="Карта Яндекс" height="300" width="auto"> 
+        <!-- Позже загрузим реальную карту Google -->
       </section>
   	</main>
 
@@ -153,13 +154,13 @@
         <ul class="footer_centerBlock">
           <p class="visually-hidden">Социальные сети</p>
           <li>
-            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter --></a>
+            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter.svg --></a>
           </li>
           <li>
-            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon --></a>
+            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon.svg --></a>
           </li>
           <li>
-            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube --></a>
+            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube.svg --></a>
           </li>
         </ul>
 
