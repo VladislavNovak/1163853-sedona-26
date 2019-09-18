@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Гостиницы в Седоне</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -36,7 +36,7 @@
           <div class="maskTop"></div>
         </div>  <!--"Подложка под форму поиска"> -->
 
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <ul>
             <li>
               <h3>Инфраструктура</h3>
@@ -180,28 +180,37 @@
       </section>
   	</main>
 
-  <footer>
+    <footer>
       <!-- todo: !В трёх блоках футера контент расположен по центру -->
       <!-- todo: Используем текст, а изображение добавим через CSS --> 
+        <div class="maskLayer"></div> <!-- Маскируем часть карты -->
 
         <div class="footer_leftBlock">
-          <a href="https://visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
+          <a href="//visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
         </div>
 
-        <div class="footer_centerBlock">
-            <a href="https://twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter --></a>
-            <a href="https://facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon --></a>
-            <a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube --></a>
-        </div>
+        <ul class="footer_centerBlock">
+          <p class="visually-hidden">Социальные сети</p>
+          <li>
+            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter --></a>
+          </li>
+          <li>
+            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon --></a>
+          </li>
+          <li>
+            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube --></a>
+          </li>
+        </ul>
 
         <div class="footer_rightBlock">
           <!-- todo: !Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
             <span class="highlight">Website by</span> 
-            <a href="https://up.htmlacademy.ru/htmlcss/26">
-              <h3 class="visually-hidden">"Логотип Академии ведёт на лендинг интенсива «Профессиональный HTML и CSS"</h3>
+            <a href="//up.htmlacademy.ru/htmlcss/26">
               <div class="logoOfAcademy"><!-- logo-htmlacademy.png --></div>
             </a>
         </div>
+
+    </footer> 
 
     </footer> 
   </body>
