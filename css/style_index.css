@@ -1,0 +1,165 @@
+
+body {
+	background-color: #AA9A3A27;
+	/*
+	background-image: url('../img/temp_sedona-index.png'); 
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	opacity: 0.5; 
+	*/
+
+	width: 1000px;
+	
+	/*Вкладываем header + main + footer согласно flex-модели:*/
+	display: flex; 	
+	/*Располагаем header + main + footer вертикально:*/
+	flex-direction: column; 	
+	/*default... элементы выстраиваются в одну линию:*/
+	flex-wrap: nowrap; 		
+
+
+	/*todo: Тень вокруг body*/
+	/*todo: Подложку белую... Возможно, просто фон, который тянется во все стороны*/
+
+	font-family: "MS Sans Serif", Arial, sans-serif;
+	line-height: 30px;
+}
+
+/*---------------------------------------------*/
+/*----------------H*E*A*D*E*R------------------*/
+
+header {
+	/*Временный цвет:*/
+	background-color: #FF6A0041;
+	height: 50px; 
+
+	/*Дочерние navigation и logo сможем позиционировать как absolute:*/
+	position: relative;
+}
+
+	.navigation {
+		/*Временный цвет:*/
+		background-color: #4CFF004A;
+
+		/*todo: размеры подогнать:*/
+		width: auto; 		
+
+		/*Убираем стили списка:*/
+		list-style: none; 			
+		
+		display: flex;
+		/*display: inline-flex; - возможно?!*/
+
+		/*Располагаем дочерние в одну строку:*/
+		flex-wrap: nowrap; 		
+
+		justify-content: space-around;		
+	}
+
+		/*todo: размер корректировать:*/
+		.navigation li {width: 250px;}
+		
+		/*Убираем оформление ссылок:*/
+		.navigation a {text-decoration: none;} 
+
+	.logo {
+		background-color: #8080804A;
+		
+		/*Позиционируем logo относительно wrap-navigation:*/
+		position: absolute; 
+		/*Устанавливаем по центру экрана:*/
+		left: 50%; 		
+		/*todo: позиц.по верхней границе wrap-navigation:*/
+		margin-top: -50px;	
+	}
+	
+	/*todo: цвета заменить,*/
+	/*todo: проверить действие на второй странице:*/
+	.logo:link {color: #FF006E;}	
+	.logo:hover {color: #FF006E;}	
+	.logo:active {color: #FF006E;} 	
+	.logo:visited {color: #FF006E;}
+
+/*-------------------------------------------*/
+/*----------------M*A*I*N--------------------*/
+
+main {
+	background-color: #7FC9FF79;
+}
+
+/*-------------------------------------------*/
+/*-------------F*O*O*T*E*R-------------------*/
+
+footer {
+	/*Временный цвет:*/
+	background-color: #B200FF1E;
+	/*Флекс-модель:*/
+	display: flex;
+	/*Дочерние выравниваются в одну линию:*/
+	flex-wrap: nowrap; 
+}
+	
+	/*Временный цвет:*/
+	footer p {background-color: #7FFF8E6B;}
+	
+	footer ul {
+		/*Временный цвет:*/
+		background-color: #0054FF35;
+		
+		/*Убираем стили списка:*/
+		list-style: none; 			
+		
+		/*Вложенные li - согласно flex-модели*/
+		display: flex;
+		flex-wrap: nowrap; 	
+		/*Располагаем дочерние li в одну строку:*/			
+		justify-content: center;
+		/*todo: размеры подогнать:*/
+		width: 100%; 					
+		height: auto; 
+	}
+
+		footer li {
+			width: 50px; 					
+			height: 50px; 	
+			background-color: #81b3d2; 
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			margin: 5px;
+		}
+
+		footer li:nth-child(1) {background-image: URL("../img/twitter.svg");}
+		footer li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
+		footer li:nth-child(3) {background-image: URL("../img/youtube.svg");}
+
+	.copyright {
+		background-color: #8080803A;
+		background-image: URL("../img/logo-htmlacademy.svg");
+		background-repeat: no-repeat; 
+		background-position: center;
+	}
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+.visually-hidden {
+	display: none;
+	/*position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+/*
+background-color:
+Даже, если изображение непрозначно и цвет не будет показан при нормальных 
+обстоятельствах, веб-разработчику следует всегда указывать аттрибут background-color. 
+Если изображение не может быть загружено —например, в случае отказа сетевого 
+подключения — у элемента будет отображён цветной фон.
+*/

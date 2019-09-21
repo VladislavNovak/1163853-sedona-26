@@ -3,34 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы в Седоне</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_index.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Добавить fonts-привязку к стилю в Google -->
   </head>
   <body>
     <!-- todo: Слева и справа от контентной области должен быть серый фон, на который сайт бросает лёгкую тень -->
 
     <header>
-      <nav class="wrapperMenu">
-        <!-- Главное меню -->
-        <!-- todo: Ссылки в главном меню: кликабелен только текст -->
-        <!-- todo: Все четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому -->
-        <ul class="navigationPart">
-          <!-- пункт «Информация» не является ссылкой на главную страницу -->
-          <li class="listNavigation"><a href="info.html">Информация</a></li>
-          <li class="listNavigation"><a href="foto.html">Фото и видео</a></li>
-          <li class="listNavigation"><a href="mapofstates.html">Карта штата</a></li>
-          <li class="listNavigation"><a href="hotels.html">Гостиницы</a></li>
-        </ul>
-        <!-- todo: !Логотип не является пунктом меню. Размечается отдельным элементом -->
-        <a href="index.html" class="logoPart">
-          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona" width="100">
-        </a>
-      </nav>
+      <!-- <nav class="wrap-navigation"> --><!-- Скорее всего не нужна -->
+      <!-- Главное меню -->
+      <!-- todo: Ссылки в главном меню: кликабелен только текст -->
+      <!-- todo: Все четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому -->
+      <ul class="navigation">
+        <!-- пункт «Информация» не является ссылкой на главную страницу -->
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="foto.html">Фото и видео</a></li>
+        <li><a href="mapofstates.html">Карта штата</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
+      </ul>
+      <!-- todo: !Логотип не является пунктом меню. Размечается отдельным элементом -->
+      <a href="index.html" class="logo">
+        <!-- todo: размеры img потом переопределить -->
+        <img src="img/logo-sedona.svg" width="100" alt="Логотип Citi of Sedona">
+      </a>
+      <!-- </nav> -->
     </header>
 
-  	<main class="hotelsMain">
+  	<main class="wrap-hotels">
       <h1 class="visually-hidden">Гостиницы в Седоне</h1>
 
-  		<section class="wrapperChoice">
+  		<section class="wrap-choice">
         <h2 class="visually-hidden">Панель выбора типа жилья</h2>        
         <div class="backgroundUnderSearch">
           <div class="maskTop"></div>
@@ -39,11 +42,11 @@
         <form action="//echo.htmlacademy.ru" method="get">
           <ul>
             <li>
-              <h3>Инфраструктура</h3>
+              <h3>Инфраструктура:</h3>
               <ul>
                 <li>
                   <input type="checkbox" id="pool" checked> 
-                  <!-- заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
+                  <!-- todo: заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
                   <label for="pool">Бассейн</label> 
                 </li>
                 <li>
@@ -57,7 +60,7 @@
               </ul>
             </li>
             <li>
-              <h3>Тип жилья</h3>
+              <h3>Тип жилья:</h3>
               <ul>
                 <li>
                   <input type="checkbox" id="hotel" checked>
@@ -69,7 +72,7 @@
                 </li>
                 <li>
                   <input type="checkbox" id="apartment" checked>
-                  <label for="apartment">Апартамент</label>
+                  <label for="apartment">Апартаменты</label>
                 </li>
               </ul>
             </li>
@@ -96,9 +99,9 @@
         </form>
   		</section>
 
-      <section class="wrapperResult">
+      <section class="wrap-result">
         <h2 class="visually-hidden">Панель сортировки результатов поиска</h2> 
-          <div class="numberOfFound">
+          <div class="headline">
             <!-- todo: В span будем передавать количество найденных гостиниц/апартаментов -->
             <p>Найдено: <span class="showResult"></span></p>
             <p>Сортировка:</p>
@@ -121,10 +124,11 @@
         <h2 class="visually-hidden">Найденные отели</h2>
 
         <ul>
-          <li class="AmaraResort">
-            <div class="amara_leftSide"></div> <!-- amara.png -->
+          <li class="amara-resort">
+            <!-- todo: размеры img потом переопределить -->
+            <img src="img/amara.png" width="150" alt="фотография гостиницы Amara Resort and spa">
 
-            <div class="amara_middleSide">
+            <div class="position-center">
               <h3>Amara Resort & spa</h3>
               <p>Гостиница</p>
               <p>От 4000р.</p>
@@ -134,16 +138,18 @@
               </div>
             </div>
 
-            <div class="amara_rightSide">
-              <div class="rate">Четыре звезды</div> <!-- rate.svg -->
+            <div class="stars">
+              <!-- todo: текст потом скрыть -->
+              <div class="rate">&#9734;&#9734;&#9734;&#9734;</div> <!-- rate.svg -->
               <p>рейтинг:8,5</p>
             </div>
           </li>
 
-          <li class="Desert_Quail">
-            <div class="quail_leftSide"></div> <!-- quail.png -->
+          <li class="desert-quail">
+            <!-- todo: размеры img потом переопределить -->
+            <img src="img/quail.png" width="150" alt="Фотография мотеля Desert Quail inn">
 
-            <div class="quail_middleSide">
+            <div class="position-center">
               <h3>Desert Quail inn</h3>
               <p>Мотель</p>
               <p>От 3000р.</p>
@@ -153,16 +159,18 @@
               </div>
             </div>
 
-            <div class="quail_rightSide">
-              <div class="rate">Три звезды</div> <!-- rate.svg -->
+            <div class="stars">
+              <!-- todo: текст потом скрыть -->
+              <div class="rate">&#9734;&#9734;&#9734;</div> <!-- rate.svg -->
               <p>рейтинг:8,9</p>
             </div>
           </li>
 
-          <li class="Poco_Diablo">
-            <div class="poco_leftSide"></div> <!-- poco.png -->
+          <li class="poco-diablo">
+            <!-- todo: размеры img потом переопределить -->
+            <img src="img/poco.png" width="150" alt="Фотография апартаментов Villas at Poco Diablo">
 
-            <div class="poco_middleSide">
+            <div class="position-center">
               <h3>Villas at Poco Diablo</h3>
               <p>Апартаменты</p>
               <p>От 2000р.</p>
@@ -173,7 +181,8 @@
             </div>
 
             <div class="poco_rightSide">
-              <div class="rate">Две звезды</div> <!-- rate.svg -->
+              <!-- todo: текст потом скрыть -->
+              <div class="rate">&#9734;&#9734;</div> <!-- rate.svg -->
               <p>рейтинг:9,2</p>
             </div>
           </li>
@@ -185,35 +194,26 @@
     <footer>
       <!-- todo: !В трёх блоках футера контент расположен по центру -->
       <!-- todo: Используем текст, а изображение добавим через CSS --> 
-        <div class="maskLayer"></div> <!-- Маскируем часть карты -->
+        <div class="mask-layer"></div> <!-- Маскируем часть карты -->
 
-        <div class="footer_leftBlock">
-          <a href="//visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
-        </div>
+        <!-- Это не ссылка: -->
+        <p>#visitsedona</p>
 
-        <ul class="footer_centerBlock">
-          <p class="visually-hidden">Социальные сети</p>
-          <li>
-            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter.svg --></a>
-          </li>
-          <li>
-            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon.svg --></a>
-          </li>
-          <li>
-            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube.svg --></a>
-          </li>
+        <p class="visually-hidden">Социальные сети</p>
+        <ul class="websites">
+          <li><a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер">Твиттер</a></li>
+          <li><a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук">Фейсбук</a></li>
+          <li><a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб">Ютьюб</a></li>
         </ul>
 
-        <div class="footer_rightBlock">
+        <div class="copyright">
           <!-- todo: !Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
-            <span class="highlight">Website by</span> 
-            <a href="//up.htmlacademy.ru/htmlcss/26">
-              <div class="logoOfAcademy"><!-- logo-htmlacademy.png --></div>
-            </a>
+            <p class="highlight">Website by
+              <a href="//up.htmlacademy.ru/htmlcss/26"><span class="logo-academy">Академия</span></a>
+            </p> 
         </div>
 
     </footer> 
 
-    </footer> 
   </body>
 </html>

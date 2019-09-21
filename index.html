@@ -3,77 +3,84 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - небольшой городок в Аризоне, заслуживающий большего!</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_index.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Добавить fonts-привязку к стилю в Google -->
   </head>
   <body>
     <!-- todo: Слева и справа от контентной области должен быть серый фон, на который сайт бросает лёгкую тень -->
     
   	<header>
-  		<nav class="wrapperMenu">
+  		<!-- <nav class="wrap-navigation"> --><!-- Скорее всего не нужна -->
         <!-- todo: Главное меню -->
         <!-- todo: Ссылки в главном меню: кликабелен только текст -->
         <!-- todo: Все четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому -->
-  			<ul class="navigationPart">
-          <!-- пункт «Информация» не является ссылкой на главную страницу -->
-  				<li class="listNavigation"><a href="info.html">Информация</a></li>
-  				<li class="listNavigation"><a href="foto.html">Фото и видео</a></li>
-  				<li class="listNavigation"><a href="mapofstates.html">Карта штата</a></li>
-  				<li class="listNavigation"><a href="hotels.html">Гостиницы</a></li>
-  			</ul>
-        <!-- todo: Логотип не является пунктом меню. Размечается отдельным элементом -->
-        <!-- todo: Логотип главной страницы лишь подгружает картинку -->
-        <a class="logoPart">
-          <img src="img/logo-sedona.svg" alt="Логотип Citi of Sedona" width="100">
-        </a>
-  		</nav>
+			<ul class="navigation">
+        <!-- пункт «Информация» не является ссылкой на главную страницу -->
+				<li><a href="info.html">Информация</a></li>
+				<li><a href="foto.html">Фото и видео</a></li>
+				<li><a href="mapofstates.html">Карта штата</a></li>
+				<li><a href="hotels.html">Гостиницы</a></li>
+			</ul>
+      <!-- todo: Логотип не является пунктом меню. Размечается отдельным элементом -->
+      <!-- todo: Логотип главной страницы лишь подгружает картинку -->
+      <a class="logo">
+        <!-- todo: размеры img потом переопределить -->
+        <img src="img/logo-sedona.svg" width="100" alt="Логотип Citi of Sedona" >
+      </a>
+  		<!-- </nav> -->
    	</header>
     
-
-  	<main class="indexMain">
+  	<main class="wrap-main">
       <!-- todo: Декоративная фоновая картинка, загружаем фоном из CSS. Три картинки - отсюда и два дополнительных вложенных. В отдельном блоке section смысла нет -->
-      <div class="pictureOfSedona"><!-- pictureofsedona.png -->
-        <div class="polygonSedona"><!-- Маска фона intro-mask.svg -->
-          <div class="welcomeToSedona">Фотография с презентацией Седоны</div> <!-- intro-welcome.svg -->
+      <div class="wrap-pic-sedona"><!-- pictureofsedona.png -->
+        <div class="polygon-sedona"><!-- Маска фона intro-mask.svg -->
+          <!-- DELETE: <div class="welcomeToSedona">Фотография с презентацией Седоны</div> -->
         </div>
+        <img src="img/intro-welcome.svg" alt="Добро пожаловать в город Седона">
       </div>
 
-      <section class="wrapperFiveReasons">
+      <section class="wrap-advantages">
         <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
         <ul>
           <li>
-            <div class="partTrueTown">
-              <div class="blueBackground"></div> <!-- Синий фон слева -->
+            <div class="true-town"> 
+              <!-- DELETE: Синий фон слева <div class="blue-background"> </div> -->
               <h2>Настоящий городок</h2>
               <p>&ndash; &#8470;1 &ndash;</p>
               <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-              <div class="rightPictureOfTown"></div> <!-- rightpictoftown.png -->
+              <!-- DELETE: <div class="rightPictureOfTown"></div>  -->
+              <!-- todo: размеры img потом переопределить -->
+              <img src="img/rightpictoftown.png" alt="Фотография города Седона">
             </div>
             <ul>
               <li>
-                <div class="iconHome"></div> <!-- icon-1.svg -->
+                <div class="icon-home"></div> <!-- todo: icon-1.svg -->
                 <h3>Жилье</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
               </li>
               <li>
-                <div class="iconDish"></div> <!-- icon-3.svg -->
+                <div class="icon-dish"></div> <!-- todo: icon-3.svg -->
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <div class="iconSouvenir"></div> <!-- icon-2.svg -->
+                <div class="icon-souvenir"></div> <!-- todo: icon-2.svg -->
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li>
-            <div class="partCanyon">
-              <div class="leftPictureOfCanyon"></div> <!-- leftpictofcanyon.png -->
-                <h2>Там есть мост дьявола</h2>
-                <p>&ndash; &#8470;2 &ndash;</p>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-              <div class="blueBackground"></div> <!-- Синий фон справа и снизу в три колонки -->
+            <div class="canyon">
+              <!-- DELETE: <div class="leftPictureOfCanyon"></div> -->
+              <!-- todo: размеры img потом переопределить -->
+              <img src="img/leftpictofcanyon.png" alt="Фотография Мост дьявола">
+              <h2>Там есть мост дьявола</h2>
+              <p>&ndash; &#8470;2 &ndash;</p>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <!-- DELETE: Синий фон справа <div class="blue-background"> </div> -->
             </div>
           </li>
           <li>
@@ -94,35 +101,36 @@
         </ul>
       </section>
 
-  		<section class="wrapperSearch">
+  		<section class="wrap-search">
         <h2>Заинтересовались?</h2>
+        <!-- возможно, нужно будет добавить br для переноса строки: -->
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button" class="jsOpenPopUp">Поиск гостиницы в Седоне</button>  
+        <a href="#" class="open-pop-up">Поиск гостиницы в Седоне</a>
 
           <!-- todo: По умолчанию форма поиска гостиницы должна быть открыта -->
           <!-- todo: Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы. Вёрстка модального окна обязательна (смотрите папку слоёв «search form») -->
           <!-- todo: Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом для того, чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря с возможностью выбора даты -->
         <form action="https://echo.htmlacademy.ru" method="get">
 
-          <div class="levelArrival">
+          <div class="arrival">
             <label for="idArrival_date">Дата заезда:</label>
             <input type="date" id="idArrival_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
-            <div class="datePicker"></div> <!-- calendar.svg -->
+            <div class="date-picker"></div> <!-- calendar.svg -->
           </div>
           
-          <div class="levelDeparture">
+          <div class="departure">
             <label for="idDeparture_date">Дата выезда:</label>
             <input type="date" id="idDeparture_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
-            <div class="datePicker"></div> <!-- calendar.svg -->
+            <div class="date-picker"></div> <!-- calendar.svg -->
           </div>
 
           <div class="counter">
-            <label>Взрослых:</label>
+            <label>Взрослые:</label>
             <button type="button">-</button>
             <input type="text" value="0" maxlength="2" size="2">
             <button type="button">+</button>
 
-            <label>Детей:</label>
+            <label>Дети:</label>
             <button type="button">-</button>
             <input type="text" value="0" maxlength="2" size="2">
             <button type="button">+</button>
@@ -132,12 +140,12 @@
         </form>
       </section>
 
-      <section class="wrapperMap">
+      <section class="wrap-map">
         <h3 class="visually-hidden">Карта Яндекс</h3>
         <!-- todo: Эта часть - пока это всё заглушка. + будет всплывать форма -->
         <!-- todo: !Блок карты: достаточная реализация — обычное изображение -->
         <!-- todo: !Блок карты: интерактивная карта, которая тянется на всю ширину контейнера. Реализация по желанию -->
-        <img src="img/map.png" alt="Карта Яндекс" height="300" width="auto"> 
+        <img src="img/map.png" height="300" alt="Карта Яндекс"> 
         <!-- Позже загрузим реальную карту Google -->
       </section>
   	</main>
@@ -145,31 +153,23 @@
   	<footer>
       <!-- todo: !В трёх блоках футера контент расположен по центру -->
       <!-- todo: Используем текст, а изображение добавим через CSS --> 
-        <div class="maskLayer"></div> <!-- Маскируем часть карты -->
+        <div class="mask-layer"></div> <!-- Маскируем часть карты. Подумать, как это сделать, ведь ПОД маской видна часть карты -->
+        
+        <!-- Это не ссылка: -->
+        <p>#visitsedona</p>
 
-        <div class="footer_leftBlock">
-          <a href="//visitsedona.com/"  aria-label="Посетить официальный сайт Седоны">#VisitSedona</a>
-        </div>
-
-        <ul class="footer_centerBlock">
-          <p class="visually-hidden">Социальные сети</p>
-          <li>
-            <a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер"><!-- twitter.svg --></a>
-          </li>
-          <li>
-            <a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук"><!-- fb-icon.svg --></a>
-          </li>
-          <li>
-            <a href="//youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб"><!-- youtube.svg --></a>
-          </li>
+        <p class="visually-hidden">Социальные сети</p>
+        <ul class="websites">
+          <li><a href="//twitter.com/" class="" aria-label="Посетить официальный сайт Твиттер">Твиттер</a></li>
+          <li><a href="//facebook.com/" class="" aria-label="Посетить официальный сайт Фейсбук">Фейсбук</a></li>
+          <li><a href="https://youtube.com/" class="" aria-label="Посетить официальный сайт Ютьюб">Ютьюб</a></li>
         </ul>
 
-        <div class="footer_rightBlock">
+        <div class="copyright">
           <!-- todo: !Логотип Академии в подвале ведёт на лендинг интенсива «Профессиональный HTML и CSS, уровень 1» -->
-            <span class="highlight">Website by</span> 
-            <a href="//up.htmlacademy.ru/htmlcss/26">
-              <div class="logoOfAcademy"><!-- logo-htmlacademy.png --></div>
-            </a>
+            <p class="highlight">Website by
+              <a href="//up.htmlacademy.ru/htmlcss/26"><span class="logo-academy">Академия</span></a>
+            </p> 
         </div>
 
   	</footer> 
