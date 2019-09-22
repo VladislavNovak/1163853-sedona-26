@@ -8,8 +8,13 @@ body {
 	opacity: 0.5; 
 	*/
 
-	width: 1000px;
-	
+	width: auto; 
+}
+
+.container {
+	width: 1200px;
+	margin: auto;
+
 	/*Вкладываем header + main + footer согласно flex-модели:*/
 	display: flex; 	
 	/*Располагаем header + main + footer вертикально:*/
@@ -17,12 +22,11 @@ body {
 	/*default... элементы выстраиваются в одну линию:*/
 	flex-wrap: nowrap; 		
 
-
 	/*todo: Тень вокруг body*/
 	/*todo: Подложку белую... Возможно, просто фон, который тянется во все стороны*/
 
-	font-family: "MS Sans Serif", Arial, sans-serif;
-	line-height: 30px;
+	font-family: "PT Sans", Arial, sans-serif;
+
 }
 
 /*---------------------------------------------*/
@@ -31,9 +35,10 @@ body {
 header {
 	/*Временный цвет:*/
 	background-color: #FF6A0041;
-	height: 50px; 
 
-	/*Дочерние navigation и logo сможем позиционировать как absolute:*/
+	font-weight: bold;
+	line-height: 26px;
+
 	position: relative;
 }
 
@@ -41,36 +46,53 @@ header {
 		/*Временный цвет:*/
 		background-color: #4CFF004A;
 
-		/*todo: размеры подогнать:*/
-		width: auto; 		
+		width: auto; 
+
+		/*Убираем defaulf-отступы:*/	
+		padding: 0;	
+		margin: 0;
 
 		/*Убираем стили списка:*/
 		list-style: none; 			
 		
 		display: flex;
-		/*display: inline-flex; - возможно?!*/
-
-		/*Располагаем дочерние в одну строку:*/
+		/*Дочерние выравниваются в одну линию и равномерно распределяются:*/
 		flex-wrap: nowrap; 		
-
-		justify-content: space-around;		
+		justify-content: space-between;		
 	}
 
 		/*todo: размер корректировать:*/
-		.navigation li {width: 250px;}
+		.navigation li {
+			/*Временный цвет:*/
+			background-color: #FF00AE4A;
+
+			/*Задаём высоту строки, центрируем текст и устанавливаем ширину:*/
+			line-height: 56px;
+			width: 240px;
+			
+			text-align: center;
+		}
+
+		/*Создаём место под логотип:*/
+		.navigation li:nth-child(2) {margin-right: 120px;}
+		.navigation li:nth-child(3) {margin-left: 120px;}
 		
 		/*Убираем оформление ссылок:*/
 		.navigation a {text-decoration: none;} 
 
 	.logo {
 		background-color: #8080804A;
-		
+
+		width: 140px;
+		height: 72px;
+
 		/*Позиционируем logo относительно wrap-navigation:*/
 		position: absolute; 
-		/*Устанавливаем по центру экрана:*/
-		left: 50%; 		
+		/*Центруем по header, и смещаем влево на ширину логотипа:*/
+		left: 50%; 	
+		margin-left: -70px;
 		/*todo: позиц.по верхней границе wrap-navigation:*/
-		margin-top: -50px;	
+		top: 0px;	
 	}
 	
 	/*todo: цвета заменить,*/
@@ -95,14 +117,22 @@ footer {
 	background-color: #B200FF1E;
 	/*Флекс-модель:*/
 	display: flex;
-	/*Дочерние выравниваются в одну линию:*/
+	/*Дочерние выравниваются в одну линию и равномерно распределяются:*/
 	flex-wrap: nowrap; 
+	justify-content: space-between;		
 }
 	
 	/*Временный цвет:*/
-	footer p {background-color: #7FFF8E6B;}
+	footer p {
+		background-color: #7FFF8E6B;
+		margin: 0;
+		padding: 0;
+		
+		font-size: 21px;
+		line-height: 26px;
+	}
 	
-	footer ul {
+	.websites {
 		/*Временный цвет:*/
 		background-color: #0054FF35;
 		
@@ -115,25 +145,37 @@ footer {
 		/*Располагаем дочерние li в одну строку:*/			
 		justify-content: center;
 		/*todo: размеры подогнать:*/
-		width: 100%; 					
+		/*width: 100%; 		*/			
 		height: auto; 
 	}
 
-		footer li {
-			width: 50px; 					
-			height: 50px; 	
+		.websites li {
 			background-color: #81b3d2; 
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
-			margin: 5px;
+			/*margin: 5px;*/
 		}
 
-		footer li:nth-child(1) {background-image: URL("../img/twitter.svg");}
-		footer li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
-		footer li:nth-child(3) {background-image: URL("../img/youtube.svg");}
+		.websites a {
+			/*Меняем модель на блочное поведение*/
+			display: block;
+
+			width: 46px; 					
+			height: 49px; 	
+			
+			/*Текст есть, но визуально не представлен*/
+			font-size: 0;
+		}
+
+		.websites li:nth-child(1) {background-image: URL("../img/twitter.svg");}
+		.websites li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
+		.websites li:nth-child(3) {background-image: URL("../img/youtube.svg");}
 
 	.copyright {
-		background-color: #8080803A;
+		font-size: 14px;
+		line-height: 26px;
+
+		background-color: #7C7C7C95;
 		background-image: URL("../img/logo-htmlacademy.svg");
 		background-repeat: no-repeat; 
 		background-position: center;
