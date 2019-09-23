@@ -1,19 +1,19 @@
 
 body {
-	background-color: #AA9A3A27;
-	/*
+	background-color: #00FF2162;
+	
 	background-image: url('../img/temp_sedona-index.png'); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	opacity: 0.5; 
-	*/
-
-	width: auto; 
+	
+	width: auto;
+	margin: 0 auto;
 }
 
 .container {
 	width: 1200px;
-	margin: auto;
+	margin: 0 auto;
 
 	/*Вкладываем header + main + footer согласно flex-модели:*/
 	display: flex; 	
@@ -105,9 +105,46 @@ header {
 /*-------------------------------------------*/
 /*----------------M*A*I*N--------------------*/
 
-main {
-	background-color: #7FC9FF79;
+.wrap-main {
+
+	display: flex;
+	flex-direction: column;
 }
+
+	.wrap-pic-sedona {
+		/**Слои идут от самого верхнего к самому нижнему:*/
+		background-image: 	url("../img/mask_pictureofsedona.png "),
+							url("../img/intro-mask.svg "),
+							url("../img/pictureofsedona.png");
+		height: 216px, 800px, 59px;
+		width: auto;
+		background-repeat: no-repeat;
+		background-position: center bottom, center bottom 215px, center bottom;
+		
+	}
+
+		.wrap-pic-sedona img {
+			display: block;
+			padding: 0;
+			margin: 0 auto;
+			margin-top: 75px;/*todo: неверный масштаб*/
+			margin-bottom: 307px;
+		}
+
+	.wrap-advantages {
+		background-color: #FFD80056;
+		;
+	}
+
+	.wrap-search {
+		background-color: #4040403A;
+		;
+	}
+
+	.wrap-map {
+		background-color: #FF6A0041;
+		;
+	}
 
 /*-------------------------------------------*/
 /*-------------F*O*O*T*E*R-------------------*/
@@ -115,26 +152,33 @@ main {
 footer {
 	/*Временный цвет:*/
 	background-color: #B200FF1E;
+	/*todo: сделать полупрозрачную подложку*/
+
 	/*Флекс-модель:*/
 	display: flex;
 	/*Дочерние выравниваются в одну линию и равномерно распределяются:*/
 	flex-wrap: nowrap; 
-	justify-content: space-between;		
+	justify-content: space-around;		
 }
 	
-	/*Временный цвет:*/
-	footer p {
+	footer>p {
+		/*Временный цвет:*/
 		background-color: #7FFF8E6B;
 		margin: 0;
 		padding: 0;
 		
 		font-size: 21px;
-		line-height: 26px;
+		line-height: 120px;
+		text-align: center;
+		width: 240px;
 	}
 	
 	.websites {
 		/*Временный цвет:*/
 		background-color: #0054FF35;
+		margin: 0;
+		padding: 0;
+		width: 240px;
 		
 		/*Убираем стили списка:*/
 		list-style: none; 			
@@ -142,21 +186,28 @@ footer {
 		/*Вложенные li - согласно flex-модели*/
 		display: flex;
 		flex-wrap: nowrap; 	
-		/*Располагаем дочерние li в одну строку:*/			
+		/*Располагаем дочерние li в одну строку и сдвигаем в центр блока по вертикали:*/			
 		justify-content: center;
-		/*todo: размеры подогнать:*/
-		/*width: 100%; 		*/			
-		height: auto; 
+		align-items: center;
 	}
 
 		.websites li {
 			background-color: #81b3d2; 
+			margin: 6px;
+			/*padding: 0;*/
+
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
-			/*margin: 5px;*/
 		}
 
+		.websites li:nth-child(1) {background-image: URL("../img/twitter.svg");}
+		.websites li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
+		.websites li:nth-child(3) {background-image: URL("../img/youtube.svg");}
+
 		.websites a {
+			/*margin: 0;
+			padding: 0;*/
+
 			/*Меняем модель на блочное поведение*/
 			display: block;
 
@@ -167,27 +218,42 @@ footer {
 			font-size: 0;
 		}
 
-		.websites li:nth-child(1) {background-image: URL("../img/twitter.svg");}
-		.websites li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
-		.websites li:nth-child(3) {background-image: URL("../img/youtube.svg");}
-
 	.copyright {
-		font-size: 14px;
-		line-height: 26px;
-
 		background-color: #7C7C7C95;
-		background-image: URL("../img/logo-htmlacademy.svg");
+		/*background-image: URL("../img/logo-htmlacademy.svg");
 		background-repeat: no-repeat; 
-		background-position: center;
+		background-position: center;*/
+		width: 240px;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center; 
 	}
 
+		.copyright>a {
+			background-color: #4CFF0066;
+			text-decoration: none;
+			font-size: 14px;
+			line-height: 120px;
+		}
+
+		.logo-academy {
+			background-color: #FF006E56;
+			
+			font-size: 0;
+
+			background-image: URL("../img/logo-htmlacademy.svg");
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			width: 115px;
+			height: 41px;
+		}
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 
 
 .visually-hidden {
 	display: none;
-	/*position: absolute;
+	position: absolute;
 	width: 1px;
 	height: 1px;
 	margin: -1px;
