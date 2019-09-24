@@ -1,11 +1,11 @@
 
 body {
-	background-color: #00FF2162;
+	background-color: #54545451;
 	
 	background-image: url('../img/temp_sedona-index.png'); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.5; 
+	opacity: 0.8; 
 	
 	width: auto;
 	margin: 0 auto;
@@ -27,15 +27,16 @@ body {
 
 	font-family: "PT Sans", Arial, sans-serif;
 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/*---------------------------------------------*/
-/*----------------H*E*A*D*E*R------------------*/
+/***********************************************/
+/***********************************************/
+
+header, footer {	background-color: #FF00007B;}
+main {				background-color: #6868685F;}
 
 header {
-	/*Временный цвет:*/
-	background-color: #FF6A0041;
-
 	font-weight: bold;
 	line-height: 26px;
 
@@ -43,11 +44,6 @@ header {
 }
 
 	.navigation {
-		/*Временный цвет:*/
-		background-color: #4CFF004A;
-
-		width: auto; 
-
 		/*Убираем defaulf-отступы:*/	
 		padding: 0;	
 		margin: 0;
@@ -55,17 +51,12 @@ header {
 		/*Убираем стили списка:*/
 		list-style: none; 			
 		
-		display: flex;
-		/*Дочерние выравниваются в одну линию и равномерно распределяются:*/
-		flex-wrap: nowrap; 		
+		display: flex;	
 		justify-content: space-between;		
 	}
 
 		/*todo: размер корректировать:*/
 		.navigation li {
-			/*Временный цвет:*/
-			background-color: #FF00AE4A;
-
 			/*Задаём высоту строки, центрируем текст и устанавливаем ширину:*/
 			line-height: 56px;
 			width: 240px;
@@ -77,8 +68,7 @@ header {
 		.navigation li:nth-child(2) {margin-right: 120px;}
 		.navigation li:nth-child(3) {margin-left: 120px;}
 		
-		/*Убираем оформление ссылок:*/
-		.navigation a {text-decoration: none;} 
+		.navigation a {text-decoration: none;} /*Убираем оформление ссылок:*/
 
 	.logo {
 		background-color: #8080804A;
@@ -86,13 +76,10 @@ header {
 		width: 140px;
 		height: 72px;
 
-		/*Позиционируем logo относительно wrap-navigation:*/
-		position: absolute; 
-		/*Центруем по header, и смещаем влево на ширину логотипа:*/
-		left: 50%; 	
+		position: absolute; /*Позиционируем в header... */
+		left: 50%; 	/*... смещаем влево на ширину логотипа:*/
 		margin-left: -70px;
-		/*todo: позиц.по верхней границе wrap-navigation:*/
-		top: 0px;	
+		top: 0px;/*... позиц.по верхней границе wrap-navigation:*/
 	}
 	
 	/*todo: цвета заменить,*/
@@ -102,56 +89,84 @@ header {
 	.logo:active {color: #FF006E;} 	
 	.logo:visited {color: #FF006E;}
 
-/*-------------------------------------------*/
-/*----------------M*A*I*N--------------------*/
+/********************************************/
+/*********************************************/
 
-.wrap-main {
-
+.main-index {
 	display: flex;
 	flex-direction: column;
 }
 
-	.wrap-pic-sedona {
-		/**Слои идут от самого верхнего к самому нижнему:*/
-		background-image: 	url("../img/mask_pictureofsedona.png "),
-							url("../img/intro-mask.svg "),
-							url("../img/pictureofsedona.png");
-		height: 216px, 800px, 59px;
-		width: auto;
-		background-repeat: no-repeat;
-		background-position: center bottom, center bottom 215px, center bottom;
-		
+/***********************/
+	.welcome {
+		background-image: url("../img/mountains.png");
+		display: flex;
+		flex-direction: column;			/*вертикальное направление*/
+		justify-content: center; /*выравниваем по Y*/
+		align-items: center;			/*выравниваем по X*/
 	}
 
-		.wrap-pic-sedona img {
-			display: block;
-			padding: 0;
-			margin: 0 auto;
-			margin-top: 75px;/*todo: неверный масштаб*/
-			margin-bottom: 307px;
+		.sedona {
+			align-self: stretch;
+			padding-left: 370px;
+			padding-top: 75px;
+
+			background-image: url("../img/polygon.svg ");
+			background-repeat: no-repeat;
+			background-position: center bottom;
+
+			
+			background-color: #B6FF005F;
 		}
 
-	.wrap-advantages {
-		background-color: #FFD80056;
+		.description {
+			align-self: stretch;
+			background-color: #FFFFFFFF;
+			padding-left: 359px;
+		}
+
+			.description h1 {
+				display: block;
+				width: 470px;
+
+				font-size: 21px;
+				line-height: 26px;
+				font-weight: bold;
+				text-transform: uppercase;
+
+				text-align: center;
+				overflow-wrap: normal;
+				padding-top: 118px;
+			}
+
+			.description p {
+				display: block;
+
+				font-size: 14px;
+				line-height: 45px;
+				text-transform: uppercase;
+			}
+
+/***********************/
+	.advantages {
+		background-color: #7300A838;
 		;
 	}
-
-	.wrap-search {
+/***********************/
+	.search {
 		background-color: #4040403A;
 		;
 	}
-
-	.wrap-map {
+/***********************/
+	.googlemap {
 		background-color: #FF6A0041;
 		;
 	}
 
-/*-------------------------------------------*/
-/*-------------F*O*O*T*E*R-------------------*/
+/***********************************************/
+/***********************************************/
 
 footer {
-	/*Временный цвет:*/
-	background-color: #B200FF1E;
 	/*todo: сделать полупрозрачную подложку*/
 
 	/*Флекс-модель:*/
