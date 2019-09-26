@@ -47,12 +47,11 @@
           <ul>
             <li>
               <div class="true-town"> 
-                <!-- DELETE: Синий фон слева <div class="blue-background"> </div> -->
-                <h2>Настоящий городок</h2>
-                <p>&ndash; &#8470;1 &ndash;</p>
-                <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-                <!-- DELETE: <div class="rightPictureOfTown"></div>  -->
-                <!-- todo: размеры img потом переопределить -->
+               <div class=""> 
+                  <h2>Настоящий городок</h2>
+                  <p>&ndash; &#8470;1 &ndash;</p>
+                  <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                </div>
                 <img src="img/rightpictoftown.png" alt="Фотография города Седона">
               </div>
               <ul>
@@ -126,14 +125,14 @@
             </div>
 
             <div class="counter">
-              <label>Взрослые:</label>
+              <label for="adult">Взрослые:</label>
               <button type="button">-</button>
-              <input type="text" value="0" maxlength="2" size="2">
+              <input type="text" id="adult" value="0" maxlength="2" size="2">
               <button type="button">+</button>
 
-              <label>Дети:</label>
+              <label for="children">Дети:</label>
               <button type="button">-</button>
-              <input type="text" value="0" maxlength="2" size="2">
+              <input type="text" id="children" value="0" maxlength="2" size="2">
               <button type="button">+</button>
             </div>
             

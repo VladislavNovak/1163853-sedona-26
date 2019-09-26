@@ -19,8 +19,6 @@ body {
 	display: flex; 	
 	/*Располагаем header + main + footer вертикально:*/
 	flex-direction: column; 	
-	/*default... элементы выстраиваются в одну линию:*/
-	flex-wrap: nowrap; 		
 
 	/*todo: Тень вокруг body*/
 	/*todo: Подложку белую... Возможно, просто фон, который тянется во все стороны*/
@@ -102,12 +100,12 @@ header {
 		background-image: url("../img/mountains.png");
 		display: flex;
 		flex-direction: column;			/*вертикальное направление*/
-		justify-content: center; /*выравниваем по Y*/
-		align-items: center;			/*выравниваем по X*/
+		justify-content: center; 		/*выравниваем по Y*/
+		align-items: stretch;			/*выравниваем по X*/
+
 	}
 
 		.sedona {
-			align-self: stretch;
 			padding-left: 370px;
 			padding-top: 75px;
 
@@ -115,13 +113,12 @@ header {
 			background-repeat: no-repeat;
 			background-position: center bottom;
 
-			
-			background-color: #B6FF005F;
+			/*position: relative;*/
+			height: 430px;
 		}
 
 		.description {
-			align-self: stretch;
-			background-color: #FFFFFFFF;
+			background-color: #00FFFF51;
 			padding-left: 359px;
 		}
 
@@ -150,8 +147,33 @@ header {
 /***********************/
 	.advantages {
 		background-color: #7300A838;
-		;
+		display: flex;
+		flex-direction: column;
 	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***********************/
 	.search {
 		background-color: #4040403A;
