@@ -5,7 +5,7 @@ body {
 	background-image: url('../img/temp_sedona-index.png'); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.8; 
+	opacity: 0.6; 
 	
 	width: auto;
 	margin: 0 auto;
@@ -26,57 +26,76 @@ body {
 /***********************************************/
 /***********************************************/
 
-header, footer {	background-color: #FF00007B;}
-main {				background-color: #6868685F;}
+footer {	background-color: #FF00007B;}
+main {	background-color: #6868685F;}
 
 header {
-	font-weight: bold;
-	line-height: 26px;
-
 	position: relative;
 }
 
-	.navigation {	
-		padding: 0;	
-		margin: 0;
+.navigation {	
+	padding: 0;	
+	margin: 0;
 
-		/*Убираем стили списка:*/
-		list-style: none; 			
-		
-		display: flex;	
-		justify-content: space-between;		
-	}
+	display: flex;	
+	justify-content: space-between;	
+	/*justify-content: center;	*/
+}
 
-		.navigation li {
-			line-height: 56px;
-			width: 240px;
-			
-			text-align: center;
-		}
+.navigation li {
+	list-style: none;
+	width: 241px;
+	text-align: center;
+	white-space: nowrap;
 
-		.navigation li:nth-child(2) {margin-right: 120px;}
-		.navigation li:nth-child(3) {margin-left: 120px;}
-		
-		.navigation a {text-decoration: none;} /*Убираем оформление ссылок:*/
+	padding: 14px 0 15px 0;
+}
+.navigation li:nth-child(1) {
+	text-align: left;
+	margin-left: 71px;
+}
 
-	.logo {
-		background-color: #8080804A;
+.navigation li:nth-child(2) {
+	text-align: left;
+	margin-right: 94px;
+}
+.navigation li:nth-child(3) {
+	text-align: right;
+	letter-spacing: 0.5px;
+}
 
-		width: 140px;
-		height: 72px;
+.navigation li:nth-child(4) { 
+	text-align: right;
+	margin-right: 71px;
+}
 
-		position: absolute; /*Позиционируем в header... */
-		left: 50%; 	/*... смещаем влево на ширину логотипа:*/
-		margin-left: -70px;
-		top: 0px;/*... позиц.по верхней границе wrap-navigation:*/
-	}
+.navigation a {
+	text-decoration: none; /*Убираем оформление ссылок:*/
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 26px;
+} 
+/****************************************/
+.logo {
+	background-color: #8080804A;
+
+	width: 140px;
+	height: 72px;
+
+	position: absolute; /*Позиционируем в header... */
+	left: 50%; 	/*... смещаем влево на ширину логотипа:*/
+	margin-left: -70px;
+	top: -1px;/*... позиц.по верхней границе wrap-navigation:*/
+}
 	
-	/*todo: цвета заменить,*/
-	/*todo: проверить действие на второй странице:*/
-	.logo:link {color: #FF006E;}	
-	.logo:hover {color: #FF006E;}	
-	.logo:active {color: #FF006E;} 	
-	.logo:visited {color: #FF006E;}
+/*todo: цвета заменить,*/
+/*todo: проверить действие на второй странице:*/
+.logo:link {color: #FF006E;}	
+.logo:hover {color: #FF006E;}	
+.logo:active {color: #FF006E;} 	
+.logo:visited {color: #FF006E;}
 
 /********************************************/
 /*********************************************/
@@ -86,24 +105,26 @@ header {
 	flex-direction: column;
 }
 
-/***********************/
+/*********************************************/
 .welcome {
-	background-image: url("../img/mountains.png");
+	background-image: url("../img/mountains.jpg");
 
 	display: flex;
 	flex-direction: column;			/*вертикальное направление*/
 	justify-content: center; 		/*выравниваем по Y*/
 	align-items: stretch;			/*выравниваем по X*/
+
+	
 }
 
 .sedona {
 	height: 430px;
 	padding-left: 370px;
-	padding-top: 75px;
+	padding-top: 77px;
 
 	background-image: url("../img/polygon.svg ");
 	background-repeat: no-repeat;
-	background-position: center bottom -3px;
+	background-position: center bottom -4px;
 }
 
 .description {
@@ -123,11 +144,11 @@ header {
 	line-height: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.1px;
 
 	text-align: center;
 	overflow-wrap: normal;
-	padding-top: 63px;
+	padding-top: 62px;
 }
 
 .description p {
@@ -137,20 +158,78 @@ header {
 	font-size: 14px;
 	line-height: 45px;
 	text-transform: uppercase;
+	letter-spacing: 0.1px;
+
 	padding-top: 18px;
 	padding-bottom: 42px;
 }
 
-/***********************/
-	.advantages {
-		background-color: #7300A838;
-		display: flex;
-		flex-direction: column;
-	}
-	
+/*********************************************/
+.advantages {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
+.advantages ul {
+	margin: 0;
+	padding: 0;
+}
 
+.first-advantage {
+	background-color: #81b3d2;
+	display: flex;
+	justify-content: center;
+}
 
+.first-advantage-text {
+	min-width: 400px;
+	color: #FFFFFFFF;
+}
+
+.first-advantage-text h2 {
+	display: block;
+	font-size: 21px;
+	line-height: 21px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 47px 0 0 100px; 
+	margin: 0;
+
+	width: 200px;
+	overflow-wrap: normal;
+}
+
+.first-advantage-text p:first-of-type {
+	margin: 0;
+	display: block;
+
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+
+	padding: 25px 0 0 180px;
+}
+
+.first-advantage-text p:last-of-type {
+	margin: 0;
+	display: block;
+
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+
+	width: 300px;
+	text-align: center;
+	text-transform: uppercase;
+	overflow-wrap: normal;
+
+	padding: 21px 0 0 55px;
+	letter-spacing: 0.5px;
+}
+
+/*********************************************/
 
 
 
