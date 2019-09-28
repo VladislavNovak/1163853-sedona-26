@@ -15,13 +15,8 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 
-	/*Вкладываем header + main + footer согласно flex-модели:*/
 	display: flex; 	
-	/*Располагаем header + main + footer вертикально:*/
 	flex-direction: column; 	
-
-	/*todo: Тень вокруг body*/
-	/*todo: Подложку белую... Возможно, просто фон, который тянется во все стороны*/
 
 	font-family: "PT Sans", Arial, sans-serif;
 
@@ -41,8 +36,7 @@ header {
 	position: relative;
 }
 
-	.navigation {
-		/*Убираем defaulf-отступы:*/	
+	.navigation {	
 		padding: 0;	
 		margin: 0;
 
@@ -53,16 +47,13 @@ header {
 		justify-content: space-between;		
 	}
 
-		/*todo: размер корректировать:*/
 		.navigation li {
-			/*Задаём высоту строки, центрируем текст и устанавливаем ширину:*/
 			line-height: 56px;
 			width: 240px;
 			
 			text-align: center;
 		}
 
-		/*Создаём место под логотип:*/
 		.navigation li:nth-child(2) {margin-right: 120px;}
 		.navigation li:nth-child(3) {margin-left: 120px;}
 		
@@ -96,53 +87,59 @@ header {
 }
 
 /***********************/
-	.welcome {
-		background-image: url("../img/mountains.png");
-		display: flex;
-		flex-direction: column;			/*вертикальное направление*/
-		justify-content: center; 		/*выравниваем по Y*/
-		align-items: stretch;			/*выравниваем по X*/
+.welcome {
+	background-image: url("../img/mountains.png");
 
-	}
+	display: flex;
+	flex-direction: column;			/*вертикальное направление*/
+	justify-content: center; 		/*выравниваем по Y*/
+	align-items: stretch;			/*выравниваем по X*/
+}
 
-		.sedona {
-			padding-left: 370px;
-			padding-top: 75px;
+.sedona {
+	height: 430px;
+	padding-left: 370px;
+	padding-top: 75px;
 
-			background-image: url("../img/polygon.svg ");
-			background-repeat: no-repeat;
-			background-position: center bottom;
+	background-image: url("../img/polygon.svg ");
+	background-repeat: no-repeat;
+	background-position: center bottom -3px;
+}
 
-			/*position: relative;*/
-			height: 430px;
-		}
+.description {
+	background-color: #FFFFFFFF;
 
-		.description {
-			background-color: #00FFFF51;
-			padding-left: 359px;
-		}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-			.description h1 {
-				display: block;
-				width: 470px;
+.description h1 {
+	display: block;
+	margin: 0 0;
+	width: 470px;
 
-				font-size: 21px;
-				line-height: 26px;
-				font-weight: bold;
-				text-transform: uppercase;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 
-				text-align: center;
-				overflow-wrap: normal;
-				padding-top: 118px;
-			}
+	text-align: center;
+	overflow-wrap: normal;
+	padding-top: 63px;
+}
 
-			.description p {
-				display: block;
+.description p {
+	display: block;
+	margin: 0 0;
 
-				font-size: 14px;
-				line-height: 45px;
-				text-transform: uppercase;
-			}
+	font-size: 14px;
+	line-height: 45px;
+	text-transform: uppercase;
+	padding-top: 18px;
+	padding-bottom: 42px;
+}
 
 /***********************/
 	.advantages {
