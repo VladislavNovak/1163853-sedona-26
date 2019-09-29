@@ -176,18 +176,18 @@ header {
 	padding: 0;
 }
 
-.first-advantage {
+.advantage-1 {
 	background-color: #81b3d2;
 	display: flex;
 	justify-content: center;
 }
 
-.first-advantage-text {
+.advantage-1-text {
 	min-width: 400px;
 	color: #FFFFFFFF;
 }
 
-.first-advantage-text h2 {
+.advantage-1-text h2 {
 	display: block;
 	font-size: 21px;
 	line-height: 21px;
@@ -201,19 +201,17 @@ header {
 	overflow-wrap: normal;
 }
 
-.first-advantage-text p:first-of-type {
-	margin: 0;
+.advantage-1-text p:first-of-type {
 	display: block;
 
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
 
-	padding: 25px 0 0 180px;
+	padding: 10px 0 0 176px;
 }
 
-.first-advantage-text p:last-of-type {
-	margin: 0;
+.advantage-1-text p:last-of-type {
 	display: block;
 
 	font-size: 14px;
@@ -225,13 +223,26 @@ header {
 	text-transform: uppercase;
 	overflow-wrap: normal;
 
-	padding: 21px 0 0 55px;
+	padding: 7px 0 0 55px;
 	letter-spacing: 0.5px;
 }
 
 /*********************************************/
 
+.advantage-2 {
+	background-color: #81b3d2;
+}
 
+
+
+/*.second-advantage li {
+	list-style: none;
+	/*width: 241px;
+	text-align: center;
+	white-space: nowrap;
+
+	padding: 14px 0 15px 0;
+}
 
 
 
