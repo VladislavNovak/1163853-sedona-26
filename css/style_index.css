@@ -1,22 +1,21 @@
 
 body {
+	width: auto;
+	margin: 0 auto;
+
 	background-color: #54545451;
 	
-	background-image: url('../img/temp_sedona-index.png'); 
+	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	opacity: 0.6; 
-	
-	width: auto;
-	margin: 0 auto;
 }
 
 .container {
+	display: flex; 	
+	flex-direction: column; 
 	width: 1200px;
 	margin: 0 auto;
-
-	display: flex; 	
-	flex-direction: column; 	
 
 	font-family: "PT Sans", Arial, sans-serif;
 
@@ -33,22 +32,21 @@ header {
 	position: relative;
 }
 
-.navigation {	
-	padding: 0;	
-	margin: 0;
-
+.navigation {
 	display: flex;	
 	justify-content: space-between;	
-	/*justify-content: center;	*/
+
+	padding: 0;	
+	margin: 0;
 }
 
 .navigation li {
-	list-style: none;
 	width: 241px;
+	padding: 14px 0 15px 0;
+
+	list-style: none;
 	text-align: center;
 	white-space: nowrap;
-
-	padding: 14px 0 15px 0;
 }
 .navigation li:nth-child(1) {
 	text-align: left;
@@ -70,24 +68,23 @@ header {
 }
 
 .navigation a {
-	text-decoration: none; /*Убираем оформление ссылок:*/
-	color: #000000;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 26px;
+
+	text-decoration: none; /*Убираем оформление ссылок:*/
+	color: #000000;
 } 
 /****************************************/
 .logo {
-	background-color: #8080804A;
+	position: absolute; 
+	left: 50%; 	
+	top: -1px;
+	margin-left: -70px;
 
 	width: 140px;
 	height: 72px;
-
-	position: absolute; /*Позиционируем в header... */
-	left: 50%; 	/*... смещаем влево на ширину логотипа:*/
-	margin-left: -70px;
-	top: -1px;/*... позиц.по верхней границе wrap-navigation:*/
 }
 	
 /*todo: цвета заменить,*/
@@ -107,14 +104,12 @@ header {
 
 /*********************************************/
 .welcome {
-	background-image: url("../img/mountains.jpg");
-
 	display: flex;
-	flex-direction: column;			/*вертикальное направление*/
-	justify-content: center; 		/*выравниваем по Y*/
-	align-items: stretch;			/*выравниваем по X*/
+	flex-direction: column;
+	justify-content: center;
+	/*align-items: stretch;			/*выравниваем по X*/	
 
-	
+	background-image: url("../img/mountains.jpg");
 }
 
 .sedona {
@@ -122,22 +117,23 @@ header {
 	padding-left: 370px;
 	padding-top: 77px;
 
-	background-image: url("../img/polygon.svg ");
+	background-image: url("../img/polygon.svg");
 	background-repeat: no-repeat;
 	background-position: center bottom -4px;
 }
 
 .description {
-	background-color: #FFFFFFFF;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	background-color: #FFFFFF;
 }
 
 .description h1 {
 	display: block;
-	margin: 0 0;
+	margin: 0;
+	padding-top: 62px;
 	width: 470px;
 
 	font-size: 21px;
@@ -145,23 +141,20 @@ header {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1px;
-
 	text-align: center;
-	overflow-wrap: normal;
-	padding-top: 62px;
+	overflow-wrap: normal;	
 }
 
 .description p {
 	display: block;
-	margin: 0 0;
+	margin: 0;
+	padding-top: 18px;
+	padding-bottom: 42px;
 
 	font-size: 14px;
 	line-height: 45px;
 	text-transform: uppercase;
 	letter-spacing: 0.1px;
-
-	padding-top: 18px;
-	padding-bottom: 42px;
 }
 
 /*********************************************/
@@ -183,67 +176,117 @@ header {
 }
 
 .advantage-1-text {
-	min-width: 400px;
-	color: #FFFFFFFF;
+	width: 400px;
+
+	color: #FFFFFF;
+
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .advantage-1-text h2 {
-	display: block;
+	display: inline-block;
+	margin: 0;
+	padding-top: 47px; 
+	width: 200px;
+
 	font-size: 21px;
 	line-height: 21px;
-	text-transform: uppercase;
 	font-weight: bold;
-	text-align: center;
-	padding: 47px 0 0 100px; 
-	margin: 0;
-
-	width: 200px;
 	overflow-wrap: normal;
 }
 
 .advantage-1-text p:first-of-type {
 	display: block;
+	padding-top: 9px;
 
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
-
-	padding: 10px 0 0 176px;
 }
 
 .advantage-1-text p:last-of-type {
-	display: block;
+	display: inline-block;
+	margin: 0;
+	padding-top: 7px;
+	width: 300px;
 
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
-
-	width: 300px;
-	text-align: center;
-	text-transform: uppercase;
 	overflow-wrap: normal;
-
-	padding: 7px 0 0 55px;
 	letter-spacing: 0.5px;
 }
 
 /*********************************************/
 
 .advantage-2 {
-	background-color: #81b3d2;
+	list-style-type: none;
 }
 
+.advantage-2 ul {
+	display: flex;
+	flex-wrap: nowrap;
+	/*margin: 0; padding: 0;*/
+}
 
+.advantage-2 li {
+	/*margin: 0; padding: 0;*/
+	display: block;
+	list-style-type: none;
+	width: 400px;
 
-/*.second-advantage li {
-	list-style: none;
-	/*width: 241px;
+	background-color: #FFFFFF;
+
 	text-align: center;
-	white-space: nowrap;
-
-	padding: 14px 0 15px 0;
+	text-transform: uppercase;
 }
 
+.icon-home {
+	background-image: url("../img/icon-1.svg");
+	background-repeat: no-repeat;
+	background-position: center top 59px;
+}
+
+/*.icon-home */
+
+.icon-dish {
+	background-image: url("../img/icon-3.svg");
+	background-repeat: no-repeat;
+	background-position: center top 60px;
+}
+
+.icon-souvenir {
+	background-image: url("../img/icon-2.svg");
+	background-repeat: no-repeat;
+	background-position: center top 56px;
+}
+
+.advantage-2-list h3 {
+	display: inline-block;
+	margin: 0;
+	width: 300px;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+
+	padding-top: 160.5px;
+}
+
+.advantage-2-list p {
+	display: inline-block;
+	margin: 0;
+	width: 300px;
+	padding-top: 22px;
+	padding-bottom: 83px;
+
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	overflow-wrap: normal;
+	letter-spacing: 0.1px;
+}
 
 
 
