@@ -2,19 +2,19 @@
 body {
 	width: auto;
 	margin: 0 auto;
-
-	background-color: #54545451;
 	
 	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.6; 
+	opacity: 0.5; 
+
+	background-color: #f2f2f2;
 }
 
 .container {
+	width: 1200px;
 	display: flex; 	
 	flex-direction: column; 
-	width: 1200px;
 	margin: 0 auto;
 
 	font-family: "PT Sans", Arial, sans-serif;
@@ -34,32 +34,36 @@ header {
 
 .navigation {
 	display: flex;	
-	justify-content: space-between;	
+	justify-content: space-between;
+	flex-wrap: wrap;	
 
 	padding: 0;	
 	margin: 0;
 }
 
 .navigation li {
-	width: 241px;
+	width: auto;
+	display: block;
+
 	padding: 14px 0 15px 0;
 
 	list-style: none;
-	text-align: center;
 	white-space: nowrap;
 }
 .navigation li:nth-child(1) {
-	text-align: left;
 	margin-left: 71px;
+	text-align: left;
 }
 
 .navigation li:nth-child(2) {
+	margin-right: 130px;
 	text-align: left;
-	margin-right: 94px;
 }
+
 .navigation li:nth-child(3) {
+	margin-left: 130px;
 	text-align: right;
-	letter-spacing: 0.5px;
+	/*letter-spacing: 0.5px;*/
 }
 
 .navigation li:nth-child(4) { 
@@ -94,7 +98,7 @@ header {
 .logo:active {color: #FF006E;} 	
 .logo:visited {color: #FF006E;}
 
-/********************************************/
+/*********************************************/
 /*********************************************/
 
 .main-index {
@@ -107,7 +111,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/*align-items: stretch;			/*выравниваем по X*/	
 
 	background-image: url("../img/mountains.jpg");
 }
@@ -123,6 +126,7 @@ header {
 }
 
 .description {
+	width: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -151,6 +155,7 @@ header {
 	padding-top: 18px;
 	padding-bottom: 42px;
 
+	color: #333333;
 	font-size: 14px;
 	line-height: 45px;
 	text-transform: uppercase;
@@ -158,6 +163,7 @@ header {
 }
 
 /*********************************************/
+
 .advantages {
 	display: flex;
 	flex-direction: column;
@@ -167,29 +173,36 @@ header {
 .advantages ul {
 	margin: 0;
 	padding: 0;
+
+	list-style-type: none;
 }
 
+/*********************************************/
+
 .advantage-1 {
-	background-color: #81b3d2;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .advantage-1-text {
 	width: 400px;
-
-	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	text-transform: uppercase;
 	text-align: center;
+
+	background-color: #81b3d2;
+	color: #FFFFFF;
 }
 
 .advantage-1-text h2 {
-	display: inline-block;
+	width: 150px;
+	display: block;
 	margin: 0;
-	padding-top: 47px; 
-	width: 200px;
-
+	padding-top: 47px;
+	
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
@@ -206,11 +219,11 @@ header {
 }
 
 .advantage-1-text p:last-of-type {
-	display: inline-block;
+	width: 300px;
+	display: block;
 	margin: 0;
 	padding-top: 7px;
-	width: 300px;
-
+	
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
@@ -220,26 +233,21 @@ header {
 
 /*********************************************/
 
-.advantage-2 {
-	list-style-type: none;
-}
-
-.advantage-2 ul {
+.advantage-2-list {
 	display: flex;
 	flex-wrap: nowrap;
-	/*margin: 0; padding: 0;*/
 }
 
-.advantage-2 li {
-	/*margin: 0; padding: 0;*/
-	display: block;
-	list-style-type: none;
+.advantage-2-list li {
 	width: 400px;
-
-	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	text-align: center;
 	text-transform: uppercase;
+
+	background-color: #FFFFFF;
 }
 
 .icon-home {
@@ -247,8 +255,6 @@ header {
 	background-repeat: no-repeat;
 	background-position: center top 59px;
 }
-
-/*.icon-home */
 
 .icon-dish {
 	background-image: url("../img/icon-3.svg");
@@ -263,24 +269,24 @@ header {
 }
 
 .advantage-2-list h3 {
-	display: inline-block;
-	margin: 0;
+	display: block;
 	width: 300px;
+	margin: 0;
+	padding-top: 161px;
 
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 21px;
-
-	padding-top: 160.5px;
 }
 
 .advantage-2-list p {
-	display: inline-block;
-	margin: 0;
+	display: block;
 	width: 300px;
-	padding-top: 22px;
+	margin: 0;
+	padding-top: 23px;
 	padding-bottom: 83px;
 
+	color: #333333;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 21px;
@@ -288,32 +294,157 @@ header {
 	letter-spacing: 0.1px;
 }
 
+/*********************************************/
 
+.advantage-3 {
+	display: flex;
+	justify-content: space-between;
+}
 
+.advantage-3-text {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
+	text-transform: uppercase;
+	text-align: center;
 
+	background-color: #81b3d2;
+	color: #FFFFFF;
+}
 
+.advantage-3-text h2 {
+	width: 160px;
+	display: block;
+	margin: 0;
+	padding-top: 47px; 
+	
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	overflow-wrap: normal;
+}
 
+.advantage-3-text p:first-of-type {
+	display: block;
+	padding-top: 9px;
 
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+}
 
+.advantage-3-text p:last-of-type {
+	width: 330px;
+	display: block;
+	margin: 0;
+	padding-top: 7px;
+	
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	overflow-wrap: normal;
+	letter-spacing: 0.5px;
+}
 
+/*********************************************/
 
+.advantage-4-list {
+	display: flex;
+	flex-wrap: nowrap;
+}
 
+.advantage-4-list li {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
+	text-align: center;
+	text-transform: uppercase;
 
+	background-color: #EEEEEE;
+}
 
+.advantage-4-list h2 {
+	width: 150px;
+	padding-top: 47px;
+	margin: 0 auto;
+	
+	color: #333333;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+	overflow-wrap: normal;
+}
 
+.advantage-4-list p:first-of-type {
+	margin: 0;
+	padding-top: 24px;
+
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+}
+
+.advantage-4-list p:last-of-type {
+	margin: 0;
+	width: 270px;
+	padding-top: 21px;
+	padding-bottom: 60px;
+
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	overflow-wrap: normal;
+	letter-spacing: 0.1px;
+}
 
 /***********************/
 	.search {
-		background-color: #4040403A;
+		border: 1px dotted green;
+		background-color: #FFFFFFFF;
 		;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***********************/
 	.googlemap {
 		background-color: #FF6A0041;
 		;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***********************************************/
 /***********************************************/
