@@ -17,7 +17,7 @@ body {
 	flex-direction: column; 
 	margin: 0 auto;
 
-	font-family: "PT Sans", Arial, sans-serif;
+	font-family: "pt sans", arial, sans-serif;
 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -25,8 +25,8 @@ body {
 /***********************************************/
 /***********************************************/
 
-footer {	background-color: #FF00007B;}
-main {	background-color: #6868685F;}
+footer {	background-color: #ff00007b;}
+main {	background-color: #6868685f;}
 
 header {
 	position: relative;
@@ -36,9 +36,10 @@ header {
 	display: flex;	
 	justify-content: space-between;
 	flex-wrap: wrap;	
-
 	padding: 0;	
 	margin: 0;
+
+	background-color: #ffffff;
 }
 
 .navigation li {
@@ -49,6 +50,7 @@ header {
 
 	list-style: none;
 	white-space: nowrap;
+	/*border: 1px dotted red;*/
 }
 .navigation li:nth-child(1) {
 	margin-left: 71px;
@@ -77,7 +79,7 @@ header {
 	font-size: 14px;
 	line-height: 26px;
 
-	text-decoration: none; /*Убираем оформление ссылок:*/
+	text-decoration: none;
 	color: #000000;
 } 
 /****************************************/
@@ -93,10 +95,10 @@ header {
 	
 /*todo: цвета заменить,*/
 /*todo: проверить действие на второй странице:*/
-.logo:link {color: #FF006E;}	
-.logo:hover {color: #FF006E;}	
-.logo:active {color: #FF006E;} 	
-.logo:visited {color: #FF006E;}
+.logo:link {color: #ff006e;}	
+.logo:hover {color: #ff006e;}	
+.logo:active {color: #ff006e;} 	
+.logo:visited {color: #ff006e;}
 
 /*********************************************/
 /*********************************************/
@@ -107,7 +109,7 @@ header {
 }
 
 /*********************************************/
-.welcome {
+.welcome-sector {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -131,7 +133,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 }
 
 .description h1 {
@@ -164,13 +166,13 @@ header {
 
 /*********************************************/
 
-.advantages {
+.advantages-sector {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.advantages ul {
+.advantages-sector ul {
 	margin: 0;
 	padding: 0;
 
@@ -179,12 +181,12 @@ header {
 
 /*********************************************/
 
-.advantage-1 {
+.line-1 {
 	display: flex;
 	justify-content: space-between;
 }
 
-.advantage-1-text {
+.line-1-text {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
@@ -194,10 +196,10 @@ header {
 	text-align: center;
 
 	background-color: #81b3d2;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
-.advantage-1-text h2 {
+.line-1-text h2 {
 	width: 150px;
 	display: block;
 	margin: 0;
@@ -209,7 +211,7 @@ header {
 	overflow-wrap: normal;
 }
 
-.advantage-1-text p:first-of-type {
+.line-1-text p:first-of-type {
 	display: block;
 	padding-top: 9px;
 
@@ -218,7 +220,7 @@ header {
 	font-weight: normal;
 }
 
-.advantage-1-text p:last-of-type {
+.line-1-text p:last-of-type {
 	width: 300px;
 	display: block;
 	margin: 0;
@@ -233,12 +235,12 @@ header {
 
 /*********************************************/
 
-.advantage-2-list {
+.line-2-list {
 	display: flex;
 	flex-wrap: nowrap;
 }
 
-.advantage-2-list li {
+.line-2-list li {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
@@ -247,7 +249,7 @@ header {
 	text-align: center;
 	text-transform: uppercase;
 
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 }
 
 .icon-home {
@@ -268,7 +270,7 @@ header {
 	background-position: center top 56px;
 }
 
-.advantage-2-list h3 {
+.line-2-list h3 {
 	display: block;
 	width: 300px;
 	margin: 0;
@@ -279,7 +281,7 @@ header {
 	line-height: 21px;
 }
 
-.advantage-2-list p {
+.line-2-list p {
 	display: block;
 	width: 300px;
 	margin: 0;
@@ -296,12 +298,12 @@ header {
 
 /*********************************************/
 
-.advantage-3 {
+.line-3 {
 	display: flex;
 	justify-content: space-between;
 }
 
-.advantage-3-text {
+.line-3-text {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
@@ -311,10 +313,10 @@ header {
 	text-align: center;
 
 	background-color: #81b3d2;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
-.advantage-3-text h2 {
+.line-3-text h2 {
 	width: 160px;
 	display: block;
 	margin: 0;
@@ -326,7 +328,7 @@ header {
 	overflow-wrap: normal;
 }
 
-.advantage-3-text p:first-of-type {
+.line-3-text p:first-of-type {
 	display: block;
 	padding-top: 9px;
 
@@ -335,7 +337,7 @@ header {
 	font-weight: normal;
 }
 
-.advantage-3-text p:last-of-type {
+.line-3-text p:last-of-type {
 	width: 330px;
 	display: block;
 	margin: 0;
@@ -350,12 +352,12 @@ header {
 
 /*********************************************/
 
-.advantage-4-list {
+.line-4-list {
 	display: flex;
 	flex-wrap: nowrap;
 }
 
-.advantage-4-list li {
+.line-4-list li {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
@@ -364,10 +366,10 @@ header {
 	text-align: center;
 	text-transform: uppercase;
 
-	background-color: #EEEEEE;
+	background-color: #eeeeee;
 }
 
-.advantage-4-list h2 {
+.line-4-list h2 {
 	width: 150px;
 	padding-top: 47px;
 	margin: 0 auto;
@@ -379,7 +381,7 @@ header {
 	overflow-wrap: normal;
 }
 
-.advantage-4-list p:first-of-type {
+.line-4-list p:first-of-type {
 	margin: 0;
 	padding-top: 24px;
 
@@ -389,7 +391,7 @@ header {
 	line-height: 21px;
 }
 
-.advantage-4-list p:last-of-type {
+.line-4-list p:last-of-type {
 	margin: 0;
 	width: 270px;
 	padding-top: 21px;
@@ -403,31 +405,64 @@ header {
 	letter-spacing: 0.1px;
 }
 
-/***********************/
-	.search {
-		border: 1px dotted green;
-		background-color: #FFFFFFFF;
-		;
-	}
+/*********************************************/
+.search-sector {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	/*border: 1px dotted green;*/
+	background-color: #ffffff;
+}
+
+.before-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.before-form h2 {
+	padding-top: 51px;
+	margin: 0;
+	
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.before-form p {
+	width: 500px;
+	margin: 0;
+	padding-top: 24px;
+
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	overflow-wrap: normal;
+}
+
+.open-pop-up {
+	width: 568px;
+	margin-top: 46px;
+
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	padding-top: 30px;
+	padding-bottom: 31px;
+
+	background-color: #766357;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-/***********************/
-	.googlemap {
-		background-color: #FF6A0041;
-		;
-	}
 
 
 
@@ -452,16 +487,16 @@ header {
 footer {
 	/*todo: сделать полупрозрачную подложку*/
 
-	/*Флекс-модель:*/
+	/*флекс-модель:*/
 	display: flex;
-	/*Дочерние выравниваются в одну линию и равномерно распределяются:*/
+	/*дочерние выравниваются в одну линию и равномерно распределяются:*/
 	flex-wrap: nowrap; 
 	justify-content: space-around;		
 }
 	
 	footer>p {
-		/*Временный цвет:*/
-		background-color: #7FFF8E6B;
+		/*временный цвет:*/
+		background-color: #7fff8e6b;
 		margin: 0;
 		padding: 0;
 		
@@ -472,19 +507,19 @@ footer {
 	}
 	
 	.websites {
-		/*Временный цвет:*/
-		background-color: #0054FF35;
+		/*временный цвет:*/
+		background-color: #0054ff35;
 		margin: 0;
 		padding: 0;
 		width: 240px;
 		
-		/*Убираем стили списка:*/
+		/*убираем стили списка:*/
 		list-style: none; 			
 		
-		/*Вложенные li - согласно flex-модели*/
+		/*вложенные li - согласно flex-модели*/
 		display: flex;
 		flex-wrap: nowrap; 	
-		/*Располагаем дочерние li в одну строку и сдвигаем в центр блока по вертикали:*/			
+		/*располагаем дочерние li в одну строку и сдвигаем в центр блока по вертикали:*/			
 		justify-content: center;
 		align-items: center;
 	}
@@ -498,27 +533,27 @@ footer {
 			background-repeat: no-repeat;
 		}
 
-		.websites li:nth-child(1) {background-image: URL("../img/twitter.svg");}
-		.websites li:nth-child(2) {background-image: URL("../img/fb-icon.svg");}
-		.websites li:nth-child(3) {background-image: URL("../img/youtube.svg");}
+		.websites li:nth-child(1) {background-image: url("../img/twitter.svg");}
+		.websites li:nth-child(2) {background-image: url("../img/fb-icon.svg");}
+		.websites li:nth-child(3) {background-image: url("../img/youtube.svg");}
 
 		.websites a {
 			/*margin: 0;
 			padding: 0;*/
 
-			/*Меняем модель на блочное поведение*/
+			/*меняем модель на блочное поведение*/
 			display: block;
 
 			width: 46px; 					
 			height: 49px; 	
 			
-			/*Текст есть, но визуально не представлен*/
+			/*текст есть, но визуально не представлен*/
 			font-size: 0;
 		}
 
 	.copyright {
-		background-color: #7C7C7C95;
-		/*background-image: URL("../img/logo-htmlacademy.svg");
+		background-color: #7c7c7c95;
+		/*background-image: url("../img/logo-htmlacademy.svg");
 		background-repeat: no-repeat; 
 		background-position: center;*/
 		width: 240px;
@@ -526,37 +561,59 @@ footer {
 		flex-wrap: nowrap;
 		align-items: center; 
 	}
-
+/*
 		.copyright>a {
-			background-color: #4CFF0066;
+			background-color: #4cff0066;
 			text-decoration: none;
 			font-size: 14px;
 			line-height: 120px;
+		}*/
+
+		.copyright .logo-html {
+			width: 115px;
+			height: 41px;
+			vertical-align: middle;
+			fill: #231f20;
 		}
 
+		.autor-anchor:hover {
+			color: red;
+		}
+
+		.autor-anchor:hover .logo-html {
+			fill: red;
+		}
+/*
 		.logo-academy {
-			background-color: #FF006E56;
+			background-color: #ff006e56;
 			
 			font-size: 0;
 
-			background-image: URL("../img/logo-htmlacademy.svg");
+			background-image: url("../img/logo-htmlacademy.svg");
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			width: 115px;
 			height: 41px;
 		}
+*/
+
+
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 
 
-.visually-hidden {
-	display: none;
+.visually-hidden:not(:focus):not(:active) {
+	display: none;		/*возможно, удалить*/
 	position: absolute;
 	width: 1px;
 	height: 1px;
 	margin: -1px;
 	border: 0;
 	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
@@ -564,8 +621,8 @@ footer {
 
 /*
 background-color:
-Даже, если изображение непрозначно и цвет не будет показан при нормальных 
+даже, если изображение непрозначно и цвет не будет показан при нормальных 
 обстоятельствах, веб-разработчику следует всегда указывать аттрибут background-color. 
-Если изображение не может быть загружено —например, в случае отказа сетевого 
+если изображение не может быть загружено —например, в случае отказа сетевого 
 подключения — у элемента будет отображён цветной фон.
 */
