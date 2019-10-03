@@ -2,13 +2,13 @@
 body {
 	width: auto;
 	margin: 0 auto;
-
+/*
 	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	opacity: 0.5; 
-
 	background-color: #f2f2f2;
+*/
 }
 
 .container {
@@ -29,60 +29,49 @@ footer {	background-color: #ff00007b;}
 main {	background-color: #6868685f;}
 
 header {
+	width: 1200px;
 	position: relative;
+
+	margin: auto;
 }
 
-.navigation {
-	display: flex;	
-	justify-content: space-between;
-	flex-wrap: wrap;	
+.navigator {
 	padding: 0;	
-	margin: 0;
+	margin: 0 71px;
+	min-height: 56px;
 
-	background-color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.navigation li {
-	width: auto;
+.go-to {
+	width: 240px;
+
+	list-style-type: none;
+}
+
+.go-to a {
 	display: block;
 
-	padding: 14px 0 15px 0;
+	margin: 14px auto;
 
-	list-style: none;
-	white-space: nowrap;
-	/*border: 1px dotted red;*/
-}
-.navigation li:nth-child(1) {
-	margin-left: 71px;
-	text-align: left;
-}
-
-.navigation li:nth-child(2) {
-	margin-right: 130px;
-	text-align: left;
-}
-
-.navigation li:nth-child(3) {
-	margin-left: 130px;
-	text-align: right;
-	/*letter-spacing: 0.5px;*/
-}
-
-.navigation li:nth-child(4) { 
-	text-align: right;
-	margin-right: 71px;
-}
-
-.navigation a {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 26px;
-
 	text-decoration: none;
 	color: #000000;
-} 
-/****************************************/
+}
+
+.go-to:nth-child(4n-1) {
+	margin-left: auto;
+	text-align: right;
+}
+
+.go-to:nth-child(4n) {
+	text-align: right;
+}
+
 .logo {
 	position: absolute; 
 	left: 50%; 	
@@ -91,6 +80,8 @@ header {
 
 	width: 140px;
 	height: 72px;
+
+	/*todo: на второй странице cursor: pointer;*/
 }
 	
 /*todo: цвета заменить,*/
@@ -199,7 +190,7 @@ header {
 
 .primary h2 {
 	width: 150px;
-	margin: 47px auto 24px;
+	margin: 47px auto 23px;
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
@@ -207,7 +198,7 @@ header {
 }
 
 .primary p {
-	margin: 22px auto;
+	margin: 0 auto 22px;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
