@@ -2,7 +2,7 @@
 body {
 	width: auto;
 	margin: 0 auto;
-	
+
 	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
@@ -168,125 +168,113 @@ header {
 
 .advantages-sector {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.advantages-sector ul {
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-
-	list-style-type: none;
 }
 
-/*********************************************/
-
-.line-1 {
+.advantage_wrapper {
 	display: flex;
-	justify-content: space-between;
-}
-
-.line-1-text {
-	width: 400px;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-wrap: wrap;
+}
 
+.primary {
+	width: 400px; 
+	min-height: 256px;
+
+	list-style: none;
+	text-align: center; 
 	text-transform: uppercase;
-	text-align: center;
-
+}
+ 
+.primary.blue-layout {
 	background-color: #81b3d2;
 	color: #ffffff;
 }
 
-.line-1-text h2 {
+.primary.lightgray-layout {
+	background-color: #eeeeee;
+}
+
+.primary h2 {
 	width: 150px;
-	display: block;
-	margin: 0;
-	padding-top: 47px;
-	
+	margin: 47px auto 24px;
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
 	overflow-wrap: normal;
 }
 
-.line-1-text p:first-of-type {
-	display: block;
-	padding-top: 9px;
-
+.primary p {
+	margin: 22px auto;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
 }
 
-.line-1-text p:last-of-type {
+.primary p:not(:first-of-type) {
 	width: 300px;
-	display: block;
-	margin: 0;
-	padding-top: 7px;
-	
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
 	overflow-wrap: normal;
 	letter-spacing: 0.5px;
 }
 
-/*********************************************/
-
-.line-2-list {
-	display: flex;
-	flex-wrap: nowrap;
+.advantage_wrapper img {
+	width: 800px;
+	min-height: 256px; 
+	background-color: #81b3d2;
 }
 
-.line-2-list li {
-	width: 400px;
+.secondary-wrapper {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-wrap: wrap;
 
-	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.secondary {
+	width: 400px; 
+	min-height: 330px;
+
+	list-style: none;
+	text-align: center; 
 	text-transform: uppercase;
 
 	background-color: #ffffff;
 }
 
-.icon-home {
+.secondary.icon-home {
 	background-image: url("../img/icon-1.svg");
 	background-repeat: no-repeat;
 	background-position: center top 59px;
 }
 
-.icon-dish {
+.secondary.icon-dish {
 	background-image: url("../img/icon-3.svg");
 	background-repeat: no-repeat;
 	background-position: center top 60px;
 }
 
-.icon-souvenir {
+.secondary.icon-souvenir {
 	background-image: url("../img/icon-2.svg");
 	background-repeat: no-repeat;
 	background-position: center top 56px;
 }
 
-.line-2-list h3 {
-	display: block;
-	width: 300px;
-	margin: 0;
-	padding-top: 161px;
+.secondary h3 {
+	min-width: 300px;
+	margin: 161px auto 12px;
 
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 21px;
 }
 
-.line-2-list p {
-	display: block;
+.secondary p {
 	width: 300px;
-	margin: 0;
-	padding-top: 23px;
-	padding-bottom: 83px;
+	margin: 24px auto 12px;
 
 	color: #333333;
 	font-size: 14px;
@@ -297,124 +285,19 @@ header {
 }
 
 /*********************************************/
-
-.line-3 {
-	display: flex;
-	justify-content: space-between;
-}
-
-.line-3-text {
-	width: 400px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	text-transform: uppercase;
-	text-align: center;
-
-	background-color: #81b3d2;
-	color: #ffffff;
-}
-
-.line-3-text h2 {
-	width: 160px;
-	display: block;
-	margin: 0;
-	padding-top: 47px; 
-	
-	font-size: 21px;
-	line-height: 21px;
-	font-weight: bold;
-	overflow-wrap: normal;
-}
-
-.line-3-text p:first-of-type {
-	display: block;
-	padding-top: 9px;
-
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-}
-
-.line-3-text p:last-of-type {
-	width: 330px;
-	display: block;
-	margin: 0;
-	padding-top: 7px;
-	
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-	overflow-wrap: normal;
-	letter-spacing: 0.5px;
-}
-
 /*********************************************/
-
-.line-4-list {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.line-4-list li {
-	width: 400px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	text-align: center;
-	text-transform: uppercase;
-
-	background-color: #eeeeee;
-}
-
-.line-4-list h2 {
-	width: 150px;
-	padding-top: 47px;
-	margin: 0 auto;
-	
-	color: #333333;
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 21px;
-	overflow-wrap: normal;
-}
-
-.line-4-list p:first-of-type {
-	margin: 0;
-	padding-top: 24px;
-
-	color: #333333;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 21px;
-}
-
-.line-4-list p:last-of-type {
-	margin: 0;
-	width: 270px;
-	padding-top: 21px;
-	padding-bottom: 60px;
-
-	color: #333333;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 21px;
-	overflow-wrap: normal;
-	letter-spacing: 0.1px;
-}
-
-/*********************************************/
+/*
 .search-sector {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	/*border: 1px dotted green;*/
+	/*
 	background-color: #ffffff;
 }
-
+*/
+/*
 .before-form {
 	display: flex;
 	flex-direction: column;
@@ -462,7 +345,7 @@ header {
 
 
 
-
+*/
 
 
 
@@ -602,10 +485,11 @@ footer {
 /*-------------------------------------------*/
 
 
-.visually-hidden:not(:focus):not(:active) {
+/*.visually-hidden:not(:focus):not(:active) {*/
+.visually-hidden {
 	display: none;		/*возможно, удалить*/
-	position: absolute;
-	width: 1px;
+	/*position: absolute;*/
+/*	width: 1px;
 	height: 1px;
 	margin: -1px;
 	border: 0;
@@ -615,7 +499,7 @@ footer {
 
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	overflow: hidden;
+	overflow: hidden;*/
 }
 
 
