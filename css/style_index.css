@@ -2,13 +2,13 @@
 body {
 	width: auto;
 	margin: 0 auto;
-/*
+
 	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	opacity: 0.5; 
 	background-color: #f2f2f2;
-*/
+
 }
 
 .container {
@@ -51,15 +51,15 @@ header {
 }
 
 .go-to a {
+	width: 240px;
 	display: block;
-
 	margin: 14px auto;
 
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
+	font-weight: bold;
 	line-height: 26px;
 	text-decoration: none;
+	text-transform: uppercase;
 	color: #000000;
 }
 
@@ -73,14 +73,12 @@ header {
 }
 
 .logo {
+	width: 140px;
+	height: 72px;
 	position: absolute; 
 	left: 50%; 	
 	top: -1px;
 	margin-left: -70px;
-
-	width: 140px;
-	height: 72px;
-
 	/*todo: на второй странице cursor: pointer;*/
 }
 	
@@ -96,61 +94,68 @@ header {
 
 .main-index {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 /*********************************************/
 .welcome-sector {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
-
+	
+	background-color: #e4f1f9;
 	background-image: url("../img/mountains.jpg");
+	background-repeat: no-repeat;
+	background-position: center top -83px;
 }
 
 .sedona {
-	height: 430px;
-	padding-left: 370px;
-	padding-top: 77px;
+	min-height: 508px;
+	width: 100%;
+	margin: 0 auto;
 
 	background-image: url("../img/polygon.svg");
 	background-repeat: no-repeat;
-	background-position: center bottom -4px;
+	background-position: center bottom -2px;
+	border-bottom: 1px solid white; 
 }
 
-.description {
-	width: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.sedona img {
+	display: block;
+	min-width: 459px;
+	min-height: 353px;
+	margin: 76px auto 0;
+}
+
+.legend {
+	min-height: 215px; /*-1px*/
+	width: 100%;
+	margin: 0 auto;
+
+	text-align: center;
 
 	background-color: #ffffff;
 }
 
-.description h1 {
-	display: block;
-	margin: 0;
-	padding-top: 62px;
+.legend h1 {
 	width: 470px;
+	margin: 59px auto 27px; /*-1px to top*/
 
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1px;
-	text-align: center;
 	overflow-wrap: normal;	
 }
 
-.description p {
-	display: block;
-	margin: 0;
-	padding-top: 18px;
-	padding-bottom: 42px;
+.legend p {
+	width: calc(100% - 100px);
+	margin: 0 auto;
 
 	color: #333333;
 	font-size: 14px;
-	line-height: 45px;
+	line-height: 26px;
 	text-transform: uppercase;
 	letter-spacing: 0.1px;
 }
@@ -162,6 +167,8 @@ header {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+
+	outline: 1px dotted red;
 }
 
 .advantage_wrapper {
@@ -190,7 +197,7 @@ header {
 
 .primary h2 {
 	width: 150px;
-	margin: 47px auto 23px;
+	margin: 47px auto 24px;
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
@@ -228,7 +235,7 @@ header {
 .secondary {
 	width: 400px; 
 	min-height: 330px;
-
+	
 	list-style: none;
 	text-align: center; 
 	text-transform: uppercase;
@@ -277,6 +284,23 @@ header {
 
 /*********************************************/
 /*********************************************/
+
+.pre-form {
+	margin: 0;
+	outline: 1px dotted green;
+}
+
+
+
+/*.primary {
+	width: 400px; 
+	min-height: 256px;
+
+	list-style: none;
+	text-align: center; 
+	text-transform: uppercase;
+}*/
+
 /*
 .search-sector {
 	display: flex;
