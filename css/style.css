@@ -1,0 +1,536 @@
+
+@font-face {
+	font-family: "ptsans";
+	font-style: normal;
+	font-weight: normal;
+	src: 
+		url("../fonts/ptsans.woff2") format("woff2"),
+		url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+	font-family: "ptsans";
+	font-style: normal;
+	font-weight: bold;
+	src: 
+		url("../fonts/ptsansbold.woff2") format("woff2"),
+		url("../fonts/ptsansbold.woff") format("woff");
+}
+
+body {
+	width: auto;
+	margin: 0 auto;
+
+	font-family: "ptsans", arial, sans-serif;
+
+	/*background-image: url("../img/temp_sedona-index.png"); 
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	opacity: 0.5; 
+	
+	background-color: #f2f2f2;*/
+
+}
+
+.container {
+	width: 1200px;
+	display: flex; 	
+	flex-direction: column; 
+	margin: 0 auto;
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/***********************************************/
+/***********************************************/
+
+main {	background-color: #6868685f;}
+
+header {
+	width: 1200px;
+	position: relative;
+
+	margin: auto;
+}
+
+.navigator {
+	padding: 0;	
+	margin: 0 71px;
+	min-height: 56px;
+	list-style-type: none;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.go-to-page a {
+	width: 240px;
+	display: block;
+	margin: 14px auto;
+
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.go-to-page:nth-child(4n-1) {
+	margin-left: auto;
+	text-align: right;
+}
+
+.go-to-page:nth-child(4n) {
+	text-align: right;
+}
+
+.go-to-page a:not(.inactive):hover,
+.go-to-page a:not(.inactive):focus {
+	color: #81b3d2;
+	transition: 0.5s;
+}
+
+.go-to-page a:not(.inactive):active {
+	color: #cacaca;
+	transition: 0.2s;
+}
+
+.go-to-page .inactive {
+	color: #766357;
+	cursor: default;
+}
+
+.logo {
+	width: 140px;
+	height: 72px;
+	position: absolute; 
+	left: 50%; 	
+	top: -1px;
+	margin-left: -70px;
+}
+
+/*********************************************/
+/*********************************************/
+
+.main-index {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*********************************************/
+.welcome-sector {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	background-color: #e4f1f9;
+	background-image: url("../img/mountains.jpg");
+	background-repeat: no-repeat;
+	background-position: center top -83px;
+}
+
+.sedona {
+	min-height: 508px;
+	width: 100%;
+	margin: 0 auto;
+
+	background-image: url("../img/polygon.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom -2px;
+	border-bottom: 1px solid white; 
+}
+
+.sedona img {
+	display: block;
+	min-width: 459px;
+	min-height: 353px;
+	margin: 76px auto 0;
+}
+
+.presentation {
+	min-height: 215px; /*-1px*/
+	width: 100%;
+	margin: 0 auto;
+
+	text-align: center;
+
+	background-color: #ffffff;
+}
+
+.presentation h1 {
+	width: 470px;
+	margin: 59px auto 27px; /*-1px to top*/
+
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1px;
+	overflow-wrap: normal;	
+}
+
+.presentation p {
+	width: calc(100% - 100px);
+	margin: 0 auto;
+
+	color: #333333;
+	font-size: 14px;
+	line-height: 26px;
+	text-transform: uppercase;
+	letter-spacing: 0.1px;
+}
+
+/*********************************************/
+
+.advantages-sector {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
+.advantage_wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.primary {
+	width: 400px; 
+	min-height: 256px;
+
+	list-style: none;
+	text-align: center; 
+	text-transform: uppercase;
+}
+ 
+.primary.blue-layout {
+	background-color: #81b3d2;
+	color: #ffffff;
+}
+
+.primary.lightgray-layout {
+	background-color: #eeeeee;
+}
+
+.primary h2 {
+	width: 150px;
+	margin: 47px auto 24px;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	overflow-wrap: normal;
+}
+
+.primary p {
+	margin: 0 auto 22px;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+}
+
+.primary p:not(:first-of-type) {
+	width: 300px;
+	overflow-wrap: normal;
+	letter-spacing: 0.5px;
+}
+
+.advantage_wrapper img {
+	width: 800px;
+	min-height: 256px; 
+	background-color: #81b3d2;
+}
+
+.secondary-wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+}
+
+.secondary {
+	width: 400px; 
+	min-height: 330px;
+
+	list-style: none;
+	text-align: center; 
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+.secondary.icon-home {
+	background-image: url("../img/icon-1.svg");
+	background-repeat: no-repeat;
+	background-position: center top 59px;
+}
+
+.secondary.icon-dish {
+	background-image: url("../img/icon-3.svg");
+	background-repeat: no-repeat;
+	background-position: center top 60px;
+}
+
+.secondary.icon-souvenir {
+	background-image: url("../img/icon-2.svg");
+	background-repeat: no-repeat;
+	background-position: center top 56px;
+}
+
+.secondary h3 {
+	min-width: 300px;
+	margin: 161px auto 12px;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+}
+
+.secondary p {
+	width: 300px;
+	margin: 24px auto 12px;
+
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	overflow-wrap: normal;
+	letter-spacing: 0.1px;
+}
+
+/*********************************************/
+/*********************************************/
+
+.search-sector {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.pre-form {
+	width: 100%;
+	min-height: 291px;
+	margin: 0 auto;
+
+	text-align: center; 
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+.pre-form h2 {
+	margin: 50px auto 24px;
+	
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.pre-form p {
+	width: 500px;
+	margin: 20px auto;
+
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	overflow-wrap: normal;
+}
+
+.open-popup-clicker {
+	display: block;
+	width: 568px;
+	margin: 47px auto 0;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 86px;
+	text-decoration: none;
+	color: #ffffff;
+
+	background-color: #766357;
+}
+
+.open-popup-clicker:hover {
+	background-color: #604e43;
+	transition: 0.5s;
+}
+
+.open-popup-clicker:active {
+	background-color: #503e33;
+	transition: 0.2s;
+}
+
+.form-hotel-selector {
+	width: 568px;
+	min-height: 395px;
+	position: absolute;
+	left: calc(50% - 284px);
+	bottom: 77px;
+
+	background-color: #ffffff;
+}
+
+/*.Layer_35_copy {
+  background-image: url("Layer 35 copy.png");
+  position: absolute;
+  left: 342px;
+  top: 2162px;
+  width: 597px;
+  height: 424px;
+  z-index: 6;
+}
+*/
+
+
+/***********************************************/
+
+.map-wrapper {
+	height: 472px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.map-surface {
+	display: block;
+	width: 1718px;
+	height: 748px;
+	margin: -153px -259px;
+}
+
+/***********************************************/
+
+footer {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;	
+
+	background-color: #ffffff;	
+	opacity: 0.8;
+}
+
+.equalizer {
+	display: block;
+	margin: 0 auto;
+	padding: 0; 
+	min-height: 120px;
+	width: 400px;
+
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.visitsedona {
+	margin: 47px auto;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.websites {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	list-style-type: none;
+}
+
+.go-to-network a {
+	display: block;
+	width: 46px; 					
+	height: 49px; 
+	margin: 6px;
+
+	font-size: 0;
+	
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #81b3d2;
+}
+
+.go-to-network a:hover {
+	background-color: #669ec0;
+	transition: 0.5s;
+}
+
+/*todo: добиться затемнения значка во время нажатия*/
+.go-to-network a:active {
+	background-color: #5496bd;
+	transition: 0.2s;
+}
+
+.twitter {background-image: url("../img/twitter.svg");}
+.facebook {background-image: url("../img/fb-icon.svg");}
+.youtube {background-image: url("../img/youtube.svg");}
+
+.copyright {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.website-by {
+	margin: auto 5px;
+
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.logo-html {
+	margin: auto 5px;
+
+	width: 108px;
+	height: 37px;
+	vertical-align: middle;
+	fill: #231f20;
+}
+
+.go-to-academy:hover .logo-html {
+	fill: #81b3d2;
+	transition: 0.5s;
+}
+
+.go-to-academy:active .logo-html {
+	fill: #bdbbbc;
+	transition: 0.2s; 
+}
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*.visually-hidden:not(:focus):not(:active) {*/
+.visually-hidden {
+	display: none;		/*возможно, удалить*/
+	/*position: absolute;*/
+/*	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;*/
+}
+
+
+/*
+background-color:
+даже, если изображение непрозначно и цвет не будет показан при нормальных 
+обстоятельствах, веб-разработчику следует всегда указывать аттрибут background-color. 
+если изображение не может быть загружено —например, в случае отказа сетевого 
+подключения — у элемента будет отображён цветной фон.
+*/

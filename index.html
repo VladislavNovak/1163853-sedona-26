@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - небольшой городок в Аризоне, заслуживающий большего!</title>
-    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <!-- Добавить fonts-привязку к стилю в Google -->
   </head>
   <body>
     <!-- основная рабочая область: -->
@@ -15,20 +13,20 @@
     	<header>
   			<ul class="navigator">
   				<li class="go-to-page">
-            <a href="info.html" aria-label="Переход к странице с информацией">Информация</a>
+            <a href="#" aria-label="Переход к странице с информацией">Информация</a>
           </li>
   				<li class="go-to-page">
-            <a href="foto.html" aria-label="Переход к странице с фото и видео">Фото и видео</a>
+            <a href="#" aria-label="Переход к странице с фото и видео">Фото и видео</a>
           </li>
   				<li class="go-to-page">
-            <a href="mapofstates.html" aria-label="Переход к странице с картой штата">Карта штата</a>
+            <a href="#" aria-label="Переход к странице с картой штата">Карта штата</a>
           </li>
   				<li class="go-to-page">
             <a href="hotels.html" aria-label="Переход к странице с гостиницами">Гостиницы</a>
           </li>
   			</ul>
-        <a class="logo">
-          <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип Citi of Sedona" >
+        <a class="logo" aria-label="Перехода нет. Мы уже находимся на нужной странице">
+          <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип Citi of Sedona">
         </a>
      	</header>
       <!------------------------------->
@@ -106,46 +104,41 @@
           <div class="pre-form">
             <h2>Заинтересовались?</h2>
             <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <a href="#" class="open-popup">Поиск гостиницы в Седоне</a>
+            <a class="open-popup-clicker" href="#hotel-selector">Поиск гостиницы в Седоне</a>
           </div>
           <!------------------------------->
-<!--           
-          <form action="https://echo.htmlacademy.ru" method="get">
-            
+          <form class="form-hotel-selector" id="hotel-selector" action="https://echo.htmlacademy.ru" method="get">
             <div class="arrival">
               <label for="idArrival_date">Дата заезда:</label>
               <input type="date" id="idArrival_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
               <div class="date-picker"></div>
             </div>
-            
+            <!------------------------------->
             <div class="departure">
               <label for="idDeparture_date">Дата выезда:</label>
               <input type="date" id="idDeparture_date" value="2017-04-24" min="2017-01-21" max="2017-12-28">
               <div class="date-picker"></div>
             </div>
-            
+            <!------------------------------->
             <div class="counter">
               <label for="adult">Взрослые:</label>
               <button type="button">-</button>
               <input type="text" id="adult" value="0" maxlength="2" size="2">
               <button type="button">+</button>
-        
+              <!------------------------------->
               <label for="children">Дети:</label>
               <button type="button">-</button>
               <input type="text" id="children" value="0" maxlength="2" size="2">
               <button type="button">+</button>
             </div>
-            
+            <!------------------------------->
             <button type="submit">Найти</button>
-
           </form>
--->
+          <!-------------------------------> 
           <div class="map-wrapper">
             <h3 class="visually-hidden">Интерактивная карта</h3>
             <img class="map-surface" src="img/map.jpg" width="1718" height="748" alt="Карта штата Аризона">
           </div>  
-
-          <!-- <div class="temp"></div> -->
         </section>
     	</main>
       <!-------------------------------> 
