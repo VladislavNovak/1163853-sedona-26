@@ -22,22 +22,17 @@ body {
 	margin: 0 auto;
 
 	font-family: "ptsans", arial, sans-serif;
-
+	background-color: #f2f2f2;
 	
 /*	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	opacity: 0.5; */
 	
-	background-color: #f2f2f2;
-
-	
 /*	background-image: url("../img/temp_sedona-hotels.jpg"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.5; 
-	
-	background-color: #f2f2f2;*/
+	opacity: 0.5; */
 
 }
 
@@ -53,28 +48,32 @@ body {
 /***********************************************/
 /***********************************************/
 
-main {	background-color: #6868685f;}
-
 header {
-	width: 1200px;
 	position: relative;
 
+	width: 1200px;
 	margin: auto;
+
+	background-color: #ffffff;
 }
 
 .navigator {
-	padding: 0;	
-	margin: 0 71px;
-	min-height: 56px;
-	list-style-type: none;
-
 	display: flex;
 	flex-wrap: wrap;
+
+	padding: 0;	
+	margin: 0 71px;
+	
+	list-style-type: none;
+}
+
+.go-to-page {
+	min-height: 56px;
+	width: 240px;
 }
 
 .go-to-page a {
-	width: 240px;
-	display: block;
+	display: inline-block;
 	margin: 14px auto;
 
 	font-size: 14px;
@@ -97,12 +96,10 @@ header {
 .go-to-page a:not(.inactive):hover,
 .go-to-page a:not(.inactive):focus {
 	color: #81b3d2;
-	transition: 0.5s;
 }
 
 .go-to-page a:not(.inactive):active {
 	color: #cacaca;
-	transition: 0.2s;
 }
 
 .go-to-page .inactive {
@@ -200,7 +197,7 @@ header {
 
 .advantage_wrapper {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	flex-wrap: wrap;
 }
 
@@ -244,15 +241,22 @@ header {
 	letter-spacing: 0.5px;
 }
 
-.advantage_wrapper img {
-	width: 800px;
-	min-height: 256px; 
+.img-wrapper {
+	display: block;
+
+	font-size: 0;
+
 	background-color: #81b3d2;
+}
+
+.img_wrapper img {
+	width: 800px;
+	min-height: 256px;
 }
 
 .secondary-wrapper {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	flex-wrap: wrap;
 
 	margin: 0;
@@ -313,25 +317,16 @@ header {
 /*********************************************/
 
 .search-sector {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-
-.pre-form {
+	display: inline-block;
 	width: 100%;
 	min-height: 291px;
-	margin: 0 auto;
-
 	text-align: center; 
 	text-transform: uppercase;
 
 	background-color: #ffffff;
 }
 
-.pre-form h2 {
+.search-sector h2 {
 	margin: 50px auto 24px;
 	
 	font-size: 30px;
@@ -339,15 +334,15 @@ header {
 	line-height: 36px;
 }
 
-.pre-form p {
+.search-sector p {
 	width: 500px;
 	margin: 20px auto;
 
-	color: #333333;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 24px;
 	overflow-wrap: normal;
+	color: #333333;
 }
 
 .open-popup-clicker {
@@ -364,41 +359,35 @@ header {
 	background-color: #766357;
 }
 
-.open-popup-clicker:hover {
+.open-popup-clicker:hover,
+.open-popup-clicker:focus {
 	background-color: #604e43;
-	transition: 0.5s;
 }
 
 .open-popup-clicker:active {
+	color: #928a85;
 	background-color: #503e33;
-	transition: 0.2s;
+}
+
+/***********************************************/
+
+.lowest-sector {
+	position: relative;
 }
 
 .form-hotel-selector {
-	width: 568px;
-	min-height: 395px;
 	position: absolute;
 	left: calc(50% - 284px);
-	bottom: 77px;
+	width: 568px;
+	min-height: 395px;
+	
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 
 	background-color: #ffffff;
 }
 
-/*.Layer_35_copy {
-  background-image: url("Layer 35 copy.png");
-  position: absolute;
-  left: 342px;
-  top: 2162px;
-  width: 597px;
-  height: 424px;
-  z-index: 6;
-}
-*/
-
-/***********************************************/
-
 .map-wrapper {
-	height: 472px;
+	height: 594px;
 	width: 100%;
 	overflow: hidden;
 }
@@ -413,13 +402,15 @@ header {
 /***********************************************/
 
 footer {
-	width: 100%;
-	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+
 	display: flex;
 	flex-wrap: wrap;	
+	width: 100%;
+	margin: 0 auto;
 
-	background-color: #ffffff;	
-	opacity: 0.8;
+	background-color: rgba(255, 255, 255, 0.9);	
 }
 
 .equalizer {
@@ -474,9 +465,15 @@ footer {
 	transition: 0.2s;
 }
 
-.twitter {background-image: url("../img/twitter.svg");}
-.facebook {background-image: url("../img/fb-icon.svg");}
-.youtube {background-image: url("../img/youtube.svg");}
+.twitter {
+	background-image: url("../img/twitter.svg");
+}
+.facebook {
+	background-image: url("../img/fb-icon.svg");
+}
+.youtube {
+	background-image: url("../img/youtube.svg");
+}
 
 .copyright {
 	display: flex;
