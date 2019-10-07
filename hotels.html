@@ -36,18 +36,17 @@
 
     		<section class="wrap-choice">
           <h2 class="visually-hidden">Панель выбора типа жилья</h2>        
-          <div class="backgroundUnderSearch">
-            <div class="maskTop"></div>
-          </div>  <!-- backgroundundersearch.png -->
-
-          <form action="//echo.htmlacademy.ru" method="get">
+          <!-- todo: заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
+          <!-- Прикрутить ручки к концам слайдера filter-button.svg -->
+          <!-- todo: !Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
+          <form class="form-pick-up-options" id="pick-up-options" action="https://echo.htmlacademy.ru" method="get">
             <ul>
               <li>
                 <h3>Инфраструктура:</h3>
                 <ul>
                   <li>
                     <input type="checkbox" id="pool" checked> 
-                    <!-- todo: заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
+                    
                     <label for="pool">Бассейн</label> 
                   </li>
                   <li>
@@ -85,19 +84,15 @@
                     <input type="text" name="costMax">
                   </li>
                   <li>
-                    <!-- слайдер -->
-                    <input type="range" min="0" max="3000">
-                    <!-- Прикрутить ручки к концам слайдера filter-button.svg -->
+                    <input type="range" min="0" max="3000"> 
                   </li>
-                  <li>
-                    <!-- todo: !Фильтр: по нажатию кнопки «Показать» осуществляется отправка формы -->
-                    <!-- todo: !Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы (смотрите папку слоёв «search form»), необходимо дополнить анимацией «выезда» сверху вниз относительно кнопки, а не окна браузера -->
+                  <li> 
                     <button type="submit">Показать</button>
                   </li>
                 </ul>
               </li>
             </ul>
-          </form>
+          </form> 
     		</section>
 
         <section class="wrap-result">
