@@ -402,15 +402,17 @@ header {
 /***********************************************/
 
 footer {
-	position: absolute;
-	bottom: 0;
-
 	display: flex;
 	flex-wrap: wrap;	
 	width: 100%;
 	margin: 0 auto;
 
-	background-color: rgba(255, 255, 255, 0.9);	
+	background-color: rgba(255, 255, 255, 0.7);	
+}
+
+.footer-index {
+	position: absolute;
+	bottom: 0;
 }
 
 .equalizer {
