@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-/*	background-image: url("../img/temp_sedona-index.png"); 
+	background-image: url("../img/temp_sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.5; */
+	opacity: 0.7; 
 	
 /*	background-image: url("../img/temp_sedona-hotels.jpg"); 
 	background-repeat: no-repeat;
@@ -370,12 +370,13 @@ header {
 }
 
 /***********************************************/
+/***********************************************/
 
 .lowest-sector {
 	position: relative;
 }
 
-.form-hotel-selector {
+.booking-form {
 	position: absolute;
 	left: calc(50% - 284px);
 	width: 568px;
@@ -386,18 +387,29 @@ header {
 	background-color: #ffffff;
 }
 
+.booking-content {
+
+}
+
+/***********************************************/
+
 .map-wrapper {
 	height: 594px;
 	width: 100%;
 	overflow: hidden;
 }
 
-.map-surface {
+/*.map-surface {
 	display: block;
 	width: 1718px;
 	height: 748px;
 	margin: -153px -259px;
-}
+}*/
+
+/***********************************************/
+
+
+
 
 /***********************************************/
 
@@ -407,7 +419,7 @@ footer {
 	width: 100%;
 	margin: 0 auto;
 
-	background-color: rgba(255, 255, 255, 0.7);	
+	background-color: rgba(255, 255, 255, 0.8);	
 }
 
 .footer-index {
@@ -419,7 +431,7 @@ footer {
 	display: block;
 	margin: 0 auto;
 	padding: 0; 
-	min-height: 120px;
+	min-height: 121px;
 	width: 400px;
 
 	text-align: center;
@@ -525,14 +537,6 @@ footer {
 	outline: 1px dotted red;
 }
 
-
-/*.form-hotel-selector {
-
-		background-image: url("../img/polygon.svg");
-	background-repeat: no-repeat;
-	background-position: center bottom -2px;
-}
-*/
 
 
 
