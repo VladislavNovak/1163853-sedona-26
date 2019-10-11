@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-	background-image: url("../img/temp_sedona-index.png"); 
+/*	background-image: url("../img/sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.7; 
+	opacity: 0.8; */
 	
 /*	background-image: url("../img/temp_sedona-hotels.jpg"); 
 	background-repeat: no-repeat;
@@ -45,8 +45,7 @@ body {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/***********************************************/
-/***********************************************/
+/***---Хедер с навигацией---***/
 
 header {
 	position: relative;
@@ -116,15 +115,13 @@ header {
 	margin-left: -70px;
 }
 
-/*********************************************/
-/*********************************************/
+/***---Вводная картинка с презентацией Седоны---***/
 
 .main-index {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-/*********************************************/
 .welcome-sector {
 	display: flex;
 	flex-wrap: wrap;
@@ -165,7 +162,7 @@ header {
 
 .presentation h1 {
 	width: 470px;
-	margin: 59px auto 27px; /*-1px to top*/
+	margin: 59px auto 27px;
 
 	font-size: 21px;
 	line-height: 26px;
@@ -186,7 +183,7 @@ header {
 	letter-spacing: 0.1px;
 }
 
-/*********************************************/
+/***---Список преимуществ Седоны---***/
 
 .advantages-sector {
 	display: flex;
@@ -313,8 +310,7 @@ header {
 	letter-spacing: 0.1px;
 }
 
-/*********************************************/
-/*********************************************/
+/***---Сектор с кнопкой, открывающей нижерасположенную форму---***/
 
 .search-sector {
 	display: inline-block;
@@ -369,8 +365,7 @@ header {
 	background-color: #503e33;
 }
 
-/***********************************************/
-/***********************************************/
+/***---Форма подбора  гостиниц---***/
 
 .lowest-sector {
 	position: relative;
@@ -380,18 +375,188 @@ header {
 	position: absolute;
 	left: calc(50% - 284px);
 	width: 568px;
-	min-height: 395px;
 	
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
 
 	background-color: #ffffff;
 }
 
 .booking-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
+	width: 458px;
+	min-height: 200px;
+	margin: 41px auto;
+	padding: 0;
 }
 
-/***********************************************/
+.booking-content {
+	--cell-size: 38px;
+}
+
+.booking-organizer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 0;
+	padding: 0;
+}
+
+.date-picker {
+	display: inline-block;
+	width: var(--cell-size);
+	min-height: var(--cell-size);
+	padding: 0;
+	
+	vertical-align: middle;
+
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.calendar-icon {
+	width: 21px;
+	height: 22px;
+	margin-top: 7px;
+
+	fill: #cacaca;
+}
+
+.date-picker:hover .calendar-icon, 
+.date-picker:focus .calendar-icon {
+	outline: none;
+	fill: #000000;
+}
+
+.date-picker:active .calendar-icon {
+	fill: #81b3d2;
+}
+
+.booking-organizer label {
+	display: inline-block;
+	width: 110px;
+	padding-left: 2px; 
+	
+	text-align: left;
+}
+
+.template-field {
+  min-height: var(--cell-size);
+
+  text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
+	
+	
+  background-color: #f2f2f2;
+	border: none;
+}
+
+.template-field::placeholder {
+	color: #000000;
+}
+
+.for-date {
+	width: 284px;
+	padding: 0 12px;
+}
+
+.for-date:hover {
+	outline: none;
+	background-color: #ebebeb;
+}
+
+.for-date:focus {
+	outline: 2px solid #e5e5e5;
+	background-color: #ffffff;
+}
+
+.for-number {
+	width: var(--cell-size);
+	padding: 0;
+	text-align: center;
+}
+
+.for-number:focus {
+	outline: 2px solid #e5e5e5;
+}
+
+.number-changer {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	padding-top: 0;
+
+	border: none;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	
+	color: #a9a9a9;
+	background-color: #f2f2f2;
+}
+
+.number-changer:last-of-type {
+	padding-top: 3px;
+}
+
+.number-changer:hover, 
+.number-changer:focus {
+	outline: none;
+	color: #000000;
+}
+
+.number-changer:active {
+	outline: none;
+	color: #81b3d2;
+}
+
+.shift-in-label {
+	display: inline-block;
+	width: 85px;
+	text-align: right;
+}
+
+.send-reservation {
+	width: 458px;
+	min-height: 58px;
+	margin: 0 auto 55px;
+
+	border: none;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #ffffff;
+
+	background-color: #81b3d2;
+}
+
+.send-reservation:hover, 
+.send-reservation:focus {
+	outline: none;
+	background-color: #669ec0;
+}
+
+.send-reservation:active {
+	outline: none;
+	color: #94b9d2;
+	background-color: #5496bd;
+} 
+
+/***---Карта---***/
 
 .map-wrapper {
 	height: 594px;
@@ -406,14 +571,9 @@ header {
 	margin: -153px -259px;
 }*/
 
-/***********************************************/
+/***---Футер---***/
 
-
-
-
-/***********************************************/
-
-footer {
+.footer-index {
 	display: flex;
 	flex-wrap: wrap;	
 	width: 100%;
@@ -455,38 +615,48 @@ footer {
 	list-style-type: none;
 }
 
-.go-to-network a {
+.network {
 	display: block;
 	width: 46px; 					
-	height: 49px; 
-	margin: 6px;
-
-	font-size: 0;
+	height: 48px; 
+	margin: 3px;
 	
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
 	background-color: #81b3d2;
 }
 
-.go-to-network a:hover {
+.twitter-icon {
+	width: 17px;
+	height: 15px;
+	margin-top: 16px;
+	fill: #ffffff;
+}
+.facebook-icon {
+	width: 12px;
+	height: 22px;
+	margin-top: 13px;
+	fill: #ffffff;
+}
+
+.youtube-icon {
+	width: 20px;
+	height: 16px;
+	margin-top: 14px;
+	fill: #ffffff;
+}
+
+.network:hover, 
+.network:focus {
+	outline: none;
 	background-color: #669ec0;
-	transition: 0.5s;
 }
 
-/*todo: добиться затемнения значка во время нажатия*/
-.go-to-network a:active {
+.network:active {
+	outline: none;
 	background-color: #5496bd;
-	transition: 0.2s;
 }
 
-.twitter {
-	background-image: url("../img/twitter.svg");
-}
-.facebook {
-	background-image: url("../img/fb-icon.svg");
-}
-.youtube {
-	background-image: url("../img/youtube.svg");
+.network:active .change-social-icon {
+	fill: #88b6d1;
 }
 
 .copyright {
@@ -497,27 +667,28 @@ footer {
 }
 
 .website-by {
-	margin: auto 5px;
+	margin: auto 3px;
 
 	font-size: 14px;
 	line-height: 26px;
 }
 
-.logo-html {
-	margin: auto 5px;
-
+.logo-icon {
 	width: 108px;
 	height: 37px;
+	margin: auto 5px;
 	vertical-align: middle;
+
 	fill: #231f20;
 }
 
-.go-to-academy:hover .logo-html {
+.go-to-academy:hover .logo-icon, 
+.go-to-academy:focus .logo-icon {
 	fill: #81b3d2;
 	transition: 0.5s;
 }
 
-.go-to-academy:active .logo-html {
+.go-to-academy:active .logo-icon {
 	fill: #bdbbbc;
 	transition: 0.2s; 
 }
