@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-/*	background-image: url("../img/sedona-index.png"); 
+	background-image: url("../img/sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.8; */
+	opacity: 0.4; 
 	
 /*	background-image: url("../img/temp_sedona-hotels.jpg"); 
 	background-repeat: no-repeat;
@@ -174,7 +174,7 @@ header {
 
 .presentation p {
 	width: calc(100% - 100px);
-	margin: 0 auto;
+	margin: 0 auto 15px;
 
 	color: #333333;
 	font-size: 14px;
@@ -218,25 +218,37 @@ header {
 
 .primary h2 {
 	width: 150px;
-	margin: 47px auto 24px;
+	margin: 47px auto 23px;
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
 	overflow-wrap: normal;
 }
-
+/**************************************************************************/
 .primary p {
+	width: calc(100% - 30px);
 	margin: 0 auto 22px;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
+	overflow-wrap: normal;
 }
 
-.primary p:not(:first-of-type) {
-	width: 300px;
-	overflow-wrap: normal;
-	letter-spacing: 0.5px;
+.primary:first-of-type p {
+	width: 310px;
+	letter-spacing: 0.4px;
 }
+
+.primary:nth-of-type(2) p {
+	width: 320px;
+	letter-spacing: 0.1px;
+}
+
+.primary:nth-of-type(n + 3) p {
+	width: 258px;
+	/*letter-spacing: 0.1px;*/
+}
+
 
 .img-wrapper {
 	display: block;
@@ -344,13 +356,10 @@ header {
 .open-popup-clicker {
 	display: block;
 	width: 568px;
+	min-height: 86px;
 	margin: 47px auto 0;
 
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 86px;
 	text-decoration: none;
-	color: #ffffff;
 
 	background-color: #766357;
 }
@@ -360,10 +369,27 @@ header {
 	background-color: #604e43;
 }
 
-.open-popup-clicker:active {
+.open-popup-clicker:active, 
+.open-popup-clicker:active p {
 	color: #928a85;
 	background-color: #503e33;
 }
+
+.open-popup-clicker p {
+	display: inline-block;
+	width: calc(100% - 20px);
+	margin: 10px auto;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px; 
+	color: #ffffff;
+}
+
+.open-popup-clicker p:first-of-type {
+	margin-top: 30px;
+}
+
 
 /***---Форма подбора  гостиниц---***/
 
@@ -398,7 +424,7 @@ header {
 }
 
 .booking-content {
-	--cell-size: 38px;
+	--size-38px: 38px;
 }
 
 .booking-organizer {
@@ -413,8 +439,8 @@ header {
 
 .date-picker {
 	display: inline-block;
-	width: var(--cell-size);
-	min-height: var(--cell-size);
+	width: var(--size-38px);
+	min-height: var(--size-38px);
 	padding: 0;
 	
 	vertical-align: middle;
@@ -450,7 +476,7 @@ header {
 }
 
 .template-field {
-  min-height: var(--cell-size);
+  min-height: var(--size-38px);
 
   text-transform: uppercase;
 	font-size: 14px;
@@ -482,7 +508,7 @@ header {
 }
 
 .for-number {
-	width: var(--cell-size);
+	width: var(--size-38px);
 	padding: 0;
 	text-align: center;
 }
@@ -492,8 +518,8 @@ header {
 }
 
 .number-changer {
-	width: var(--cell-size);
-	height: var(--cell-size);
+	width: var(--size-38px);
+	height: var(--size-38px);
 	padding-top: 0;
 
 	border: none;
@@ -506,8 +532,12 @@ header {
 	background-color: #f2f2f2;
 }
 
+.number-changer:first-of-type {
+	font-size: 23px;
+}
+
 .number-changer:last-of-type {
-	padding-top: 3px;
+	padding-top: 4px;
 }
 
 .number-changer:hover, 
