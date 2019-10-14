@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-/*	background-image: url("../img/sedona-index.png"); 
+	background-image: url("../img/sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.4; */
+	opacity: 0.5; 
 	
 /*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
@@ -185,17 +185,21 @@ body {
 
 /***---Список преимуществ Седоны---***/
 
-.advantages-sector {
+.reasons {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }
 
-.advantage_wrapper {
+.advantage {
 	display: flex;
 	align-items: stretch;
 	flex-wrap: wrap;
+}
+
+.advantage:nth-of-type(2) {
+	flex-direction: row-reverse;
 }
 
 .primary {
@@ -234,12 +238,12 @@ body {
 	overflow-wrap: normal;
 }
 
-.primary:first-of-type p {
+.advantage:first-of-type p {
 	width: 310px;
 	letter-spacing: 0.4px;
 }
 
-.primary:nth-of-type(2) p {
+.advantage:nth-of-type(2) p {
 	width: 320px;
 	letter-spacing: 0.1px;
 }
@@ -249,18 +253,14 @@ body {
 	/*letter-spacing: 0.1px;*/
 }
 
-
-.img-wrapper {
+.image-wrapper {
 	display: block;
+	width: 800px;
+	min-height: 256px;
 
 	font-size: 0;
 
 	background-color: #81b3d2;
-}
-
-.img_wrapper img {
-	width: 800px;
-	min-height: 256px;
 }
 
 .secondary-wrapper {
@@ -353,43 +353,31 @@ body {
 	color: #333333;
 }
 
-.open-popup-clicker {
-	display: block;
-	width: 568px;
-	min-height: 86px;
-	margin: 47px auto 0;
-
+.popup-opener {
+	display: inline-block;
+	width: 548px;
+	margin: 27px auto 0;
+	padding: 30px 10px;
+	
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px; 
+	color: #ffffff;
 	text-decoration: none;
 
 	background-color: #766357;
 }
 
-.open-popup-clicker:hover,
-.open-popup-clicker:focus {
+.popup-opener:hover,
+.popup-opener:focus {
 	background-color: #604e43;
 }
 
-.open-popup-clicker:active, 
-.open-popup-clicker:active p {
+.popup-opener:active, 
+.popup-opener:active p {
 	color: #928a85;
 	background-color: #503e33;
 }
-
-.open-popup-clicker p {
-	display: inline-block;
-	width: calc(100% - 20px);
-	margin: 10px auto;
-
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 26px; 
-	color: #ffffff;
-}
-
-.open-popup-clicker p:first-of-type {
-	margin-top: 30px;
-}
-
 
 /***---Форма подбора  гостиниц---***/
 
@@ -614,7 +602,7 @@ footer {
 .footer-in-index {
 	position: absolute;
 	bottom: 0;
-	background-color: rgba(255, 255, 255, 0.8);	
+	background-color: rgba(255, 255, 255, 0.9);	
 }
 
 .equalizer {
