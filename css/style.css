@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-	background-image: url("../img/sedona-index.png"); 
+/*	background-image: url("../img/sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.5; 
+	opacity: 0.7; */
 	
 /*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
@@ -324,10 +324,15 @@ body {
 
 /***---Сектор с кнопкой, открывающей нижерасположенную форму---***/
 
+.lowest-sector {
+	overflow: hidden;
+}
+
 .search-sector {
 	display: inline-block;
 	width: 100%;
 	min-height: 291px;
+
 	text-align: center; 
 	text-transform: uppercase;
 
@@ -359,6 +364,7 @@ body {
 	margin: 27px auto 0;
 	padding: 30px 10px;
 	
+	vertical-align: middle;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px; 
@@ -374,7 +380,7 @@ body {
 }
 
 .popup-opener:active, 
-.popup-opener:active p {
+.popup-opener:active {
 	color: #928a85;
 	background-color: #503e33;
 }
@@ -388,50 +394,42 @@ body {
 .booking-form {
 	position: absolute;
 	left: calc(50% - 284px);
-	width: 568px;
+	width: 458px;
+	padding-top: 55px;
+	padding-left: 55px;
+	padding-right: 55px;
+	padding-bottom: 55px;
+
+	z-index: 1;
 	
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 26px;
 
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 	background-color: #ffffff;
-}
-
-.booking-content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-	width: 458px;
-	min-height: 200px;
-	margin: 41px auto;
-	padding: 0;
-}
-
-.booking-content {
-	--size-38px: 38px;
 }
 
 .booking-organizer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
 
-	margin: 0;
-	padding: 0;
+	margin: 0 auto 29px;
+	align-items: center;
 }
 
 .date-picker {
-	display: inline-block;
-	width: var(--size-38px);
-	min-height: var(--size-38px);
-	padding: 0;
-	
-	vertical-align: middle;
+	display: block;
+	width: 30px;
+	min-height: 30px;
+	padding-left: 7px;
+	padding-top: 8px;
 
 	background-color: #f2f2f2;
 	border: none;
@@ -440,7 +438,6 @@ body {
 .calendar-icon {
 	width: 21px;
 	height: 22px;
-	margin-top: 7px;
 
 	fill: #cacaca;
 }
@@ -457,14 +454,19 @@ body {
 
 .booking-organizer label {
 	display: inline-block;
-	width: 110px;
-	padding-left: 2px; 
+	width: 111px;
 	
 	text-align: left;
 }
 
+.shift-in-label {
+	display: inline-block;
+	width: 85px;
+	text-align: right;
+}
+
 .template-field {
-  min-height: var(--size-38px);
+  min-height: 38px;
 
   text-transform: uppercase;
 	font-size: 14px;
@@ -480,7 +482,7 @@ body {
 }
 
 .for-date {
-	width: 284px;
+	width: 286px;
 	padding: 0 12px;
 }
 
@@ -495,7 +497,7 @@ body {
 }
 
 .for-number {
-	width: var(--size-38px);
+	width: 40px;
 	padding: 0;
 	text-align: center;
 }
@@ -505,9 +507,9 @@ body {
 }
 
 .number-changer {
-	width: var(--size-38px);
-	height: var(--size-38px);
-	padding-top: 0;
+	width: 39px;
+	height: 38px;
+	/*padding: 0;*/
 
 	border: none;
 
@@ -529,7 +531,8 @@ body {
 
 .number-changer:hover, 
 .number-changer:focus {
-	outline: none;
+	/*outline: 2px solid #e5e5e5;*/
+	outline-offset: -5px;
 	color: #000000;
 }
 
@@ -538,16 +541,10 @@ body {
 	color: #81b3d2;
 }
 
-.shift-in-label {
-	display: inline-block;
-	width: 85px;
-	text-align: right;
-}
-
 .btn-send-reservation {
 	width: 458px;
 	min-height: 58px;
-	margin: 0 auto 55px;
+	margin: 26px auto 0;
 
 	border: none;
 
@@ -617,7 +614,9 @@ footer {
 }
 
 .visitsedona {
-	margin: 47px auto;
+	width: calc(100% - 20px);
+	margin: 10px auto;
+	padding-top: 36px;
 
 	font-size: 21px;
 	font-weight: bold;
@@ -694,8 +693,9 @@ footer {
 .logo-icon {
 	width: 108px;
 	height: 37px;
+	padding-left: 1px;
+	padding-top: 1px;
 	margin: auto 5px;
-	vertical-align: middle;
 
 	fill: #231f20;
 }
