@@ -404,7 +404,8 @@ body {
 	
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
+	justify-content: flex-start;
 	
 	text-transform: uppercase;
 	font-size: 14px;
@@ -421,7 +422,6 @@ body {
 	justify-content: space-between;
 
 	margin: 0 auto 29px;
-	align-items: center;
 }
 
 .date-picker {
@@ -453,16 +453,17 @@ body {
 }
 
 .booking-organizer label {
-	display: inline-block;
+	display: block;
 	width: 111px;
+
+	padding-top: 6px;
 	
 	text-align: left;
 }
 
 .shift-in-label {
-	display: inline-block;
 	width: 85px;
-	text-align: right;
+	padding-left: 50px;
 }
 
 .template-field {
