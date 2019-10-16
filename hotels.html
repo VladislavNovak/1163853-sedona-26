@@ -5,6 +5,7 @@
     <title>Гостиницы в Седоне</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jsscript.js"></script>
   </head>
   <body>
     <!-- основная рабочая область: -->
@@ -26,55 +27,76 @@
         <!------------------------------->
         <h1 class="visually-hidden">Гостиницы в Седоне</h1>
     		<section>
-          <h2 class="visually-hidden">Панель выбора типа жилья</h2>        
-          <!-- todo: заменим стандартный чекбокс на checkbox-off.svg/checkbox-on.svg -->
-          <!-- Прикрутить ручки к концам слайдера filter-button.svg -->
+          <h2 class="visually-hidden">Подберите проживание по следующим категориям:</h2> 
+          <!------------------------------->
           <form class="form-filter" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
             <!------------------------------->
-            <ul class="filter-by">
-              <li class="left-col">
+            <ul class="filter-by-accommodation">
+              <li class="block-infrastructure">
                 <h3>Инфраструктура:</h3>
-                <ul class="buildings">
-                  <li>
-                    <input type="checkbox" id="pool" checked> 
-                    <label for="pool">Бассейн</label> 
+                <ul class="choose-from">
+                  <li class="list-of-selected">
+                    <label>
+                      <input class="check-input" type="checkbox" checked> 
+                      <span class="custom-box"></span>
+                      Бассейн
+                    </label> 
                   </li>
-                  <li>
-                    <input type="checkbox" id="parking">
-                    <label for="parking">Парковка</label>
+                  <li class="list-of-selected">
+                    <label>
+                      <input class="check-input" type="checkbox"> 
+                      <span class="custom-box"></span>
+                      Парковка
+                    </label> 
                   </li>
-                  <li>
-                    <input type="checkbox" id="wifi">
-                    <label for="wifi">WI-FI</label>
+                  <li class="list-of-selected">
+                    <label>
+                      <input class="check-input" type="checkbox"> 
+                      <span class="custom-box"></span>
+                      WI-FI
+                    </label> 
                   </li>
                 </ul>  
               </li>
               <!------------------------------->
-              <li class="right-col">
+              <li class="block-housing">
                 <h3>Тип жилья:</h3>
-                <ul class="buildings">
-                  <li>
-                    <input type="checkbox" id="hotel" checked>
-                    <label for="hotel">Гостиница</label>
+                <ul class="choose-from">
+                  <li class="list-of-selected">
+                    <label>
+                      <input class="check-input" type="checkbox" checked> 
+                      <span class="custom-box"></span>
+                      Гостиница
+                    </label>
                   </li>
-                  <li>
-                    <input type="checkbox" id="motel" checked>
-                    <label for="motel">Мотель</label>
+                  <li class="list-of-selected">
+                    <label>
+                      <input class="check-input" type="checkbox" checked> 
+                      <span class="custom-box"></span>
+                      Мотель
+                    </label>
                   </li>
-                  <li>
-                    <input type="checkbox" id="apartment" checked>
-                    <label for="apartment">Апартаменты</label>
+                  <li class="list-of-selected" for="apartment">
+                    <label>
+                      <input class="check-input" type="checkbox" checked> 
+                      <span class="custom-box"></span>
+                      Апартаменты
+                    </label>
                   </li>
                 </ul>
               </li>
             </ul>
             <!------------------------------->
-            <div class="filter-by price">
-              <div class="title-filter-by-price">Стоимость в сутки(p):</div>
+            <div class="filter-block filter-by-price">
+              
+            </div>
+<!--             <div class="filter-block price">
+              <div class="title-filter-block-price">Стоимость в сутки(p):</div>
               <div class="price-ctrls">
                 <label class="label-ctrls">от<input class="input-ctrls" type="text" name="min-price" value="0"></label>
                 <label class="label-ctrls">до<input class="input-ctrls" type="text" name="max-price" value="3000"></label>
               </div>
+
               <div class="range-ctrls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -83,6 +105,20 @@
                 <div class="range-toggle range-toggle-max"></div>
               </div>
               <button class="btn-show-results" type="submit">Показать</button>
+            </div> -->
+<!-------------------------------------------->
+<!-- 
+              <div class="multi-range" data-lbound="0" data-ubound="4000">
+                <hr>
+                <input type='range' min='10' max='45' step='5' value='10' 
+                oninput='this.parentNode.dataset.lbound=this.value;'>
+                <input type='range' min='15' max='50' step='5' value='50' 
+                oninput='this.parentNode.dataset.ubound=this.value;'>
+              </div>
+
+            </div>
+ -->
+
 <!--               
               <ul>
                 <li>
@@ -97,7 +133,7 @@
                 </li>
               </ul> 
 -->
-            </div>
+            
             <!------------------------------->
           </form> 
     		</section>
@@ -207,7 +243,7 @@
         </section> -->
     	</main>
 
-      <footer>
+      <footer class="footer">
         <!-------------------------------> 
         <div class="equalizer">
           <p class="visitsedona">#visitsedona</p>
