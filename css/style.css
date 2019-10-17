@@ -766,24 +766,25 @@ body {
 	width: 255px;
 }
 
-.list-of-selected {
+.device {
 	margin-bottom: 25px;
 	padding-left: 39px;
-	
-	/*outline: 1px dotted red;*/
 }
 
-.block-housing .list-of-selected {
+.block-housing .device {
 	margin-bottom: 25px;
 	padding-left: 40px;
-	/*outline: 1px dotted red;*/
 }
 
-.check-input {
+.base-box {
 	position: absolute;
-	-webkit-appearance: none;
+/*	-webkit-appearance: none;
 	-moz-appearance: none;
-	appearance: none;
+	appearance: none;*/
+	width: 1px;
+	height: 1px; 
+	overflow: hidden;
+	clip: rect(0 0 0 0); 
 }
 
 .custom-box {
@@ -799,9 +800,10 @@ body {
 	margin-left: -40px;
 }
 
-.check-input:checked + .custom-box {
+.base-box:checked + .custom-box {
 	background-image: url(../img/checkbox-on.svg);
 }
+
 
 
 
