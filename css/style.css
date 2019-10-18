@@ -29,11 +29,11 @@ body {
 	background-position: 50% 0;
 	opacity: 0.7; */
 	
-/*	background-image: url("../img/sedona-hotels.png"); 
+	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.8; 
-*/
+	opacity: 0.5; 
+
 }
 
 .container {
@@ -45,7 +45,7 @@ body {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/***---Хедер с навигацией---***/
+/***---HEADER---***/
 
 .header {
 	position: relative;
@@ -113,8 +113,7 @@ body {
 	margin-left: -70px;
 }
 
-/***---INDEX: часть main---***/
-/***---Вводная картинка с презентацией Седоны---***/
+/***---INDEX: MAIN---***/
 
 .main-index, 
 .main-hotels {
@@ -532,7 +531,6 @@ body {
 
 .number-changer:hover, 
 .number-changer:focus {
-	/*outline: 2px solid #e5e5e5;*/
 	outline-offset: -5px;
 	color: #000000;
 }
@@ -723,7 +721,7 @@ body {
 	width: 1056px;
 	min-height: calc(217px - 11px - 11px);
 
-	padding: 11px 72px 11px 72px;
+	padding: 10.5px 72px 8px 72px;
 
 	font-size: 14px;
 	font-weight: normal;
@@ -738,7 +736,8 @@ body {
 }
 
 .form-filter h3 {
-	margin-bottom: 25px;
+	min-height: 21px;
+	margin-bottom: 24.5px;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 21px;
@@ -757,8 +756,6 @@ body {
 
 	min-height: 100px;
 	margin: 0;
-
-	/*outline: 1px dotted red;*/
 }
 
 .block-infrastructure, 
@@ -766,25 +763,43 @@ body {
 	width: 255px;
 }
 
-.device {
+/***---Пользовательский чекбокс---***/
+
+.new-item {
 	margin-bottom: 25px;
 	padding-left: 39px;
 }
 
-.block-housing .device {
-	margin-bottom: 25px;
-	padding-left: 40px;
+.block-housing .new-item {
+	padding-left: 41px;
+}
+
+.block-housing .custom-box {
+	margin-left: -41px;
+}
+
+.device {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #ffffff;
 }
 
 .base-box {
 	position: absolute;
-/*	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;*/
+
 	width: 1px;
-	height: 1px; 
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
 	overflow: hidden;
-	clip: rect(0 0 0 0); 
+	border: 0;
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
 }
 
 .custom-box {
@@ -792,17 +807,46 @@ body {
 	width: 27px;
 	height: 23px;
 	margin-left: -39px;
-	background-image: url(../img/checkbox-off.svg);
-	background-repeat: no-repeat;
 }
 
-.block-housing .custom-box {
-	margin-left: -40px;
+.assambled {
+	fill-opacity: 0;
 }
 
-.base-box:checked + .custom-box {
-	background-image: url(../img/checkbox-on.svg);
+.closedbox {
+	fill-opacity: 1;
 }
+
+.base-box:checked + * .component-tornbox {
+	-webkit-transition: 500ms;
+	fill-opacity: 1;
+}
+
+.base-box:checked + * .component-checkmark {
+	-webkit-transition: 1000ms;
+	fill-opacity: 1;
+}
+
+.base-box:checked + * .closedbox {
+	-webkit-transition: 500ms;
+	fill-opacity: 0;
+}
+
+.base-box:focus + * .closedbox,
+.base-box:active + * .closedbox {
+	fill: #00b821;
+}
+
+.base-box:focus + * .component-tornbox,
+.base-box:active + * .component-tornbox {
+	fill: #00b821;
+}
+
+
+
+
+
+
 
 
 
@@ -1005,22 +1049,22 @@ body {
 */
 
 
+/*.visually-hidden {*/
+	/*display: none;*/	
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
 
-/*.visually-hidden:not(:focus):not(:active) {*/
-.visually-hidden {
-	display: none;		/*возможно, удалить*/
-	/*position: absolute;*/
-/*	width: 1px;
+	width: 1px;
 	height: 1px;
 	margin: -1px;
-	border: 0;
 	padding: 0;
 
+	overflow: hidden;
+	border: 0;
 	white-space: nowrap;
 
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	overflow: hidden;*/
 }
 
 
