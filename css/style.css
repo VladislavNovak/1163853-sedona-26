@@ -32,7 +32,7 @@ body {
 /*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.6; */
+	opacity: 0.5; */
 
 }
 
@@ -369,7 +369,8 @@ body {
 	line-height: 26px; 
 	color: #ffffff;
 	text-decoration: none;
-
+	
+	transition-duration: 150ms;
 	background-color: #766357;
 }
 
@@ -553,7 +554,8 @@ body {
 	font-weight: bold;
 	line-height: 26px;
 	color: #ffffff;
-
+	
+	transition-duration: 150ms;
 	background-color: #81b3d2;
 }
 
@@ -637,6 +639,7 @@ body {
 	height: 48px; 
 	margin: 3px;
 	
+	transition-duration: 150ms;
 	background-color: #81b3d2;
 }
 
@@ -695,19 +698,18 @@ body {
 	padding-left: 1px;
 	padding-top: 1px;
 	margin: auto 5px;
-
+	
+	transition-duration: 150ms;
 	fill: #231f20;
 }
 
 .go-to-academy:hover .logo-icon, 
 .go-to-academy:focus .logo-icon {
 	fill: #81b3d2;
-	transition: 0.5s;
 }
 
 .go-to-academy:active .logo-icon {
 	fill: #bdbbbc;
-	transition: 0.2s; 
 }
 
 /***---HOTELS: часть main---***/
@@ -719,8 +721,8 @@ body {
 	justify-content: space-between;
 
 	width: calc(1200px - 72px - 72px);
-	min-height: calc(217px - 11px - 11px);
-	padding: 10.5px 72px 8px 72px;
+	min-height: calc(217px - 10.5px - 7.5px);
+	padding: 10.5px 72px 7.5px 72px;
 
 	font-size: 14px;
 	font-weight: normal;
@@ -1072,14 +1074,16 @@ body {
 	width: 100%;
 	padding-left: 71px;
 	padding-right: 70px;
-	padding-top: 8px;
-	padding-bottom: 9px;
+	padding-top: 1px;
+	padding-bottom: 2px;
 
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 18px;
 	text-transform: uppercase;
 	color: #000000;
+
+	border-bottom: 1px solid #e5e5e5;
 	background-color: #ffffff;
 }
 
@@ -1089,7 +1093,7 @@ body {
 	align-items: center;
 }
 
-.sorting-type > h3 {
+.sorting-type > h4 {
 	width: 150px;
 
 	font-size: 21px;
@@ -1100,7 +1104,7 @@ body {
 .sorting-type > p {
 	width: 104px; 
 
-	padding-top: 3px;
+	padding-top: 5px;
 
 	text-align: center;
 }
@@ -1109,9 +1113,9 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 650px;
+	max-width: 700px;
 	
-	padding-top: 3px;
+	padding-top: 5px;
 	padding-left: 25px;
 	padding-right: 25px;
 	
@@ -1119,7 +1123,8 @@ body {
 }
 
 .sort-control-panel .sort-by {
-	width: 81px;
+	min-width: 78px;
+	padding-left: 3px;
 }
 
 .sort-by .sort-types {
@@ -1148,18 +1153,21 @@ body {
 	border-bottom: none;
 }
 
-
 .sorting-arrow {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 
 	width: 34px;
-	padding-top: 4px;
-	padding-right: 3px;
+	padding-top: 6px;
+	padding-right: 2px;
 	padding-left: 3px;
 
 	list-style-type: none;
+}
+
+.updown-link {
+	padding-right: 1px;
 }
 
 .up-dir, 
@@ -1183,15 +1191,126 @@ body {
 	outline: none;
 }
 
+/***---Отсортированные отели---***/ 
 
+.place-equalizer {
+	display: flex;
+	flex-wrap: wrap; 
+	
+	width: 1200px;
+	margin: 0;
+	padding: 0;
+	padding-top: 25px;
 
+	list-style-type: none;
 
+	background-color: #ffffff;
+}
 
+.place-aligner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
+	width: 100%;
+	padding-left: 72px;
+	padding-bottom: 30px;
+	padding-right: 70px;
+	
+	border-bottom: 1px solid #e5e5e5;
+}
 
+.place-descriptor {
+	display: flex;
+	flex-wrap: wrap;
 
+	max-width: 940px;
+}
 
+.place-descriptor > .place-photo {
+	width: 135px; 
+	height: 90px;
+	margin-top: 5px;
 
+	text-align: center;
+	background: #f7b4dc;
+	background-repeat: no-repeat;
+}
+
+.place-descriptor .basic-info {
+	padding-left: 30px;
+
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.basic-info > h3 {
+	margin-top: 0;
+	margin-bottom: 7px;
+
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	letter-spacing: 0.3px;
+}
+
+.basic-info > p {
+	display: inline-block;
+
+	width: 107px;
+	margin-top: 0;
+	margin-right: 5px;
+	margin-bottom: 10px;
+
+	vertical-align: middle;
+}
+
+.details-and-to-book {
+	margin-top: 1px;
+}
+.details-and-to-book .go-details, 
+.details-and-to-book .go-to-book {
+	display: inline-block;
+
+	margin-top: 4px;
+	margin-right: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.details-and-to-book .go-details {
+	width: 110px;
+
+	background-color: #81b3d2;
+}
+
+.details-and-to-book .go-to-book {
+	width: 141px;
+
+	background-color: #766357;
+}
+
+/*
+.popup-opener {
+
+	padding: 30px 10px;
+	
+	vertical-align: middle;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px; 
+	color: #ffffff;
+	text-decoration: none;
+
+	background-color: #766357;
+}*/
 
 
 
