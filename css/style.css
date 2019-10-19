@@ -517,12 +517,12 @@ body {
 	font-weight: bold;
 	line-height: 26px;
 	
-	color: #a9a9a9;
-	background-color: #f2f2f2;
+	color: #a9a9a9;	background-color: #f2f2f2;
 }
 
 .number-changer:first-of-type {
 	font-size: 23px;
+	z-index: 1;
 }
 
 .number-changer:last-of-type {
@@ -718,9 +718,8 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	width: 1056px;
+	width: calc(1200px - 72px - 72px);
 	min-height: calc(217px - 11px - 11px);
-
 	padding: 10.5px 72px 8px 72px;
 
 	font-size: 14px;
@@ -775,7 +774,7 @@ body {
 }
 
 .block-housing .custom-box {
-	margin-left: -41px;
+	margin-left: -60px;
 }
 
 .device {
@@ -802,109 +801,125 @@ body {
 	clip: rect(0 0 0 0);
 }
 
-.custom-box {
+.new-item .custom-box {
 	position: absolute;
-	width: 27px;
-	height: 23px;
-	margin-left: -39px;
+	width: 29px;
+	height: 27px;
+	margin-top: -2px;
+	margin-left: -42px;
 }
 
-.assambled {
-	fill-opacity: 0;
-}
-
-.closedbox {
+.custom-box .closedbox {
 	fill-opacity: 1;
 }
 
-.base-box:checked + * .component-tornbox {
+.custom-box .component-checkmark, 
+.custom-box .component-tornbox, 
+.custom-box .outline {
+	fill-opacity: 0;
+}
+
+.base-box:checked + .custom-box .component-tornbox {
 	-webkit-transition: 500ms;
 	fill-opacity: 1;
 }
 
-.base-box:checked + * .component-checkmark {
+.base-box:checked + .custom-box .component-checkmark {
 	-webkit-transition: 1000ms;
 	fill-opacity: 1;
 }
 
-.base-box:checked + * .closedbox {
+.base-box:checked + .custom-box .closedbox {
 	-webkit-transition: 500ms;
 	fill-opacity: 0;
 }
 
-.base-box:focus + * .closedbox,
-.base-box:active + * .closedbox {
-	fill: #00b821;
+.base-box:focus ~ .custom-box .outline, 
+.base-box:active ~ .custom-box .outline {
+	fill: #ff0000;
+	fill-opacity: 1;
 }
 
-.base-box:focus + * .component-tornbox,
-.base-box:active + * .component-tornbox {
-	fill: #00b821;
+.base-box:disabled ~ .custom-box .closedbox {
+	fill: #6a6a6a;
+	fill-opacity: 1;
 }
 
+.base-box:disabled ~ .custom-box .outline, 
+.base-box:disabled ~ .custom-box .component-checkmark, 
+.base-box:disabled ~ .custom-box .component-tornbox {
+	fill-opacity: 0;
+}
 
+.base-box:checked:disabled ~ .custom-box .closedbox, 
+.base-box:checked:disabled ~ .custom-box .component-checkmark, 
+.base-box:checked:disabled ~ .custom-box .component-tornbox {
+	fill: #6a6a6a;
+	fill-opacity: 1;
+}
 
-
-
-
-
-
-
-
-
-
-/*.filter-block:last-of-type {
-	width: 317px;
-}*/
-
-
-/*
-.price {
-
-	width: 330px;
-	margin: 50px auto; 
-
-	font-size: ;
-	font-weight: ;
-	line-height: ;
-	text-transform: ;
-	color: ;
-}*/
+.base-box:disabled ~ .custom-box .outline {
+	fill-opacity: 0;
+}
 
 
 /***---Бар---***/ 
-/*
 
+.filter-by-cost {
+	/*padding-top: 10px;*/
 
-
-.title-filter-block-price {
-	margin-bottom: 9px;
+	outline: 1px dotted red;
 }
 
-.price-ctrls {
-	position: relative;
-	height: 36px;
-	margin-bottom: 20px;
+.filter-by-cost .title-filter-by-cost {
+	margin-bottom: 9.5px;
+	margin-left: 3px;
+	letter-spacing: 0.22px;
 	
-	font-size: 0;
+	outline: 1px dotted red;
+}
 
+.cost {
+	position: relative;
+	width: 315px;
+	height: 33px;
+	margin-bottom: 20px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
 	border: 2px solid #ffffff; 
 	border-radius: 2px;
 }
 
-.price-ctrls::after {
+.cost::after {
 	content: "";
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
-
 	width: 2px;
 	height: 22px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% + 1px), -50%);
 
 	background-color: #ffffff;
 }
+
+.cost .min-cost, 
+.cost .max-cost {
+	width: 50px;
+	margin: 0;
+	/*font: inherit;*/
+
+	background-color: red;
+	outline: 1px dotted green;
+}
+
+.max-cost {
+	
+
+}
+/*
 
 .label-ctrls {
 	display: inline-block;
@@ -929,6 +944,10 @@ body {
 	border: none;
 
 }
+
+
+
+
 
 .range-ctrls {
 	position: relative;
