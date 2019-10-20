@@ -24,10 +24,10 @@ body {
 	font-family: "ptsans", arial, sans-serif;
 	background-color: #f2f2f2;
 	
-	background-image: url("../img/sedona-index.png"); 
+/*	background-image: url("../img/sedona-index.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.7; 
+	opacity: 0.7; */
 	
 /*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
@@ -1223,10 +1223,6 @@ body {
 .place-descriptor {
 	display: flex;
 	flex-wrap: wrap;
-
-	/*max-width: 940px;*/
-
-	outline: 1px dotted red;
 }
 
 .place-descriptor > .place-photo {
@@ -1241,7 +1237,6 @@ body {
 
 .place-descriptor .basic-info {
 	max-width: 775px;
-	/*width: 261px;*/
 	min-height: 95px;
 	padding-left: 30px;
 
@@ -1249,8 +1244,6 @@ body {
 	font-weight: normal;
 	line-height: 21px;
 	text-transform: uppercase;
-
-	outline: 1px dashed red;
 }
 
 .basic-info > h3 {
