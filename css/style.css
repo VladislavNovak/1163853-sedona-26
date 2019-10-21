@@ -32,8 +32,7 @@ body {
 /*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.8; */
-
+	opacity: 0.5; */
 }
 
 .container {
@@ -1215,7 +1214,7 @@ body {
 	padding-top: 25px;
 	padding-left: 72px;
 	padding-bottom: 30px;
-	padding-right: 70px;
+	padding-right: 72px;
 	
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -1287,36 +1286,108 @@ body {
 
 .details-and-to-book .go-details {
 	width: 110px;
-
+	
+	transition-duration: 150ms;
 	background-color: #81b3d2;
 }
 
 .details-and-to-book .go-to-book {
 	width: 141px;
-
+	
+	transition-duration: 150ms;
 	background-color: #766357;
 }
 
-/*
-.popup-opener {
+.details-and-to-book .go-details:hover, 
+.details-and-to-book .go-details:focus {
+	outline: none;
+	background-color: #669ec0;	
+}
 
-	padding: 30px 10px;
-	
-	vertical-align: middle;
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 26px; 
+.details-and-to-book .go-to-book:hover, 
+.details-and-to-book .go-to-book:focus {
+	outline: none;
+	background-color: #604e43;	
+}
+
+.details-and-to-book .go-details:active {
+	color: #94b9d2;
+	background-color: #5496bd;
+}
+
+.details-and-to-book .go-to-book:active {
+	color: #928a85;
+	background-color: #503e33;
+}
+
+/***---Рейтинг и звёздность выбранного места---***/
+
+.stars-and-rating {
+	width: 111px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+		
+	text-align: center;
+
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
 	color: #ffffff;
-	text-decoration: none;
+	text-transform: uppercase;
 
-	background-color: #766357;
-}*/
+	outline: 1px dashed red;
+}
 
+.stars-and-rating .stars {
+	width: 100%;
+	height: 17px;
+	margin-top: 5px;
+	/*margin-bottom: 41px;*/
 
+	font-size: 0;
 
+	outline: 1px dotted red;
+}
 
+.stars.assessment-amara {
+	background-image: 
+		url("../img/star.svg"), 
+		url("../img/star.svg"),
+		url("../img/star.svg"),
+		url("../img/star.svg");
+	background-repeat: no-repeat;
+	background-position: 21px 0, 46px 0, 70px 0, 93px 0;
+}
 
+.stars.assessment-quail {
+	background-image: 
+		url("../img/star.svg"),
+		url("../img/star.svg"),
+		url("../img/star.svg");
+	background-repeat: no-repeat;
+	background-position: 46px 0, 70px 0, 93px 0;
+}
 
+.stars.assessment-poco {
+	background-image: 
+		url("../img/star.svg"),
+		url("../img/star.svg");
+	background-repeat: no-repeat;
+	background-position: 70px 0, 93px 0;
+}
+
+.stars-and-rating > p {
+	width: 100%;
+	margin: 1px;
+	padding-top: 8px;
+	padding-left: 3px;
+	
+	color: #666666;
+	/*background-color: #f2f2f2;*/
+
+	outline: 1px dotted red;
+}
 
 
 
