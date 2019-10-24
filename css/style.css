@@ -29,10 +29,10 @@ body {
 	background-position: 50% 0;
 	opacity: 0.7; */
 	
-	background-image: url("../img/sedona-hotels.png"); 
+/*	background-image: url("../img/sedona-hotels.png"); 
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	opacity: 0.7; 
+	opacity: 0.7; */
 }
 
 .container {
@@ -1078,18 +1078,19 @@ body {
 
 /***---Панель с сортировкой---***/ 
 
-.sort-panel {
+.sorting-block {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: top;
-
+	
+	min-height: 55px;
 	width: calc(1200px - 71px - 70px);
 	padding-left: 71px;
 	padding-right: 70px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-
+	
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 18px;
@@ -1100,15 +1101,7 @@ body {
 	background-color: #ffffff;
 }
 
-.sorting-type {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: top;
-
-	min-height: 55px;
-}
-
-.sorting-type > p:first-of-type {
+.sorting-block > p:first-of-type {
 	width: 150px;
 	
 	margin-top: 14px;
@@ -1119,7 +1112,7 @@ body {
 	line-height: 26px;
 }
 
-.sorting-type > p:last-of-type {
+.sorting-block > p:last-of-type {
 	width: 104px; 
 
 	margin-top: 20px;
@@ -1130,11 +1123,10 @@ body {
 .sort-control-panel {
 	display: flex;
 	flex-wrap: wrap;
-
-	max-width: 700px;
+	flex-grow: 1;
 	
 	margin-top: 20px;
-	padding-left: 25px;
+	padding-left: 24px;
 	padding-right: 25px;
 	
 	list-style-type: none;
