@@ -38,7 +38,7 @@
                   <li class="new-item">
                     <label class="device"> 
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox" checked> 
+                      <input class="base-box" type="checkbox" name="swimming-pool" checked> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -59,7 +59,7 @@
                   <li class="new-item">
                     <label class="device">   
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox"> 
+                      <input class="base-box" type="checkbox" name="parking"> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -80,7 +80,7 @@
                   <li class="new-item">
                     <label class="device">   
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox"> 
+                      <input class="base-box" type="checkbox" name="wi-fi"> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -107,7 +107,7 @@
                   <li class="new-item">
                     <label class="device">   
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox" checked> 
+                      <input class="base-box" type="checkbox" name="hotel" checked> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -128,7 +128,7 @@
                   <li class="new-item">
                     <label class="device">   
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox" checked> 
+                      <input class="base-box" type="checkbox" name="motel" checked> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -149,7 +149,7 @@
                   <li class="new-item">
                     <label class="device">   
                       <!-- стандартный элемент -->          
-                      <input class="base-box" type="checkbox" checked> 
+                      <input class="base-box" type="checkbox" name="apartment" checked> 
                       <!-- переопределяющий элемент -->
                       <svg class="custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-0.5 0.5 29 27">
                         <!-- обводка -->
@@ -171,23 +171,36 @@
               </li>
             </ul>
             <!---->
+            <div class="filter-range">
+              <p class="filter-range-title"><strong>Стоимость в сутки(p):</strong></p>
+              <div class="price-control">
+                <label class="title-price">от
+                  <input type="text" class="min-price" name="min-price" value="0">
+                </label>
+
+                <label class="title-price">до
+                  <input type="text" class="max-price" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="range-control">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
+            </div>
+<!--             
             <div class="filter-by-cost">
-              <h3 class="title-filter-by-cost">Стоимость в сутки(p):</h3>
-                <div class="cost">
-                  <output class="min-cost" name="min-cost">0</output>
-                  <output class="max-cost" name="max-cost">3000</output>
+              <p class="title-filter-by-cost">Стоимость в сутки(p):</p>
+              <div class="cost">
+                <label for="min-cost" class="title-min-cost">от</label>
+                <input type="text" class="min-cost" name="min-cost" value="0">
+
+                <label for="" class="title-max-cost">до</label>
+                <input type="text" class="max-cost" name="max-cost" value="3000">
               </div>
-            </div>
-<!--           
-            <div class="filter-by-price">
-              <div class="title-filter-block-price">Стоимость в сутки(p):</div>
-                <div class="price-ctrls">
-                  <label class="label-ctrls">от<input class="input-ctrls" type="text" name="min-price" value="0"></label>
-                  <label class="label-ctrls">до<input class="input-ctrls" type="text" name="max-price" value="3000"></label>
-              </div>
-            </div>
-              
-              
 
               <div class="range-ctrls">
                 <div class="scale">
@@ -197,9 +210,10 @@
                 <div class="range-toggle range-toggle-max"></div>
               </div>
               <button class="btn-show-results" type="submit">Показать</button>
+            </div>
+    -->
 
-            </div> -->
-<!---->
+
 <!-- 
               <div class="multi-range" data-lbound="0" data-ubound="4000">
                 <hr>
@@ -211,21 +225,6 @@
 
             </div>
  -->
-
-<!--               
-              <ul>
-                <li>
-                  <input type="text" name="costMin">
-                  <input type="text" name="costMax">
-                </li>
-                <li>
-                  <input type="range" min="0" max="3000"> 
-                </li>
-                <li> 
-                  <button type="submit">Показать</button>
-                </li>
-              </ul> 
--->
             
             <!---->
           </form> 
@@ -337,20 +336,23 @@
           <p class="visually-hidden">Возможность посетить Седону в одной из социальных сетей:</p>
           <ul class="websites equalizer">
             <li>
-              <a class="network" href="https://twitter.com/" aria-label="Посетите twitter">
+              <a class="network" href="https://twitter.com/" aria-label="Посетите twitter" title="Посетите twitter.com">
+                Посетите twitter.com
                 <svg class="twitter-icon change-social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
                   <path d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
                 </a>
             </li>
             <li>
-              <a class="network" href="https://facebook.com/" aria-label="Посетите facebook">
+              <a class="network" href="https://facebook.com/" aria-label="Посетите facebook" title="Посетите facebook.com">
+                Посетите facebook.com
                 <svg class="facebook-icon change-social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
                   <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="network" href="https://youtube.com/" aria-label="Посетите youtube">
+              <a class="network" href="https://youtube.com/" aria-label="Посетите youtube" title="Посетите youtube.com">
+                Посетите youtube.com
                 <svg class="youtube-icon change-social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
                   <path d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
                 </svg>
