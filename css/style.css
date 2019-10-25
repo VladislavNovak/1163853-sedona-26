@@ -402,6 +402,7 @@ body {
 	position: absolute;
 	left: calc(50% - 284px);
 	width: 458px;
+
 	padding-top: 55px;
 	padding-left: 55px;
 	padding-right: 55px;
@@ -419,8 +420,30 @@ body {
 	font-weight: bold;
 	line-height: 26px;
 
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
+
+	animation-duration: 1000ms;
+	animation-name: hide-booking-form;
+}
+
+@-webkit-keyframes hide-booking-form {
+	from {
+		height: 0;
+		opacity: 0;
+		top: -100px;
+		transform: scaleY(0.9);
+	}	
+	50% {
+		opacity: 0.9;
+		box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+	}
+	to {
+		height: 285px;
+		opacity: 1;
+		top: 0;
+		transform: scaleY(1);
+	}
 }
 
 .booking-organizer {
@@ -565,6 +588,23 @@ body {
 	
 	transition-duration: 150ms;
 	background-color: #81b3d2;
+
+	animation-duration: 2500ms;
+	animation-name: hide-btn-send-reservation;
+}
+
+@keyframes hide-btn-send-reservation {
+	from {
+		height: 0;
+		opacity: 0;
+		background-color: #ffffff;
+	}	
+
+	to {
+		height: 56px;
+		opacity: 1;
+		background-color: #81b3d2;
+	}
 }
 
 .btn-send-reservation:hover, 
