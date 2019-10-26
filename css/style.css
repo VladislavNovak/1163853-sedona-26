@@ -1129,7 +1129,7 @@ body {
 	background-color: #ffffff;
 }
 
-.sorting-block > p:first-of-type {
+.sorting-block > p:nth-of-type(2) {
 	width: 150px;
 	
 	margin-top: 14px;
