@@ -211,21 +211,7 @@
               </div>
               <button class="btn-show-results" type="submit">Показать</button>
             </div>
-    -->
-
-
-<!-- 
-              <div class="multi-range" data-lbound="0" data-ubound="4000">
-                <hr>
-                <input type='range' min='10' max='45' step='5' value='10' 
-                oninput='this.parentNode.dataset.lbound=this.value;'>
-                <input type='range' min='15' max='50' step='5' value='50' 
-                oninput='this.parentNode.dataset.ubound=this.value;'>
-              </div>
-
-            </div>
- -->
-            
+    --> 
             <!---->
           </form> 
     		</section>
@@ -236,7 +222,7 @@
             <p>Найдено: 3</p>
             <p>Сортировка:</p>
             <ul class="sort-control-panel">
-              <li class="sort-by"><a class="sort-types" href="#">По Цене</a></li>
+              <li class="sort-by"><a class="sort-types sort-active-onload" href="#">По Цене</a></li>
               <li class="sort-by"><a class="sort-types" href="#">По типу</a></li>
               <li class="sort-by"><a class="sort-types" href="#">По рейтингу</a></li>
             </ul>
@@ -251,7 +237,7 @@
                 </a>
               </li>
               <li>
-                <a class="updown-link" href="#" aria-label="Сортировать по убыванию"  title="Сортировать по убыванию">
+                <a class="updown-link updown-active-onload" href="#" aria-label="Сортировать по убыванию"  title="Сортировать по убыванию">
                   Сортировать по убыванию
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path class="down-dir" fill="#cacaca" d="M5.5 10L0 0h11"/>
@@ -374,7 +360,70 @@
 
     </div>          <!-- end of container -->
 
+    <script>
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+      // Деактивация изначально загруженного элемента из группы .sort-types
+      var relatedSorts = document.querySelectorAll(".sort-types");
+      var targetSort = document.querySelector(".sort-types.sort-active-onload");
+
+      // перечень элементов, выбираем один...
+      relatedSorts.forEach( function(item) {   
+        // перечень событий, выбираем одно...            
+        ["click", "focus"].forEach( function( event ) { 
+          // применяем к каждому элементу события по порядку...   
+          item.addEventListener(event, function() {   
+            // отключаем у заданного элемента класс со стилями     
+            targetSort.classList.remove( "sort-active-onload" );
+          }); 
+        });
+      });
+      
+      // Деактивация изначально загруженного элемента из группы .updown-link
+      var relatedLinks = document.querySelectorAll(".updown-link");
+      var targetLink = document.querySelector(".updown-link.updown-active-onload");
+
+
+      // перечень элементов, выбираем один...
+      relatedLinks.forEach( function(item) {   
+        // перечень событий, выбираем одно...            
+        ["click", "focus"].forEach( function( event ) { 
+          // применяем к каждому элементу события по порядку...   
+          item.addEventListener(event, function() {   
+            // отключаем у заданного элемента класс со стилями     
+            targetLink.classList.remove( "updown-active-onload" );
+          }); 
+        });
+      });
+
+      // var relatedSorts = document.querySelectorAll(".sort-types");
+      // var targetSort = document.querySelector(".sort-types.sort-active-onload");
+      // var removeClassSort = "sort-active-onload";
+
+      // var relatedLinks = document.querySelectorAll(".updown-link");
+      // var targetLink = document.querySelector(".updown-link.updown-active-onload");
+      // var removeClassLink = "updown-active-onload";
+
+      // var events = ["click", "focus"];
+
+      // function deactivator(relatedItems, events, targetItem, removeClass) {
+      //   // перечень элементов, выбираем один...
+      //   relatedItems.forEach( function( item ) {   
+      //     // перечень событий, выбираем одно...            
+      //     events.forEach( function( event ) { 
+      //       // применяем к каждому элементу события по порядку...   
+      //       item.addEventListener(event, function() {   
+      //         // отключаем у заданного элемента класс со стилями     
+      //         targetItem.classList.remove( removeClass );
+      //       }); 
+      //     });
+      //   });
+      // }
+
+      // deactivator(relatedSorts, events, targetSort, removeClassSort)();
+      // deactivator(relatedLinks, events, targetLink, removeClassLink)();
+
+     </script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
   </body>
 </html>

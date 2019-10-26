@@ -424,25 +424,25 @@ body {
 	background-color: #ffffff;
 
 	animation-duration: 1000ms;
-	animation-name: hide-booking-form;
+	animation-name: appear-booking-form;
 }
 
-@-webkit-keyframes hide-booking-form {
+@-webkit-keyframes appear-booking-form {
 	from {
 		height: 0;
-		opacity: 0;
 		top: -100px;
 		transform: scaleY(0.9);
+		color: rgba(0, 0, 0, 0);
 	}	
 	50% {
-		opacity: 0.9;
 		box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+		color: rgba(0, 0, 0, 0.3);
 	}
 	to {
 		height: 285px;
-		opacity: 1;
 		top: 0;
 		transform: scaleY(1);
+		color: #000000;
 	}
 }
 
@@ -463,6 +463,9 @@ body {
 
 	background-color: #f2f2f2;
 	border: none;
+	
+	animation-duration: 1500ms;
+	animation-name: appear-entry-field;
 }
 
 .calendar-icon {
@@ -490,6 +493,9 @@ body {
 	padding-left: 2px;
 	
 	text-align: left;
+
+	animation-duration: 1500ms;
+	animation-name: appear-booking-label;
 }
 
 .booking-organizer .title-for-adult {
@@ -512,6 +518,9 @@ body {
 	
   background-color: #f2f2f2;
 	border: none;
+
+	animation-duration: 1500ms;
+	animation-name: appear-entry-field;
 }
 
 .entry-field.for-date {
@@ -547,9 +556,13 @@ body {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
-	color: #a9a9a9;	background-color: #f2f2f2;
+	color: #a9a9a9;	
+	background-color: #f2f2f2;
 
 	border: none;
+
+	animation-duration: 1500ms;
+	animation-name: appear-quantity-control;
 }
 
 .quantity-control:first-of-type {
@@ -572,6 +585,37 @@ body {
 	color: #81b3d2;
 }
 
+@keyframes appear-booking-label {
+	from {
+		color: rgba(0, 0, 0, 0);
+	}
+	to {
+		color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+@keyframes appear-entry-field {
+	from {
+		color: rgba(0, 0, 0, 0);
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		color: rgba(0, 0, 0, 0.8);
+		background-color: #f2f2f2;
+	}
+}
+
+@keyframes appear-quantity-control {
+	from {
+		color: rgba(0, 0, 0, 0);
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		color: #a9a9a9;
+		background-color: #f2f2f2;
+	}
+}
+
 .btn-send-reservation {
 	width: 458px;
 	min-height: 58px;
@@ -590,10 +634,10 @@ body {
 	background-color: #81b3d2;
 
 	animation-duration: 2500ms;
-	animation-name: hide-btn-send-reservation;
+	animation-name: appear-btn-send-reservation;
 }
 
-@keyframes hide-btn-send-reservation {
+@keyframes appear-btn-send-reservation {
 	from {
 		height: 0;
 		opacity: 0;
@@ -1191,6 +1235,12 @@ body {
 	border-bottom: none;
 }
 
+.sort-types.sort-active-onload {
+	color: #81b3d2;
+	text-decoration: none;
+	border-bottom: none;
+}
+
 .sorting-arrow {
 	display: flex;
 	flex-wrap: wrap;
@@ -1208,6 +1258,11 @@ body {
 
 .updown-link {
 	padding-right: 1px;
+}
+
+.updown-link.updown-active-onload .down-dir {
+	fill: #81b3d2;
+	outline: none;
 }
 
 .up-dir, 
