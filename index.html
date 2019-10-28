@@ -105,7 +105,7 @@
 
         <form class="booking-form" id="hotel-selector" action="https://echo.htmlacademy.ru" method="get">
           <!---->
-          <div class="booking-organizer">
+          <div class="booking-organizer full-width-layout">
             <label for="check-in">Дата заезда:</label>
             <input class="entry-field for-date" type="text" id="check-in" name="check-in" value="24 апреля 2017" 
               pattern="[0-9]{2}\ ^[А-Яа-яЁё]+$\ [0-9]{4}" aria-label="Введите данные, разделяя пробелом: день (цифрами, не более двух) месяц (кириллицей) год (цифрами, не более четырёх)" autocomplete="off" required>
@@ -114,7 +114,7 @@
             </a>
           </div>
           <!---->
-          <div class="booking-organizer">
+          <div class="booking-organizer full-width-layout">
             <label for="check-out">Дата выезда:</label>
             <input class="entry-field for-date" type="text" id="check-out" name="check-out" value="4 июля 2017" 
             pattern="[0-9]{2}\ ^[А-Яа-яЁё]+$\ [0-9]{4}" aria-label="Введите данные, разделяя пробелом: день (цифрами, не более двух) месяц (кириллицей) год (цифрами, не более четырёх)" autocomplete="off" required>
@@ -123,7 +123,7 @@
             </a>
           </div>
           <!---->
-          <div class="booking-organizer">
+          <div class="booking-organizer left-width-layout">
             <label class="title-for-adult" for="adult">Взрослые:</label>
             <button class="quantity-control" type="button">–</button>
             <input class="entry-field for-quantity" type="text" id="adult" name="adult" value="2" 
@@ -131,7 +131,7 @@
             <button class="quantity-control" type="button">+</button>
           </div>
           <!---->
-          <div class="booking-organizer">
+          <div class="booking-organizer right-width-layout">
             <label class="title-for-children" for="children">Дети:</label>
             <button class="quantity-control" type="button">–</button>
             <input class="entry-field for-quantity" type="text" id="children" name="children" value="0" 
@@ -139,7 +139,8 @@
             <button class="quantity-control" type="button">+</button>
           </div>
           <!---->
-          <button class="btn-send-reservation" type="submit">Найти</button>
+          <button class="btn-send-reservation" type="submit">Найти </button>
+          <!-- <button class="btn-send-reservation" type="submit">Найти</button> -->
         </form>
         <!----> 
         <div class="map-wrapper">
@@ -201,7 +202,15 @@
       </div>        <!-- end of lower-sector -->
     </div>          <!-- end of container -->
     
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>
+
+      // var bookingForm  = document.querySelector(".booking-form");
+      // if( bookingForm.clientHeight == bookingForm.clientHeight ){
+      //   bookingForm.style.overflowY = "scroll";
+      // }
+
+    </script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
 
   </body>
 </html>
