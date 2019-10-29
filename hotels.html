@@ -5,7 +5,6 @@
     <title>Гостиницы в Седоне</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/external.js"></script>
   </head>
   <body>
     <!-- основная рабочая область: -->
@@ -359,38 +358,8 @@
       </footer>
 
     </div>          <!-- end of container -->
-
-    <script>
-
-      var relatedSorts = document.querySelectorAll(".sort-types");
-      var targetSort = document.querySelector(".sort-types.sort-active-onload");
-      var relatedLinks = document.querySelectorAll(".updown-link");
-      var targetLink = document.querySelector(".updown-link.updown-active-onload");
-      var events = ["click", "focus"];
-
-      // relatedItems - группа связанных элементов
-      // events - список событий, которые вызывают последующие действия
-      // targetItem - элемент( из группы связанных ), который нужно деактивировать
-      // removeClass - класс, который нужно удалить из targetItem
-      function deactivator(relatedItems, events, targetItem, removeClass) {
-        // перечень элементов, выбираем один...
-        relatedItems.forEach( function(item) {   
-          // перечень событий, выбираем одно...            
-          events.forEach( function( event ) { 
-            // применяем к каждому элементу события по порядку...   
-            item.addEventListener(event, function( evt) {   
-              // отключаем у заданного элемента класс со стилями     
-              targetItem.classList.remove( removeClass );
-              evt.preventDefault();
-            }); 
-          });
-        });
-      }
-
-      deactivator(relatedLinks, events, targetLink, "updown-active-onload");
-      deactivator(relatedSorts, events, targetSort, "sort-active-onload");
-
-     </script>
+    
+    <script src="js/external.js" defer></script>
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
   </body>
