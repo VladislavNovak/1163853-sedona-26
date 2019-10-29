@@ -409,7 +409,7 @@ body {
 	width: 488px;
 	height: 286px;
 	padding: 55px 40px 55px 40px;
-	overflow-y: auto;
+	overflow: hidden;
 
 	z-index: 1;
 	
@@ -492,9 +492,6 @@ body {
 
 	background-color: #f2f2f2;
 	border: none;
-	
-	animation-duration: 1500ms;
-	animation-name: appear-entry-field;
 }
 
 .calendar-icon {
@@ -522,9 +519,6 @@ body {
 	padding-left: 2px;
 	
 	text-align: left;
-
-	animation-duration: 1500ms;
-	animation-name: appear-booking-label;
 }
 
 .booking-organizer .title-for-adult {
@@ -547,9 +541,6 @@ body {
 	
   background-color: #f2f2f2;
 	border: none;
-
-	animation-duration: 1500ms;
-	animation-name: appear-entry-field;
 }
 
 .entry-field.for-date {
@@ -589,9 +580,6 @@ body {
 	background-color: #f2f2f2;
 
 	border: none;
-
-	animation-duration: 1500ms;
-	animation-name: appear-quantity-control;
 }
 
 .quantity-control:first-of-type {
@@ -614,37 +602,6 @@ body {
 	color: #81b3d2;
 }
 
-@keyframes appear-booking-label {
-	from {
-		color: rgba(0, 0, 0, 0);
-	}
-	to {
-		color: rgba(0, 0, 0, 0.8);
-	}
-}
-
-@keyframes appear-entry-field {
-	from {
-		color: rgba(0, 0, 0, 0);
-		background-color: rgba(0, 0, 0, 0);
-	}
-	to {
-		color: rgba(0, 0, 0, 0.8);
-		background-color: #f2f2f2;
-	}
-}
-
-@keyframes appear-quantity-control {
-	from {
-		color: rgba(0, 0, 0, 0);
-		background-color: rgba(0, 0, 0, 0);
-	}
-	to {
-		color: #a9a9a9;
-		background-color: #f2f2f2;
-	}
-}
-
 .btn-reservation {
 	width: 458px;
 	min-height: 58px;
@@ -661,23 +618,6 @@ body {
 	
 	transition-duration: 150ms;
 	background-color: #81b3d2;
-
-	animation-duration: 2500ms;
-	animation-name: appear-btn-reservation;
-}
-
-@keyframes appear-btn-reservation {
-	from {
-		height: 0;
-		opacity: 0;
-		background-color: #ffffff;
-	}	
-
-	to {
-		height: 56px;
-		opacity: 1;
-		background-color: #81b3d2;
-	}
 }
 
 .btn-reservation:hover, 
