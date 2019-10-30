@@ -173,12 +173,11 @@ body {
 
 .presentation {
 	min-height: calc(216px - 60px - 20px); 
-	width: calc(100% - 300px - 300px);
+	width: calc(100% - 300px * 2);
 	padding-top: 60px;
 	padding-right: 300px;
 	padding-bottom: 20px;
 	padding-left: 300px;
-
 	margin: 0 auto;
 
 	text-align: center;
@@ -187,7 +186,7 @@ body {
 
 .presentation > h1 {
 	width: 470px;
-	margin: 0 auto 28px;
+	margin: 0 auto 27px;
 
 	font-size: 21px;
 	line-height: 26px;
@@ -228,8 +227,12 @@ body {
 }
 
 .primary {
-	width: 400px; 
-	min-height: 256px;
+	width: calc(400px - 33px * 2); 
+	min-height: calc(256px - 47px - 30px);
+	padding-top: 47px;
+	padding-left: 33px;
+	padding-bottom: 30px;
+	padding-right: 33px;
 
 	list-style: none;
 	text-align: center; 
@@ -247,39 +250,52 @@ body {
 
 .primary h2 {
 	width: 150px;
-	margin: 47px auto 24px;
+	margin: 0 auto 23px;
+
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
 	overflow-wrap: normal;
 }
 
+.primary .third-title-location {
+	letter-spacing: 0.5px;
+}
+
 .primary p {
 	width: calc(100% - 30px);
 	margin: 0 auto 22px;
+
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
 	overflow-wrap: normal;
 }
 
-.advantage:first-of-type p {
-	width: 310px;
-	letter-spacing: 0.3px;
+.primary .first-text-location {
+	width: calc(100% - 35px);
+
+	letter-spacing: 0.2px;
 }
 
-.advantage:nth-of-type(2) p {
-	width: 320px;
-	letter-spacing: 0.1px;
+.primary .first-sign-location {
+	width: 150px;
+	padding-top: 1px;
+	margin-bottom: 22px;
+}
+
+.primary .second-sign-location {
+	width: 150px;
+	margin-bottom: 22px;
 }
 
 .primary:nth-of-type(n + 3) p {
 	width: 258px;
-	/*letter-spacing: 0.1px;*/
 }
 
 .image-wrapper {
 	display: block;
+
 	width: 800px;
 	min-height: 256px;
 
@@ -298,8 +314,12 @@ body {
 }
 
 .secondary {
-	width: 400px; 
-	min-height: 330px;
+	width: calc(400px - 30px * 2); 
+	min-height: calc(330px - 140px - 60px);
+	padding-top: 140px;
+	padding-left: 30px;
+	padding-bottom: 60px;
+	padding-right: 30px;
 
 	list-style: none;
 	text-align: center; 
@@ -327,8 +347,8 @@ body {
 }
 
 .secondary h3 {
-	min-width: 300px;
-	margin: 161px auto 12px;
+	width: 200px;
+	margin: 21px auto 12px;
 
 	font-size: 21px;
 	font-weight: bold;
@@ -344,6 +364,18 @@ body {
 	font-weight: normal;
 	line-height: 21px;
 	overflow-wrap: normal;
+	letter-spacing: 0.1px;
+}
+
+.secondary:first-of-type p {
+	width: 310px;
+
+	letter-spacing: 0.1px;
+}
+
+.secondary:nth-of-type(2) p {
+	width: 305px;
+	
 	letter-spacing: 0.1px;
 }
 

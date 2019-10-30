@@ -79,14 +79,14 @@ window.addEventListener("load", function (evt) {
   // events - список событий, которые вызывают последующие действия
   // targetItem - элемент( из группы связанных ), который нужно деактивировать
   // removeClass - класс, который нужно удалить из targetItem
-  function deactivator (relatedItems, events, targetItem, removeClass) {
+  function deactivator(relatedItems, events, targetItem, removeClass) {
     // перечень элементов, выбираем один...
     relatedItems.forEach(function (item) {   
       // перечень событий, выбираем одно...            
       events.forEach(function (event) { 
         // применяем к каждому элементу события по порядку...   
         item.addEventListener(event, function (evt) {  
-          if (targetItem.classList.contains (removeClass)) {
+          if (targetItem.classList.contains(removeClass)) {
             // отключаем у заданного элемента класс со стилями     
             targetItem.classList.remove (removeClass);
           }
