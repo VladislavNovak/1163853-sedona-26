@@ -21,7 +21,7 @@ window.addEventListener("load",
 					// фокусируемся на первом input
 					checkIn.focus();
 
-					if (bookingForm.scrollHeight > bookingForm.clientHeight ) {
+					if (bookingForm.scrollHeight > 396 && bookingForm.scrollHeight > bookingForm.clientHeight) {
 						bookingForm.style.overflowY = "auto";
 					}
 
