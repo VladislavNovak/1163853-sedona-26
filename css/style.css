@@ -387,9 +387,13 @@ body {
 
 .search-sector {
 	display: block;
-	width: 100%;
+
+	width: calc(100% - 315px * 2);
 	min-height: calc(289px - 49px);
-	padding: 49px 0 0;
+	padding-top: 49px;
+	padding-right: 315px;
+	padding-bottom: 0;
+	padding-left: 315px;
 	
 	text-align: center; 
 	text-transform: uppercase;
@@ -398,7 +402,9 @@ body {
 }
 
 .search-sector h2 {
-	margin: 0 auto 25px;
+	margin: 0 auto 25.5px;
+	padding-left: 50px;
+	padding-right: 50px;
 	
 	font-size: 30px;
 	font-weight: bold;
@@ -407,7 +413,7 @@ body {
 
 .search-sector p {
 	width: 500px;
-	margin: 20px auto 20px;
+	margin: 20px auto 19.5px;
 
 	font-size: 14px;
 	font-weight: normal;
@@ -419,7 +425,10 @@ body {
 .popup-opener {
 	width: 568px;
 	margin: 27px auto 0;
-	padding: 30px 10px;
+	padding-top: 29.5px;
+	padding-right: 80px;
+	padding-bottom: 30.5px;
+	padding-left: 80px;
 	
 	vertical-align: middle;
 	font-size: 21px;
