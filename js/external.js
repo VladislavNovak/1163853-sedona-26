@@ -63,11 +63,6 @@ window.addEventListener("load", function (evt) {
 
 				// отправляем данные на сервер после проверки валидности введённых данных:
 				bookingForm.addEventListener("submit", function(evt) {
-					// сначала проверяем, состояние формы и если оно имеет класс shake...
-					if (bookingForm.classList.contains("booking-form-shake")) {
-						// и отключаем его
-						bookingForm.classList.remove("booking-form-shake");
-					}
 					// теперь проверяем, введены ли данные в необходимые input (поле children может остаться пустым)...
 					if (checkIn.value && checkOut.value && adult.value) {
 						if (storageAvialable()) {
@@ -77,6 +72,10 @@ window.addEventListener("load", function (evt) {
 						}
 					} 
 					else {
+						// сначала проверяем, состояние формы и если она имеет класс shake и отключаем его:
+						if (bookingForm.classList.contains("booking-form-shake")) {
+							bookingForm.classList.remove("booking-form-shake");
+						}
 						// если хотя бы один из полей с пустым значением анимируем отказ...
 						evt.preventDefault();
 						void bookingForm.offsetWidth;

@@ -267,7 +267,7 @@ body {
 }
 
 .primary h2 {
-  width: 150px;
+  width: 155px;
   margin: 0 auto 23px;
 
   font-size: 21px;
@@ -1068,7 +1068,7 @@ body {
   top: 50%;
   -webkit-transform: translate(calc(-50% + 2px), -50%);
       -ms-transform: translate(calc(-50% + 2px), -50%);
-          transform: translate(calc(-50% + 2px), -50%);
+          transform: translate(-50%, -50%);
 
   background-color: #ffffff;
 }
@@ -1167,7 +1167,7 @@ body {
           justify-content: flex-start;
   
   min-height: 56px;
-  width: calc(1200px - 71px - 70px);
+  width: calc(1200px - 71.5px - 70px);
   padding-left: 71.5px;
   padding-right: 70px;
   padding-top: 15.5px;
@@ -1382,7 +1382,7 @@ body {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 .basic-info > p {
