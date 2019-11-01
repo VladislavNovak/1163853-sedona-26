@@ -37,7 +37,6 @@ body {
   margin: 0 auto;
 
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -460,14 +459,13 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   
-  -webkit-transition-duration: 150ms;
-  
-       -o-transition-duration: 150ms;
-  
-          transition-duration: 150ms;
   background-color: #766357;
   border: none;
   outline: none;
+
+  -webkit-transition-duration: 150ms;
+       -o-transition-duration: 150ms;
+          transition-duration: 150ms;
 }
 
 .popup-opener:hover,
@@ -514,10 +512,9 @@ body {
   font-weight: bold;
   line-height: 26px;
 
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .booking-form-appear {
@@ -789,9 +786,7 @@ body {
   color: #ffffff;
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   background-color: #81b3d2;
 }
@@ -924,7 +919,6 @@ body {
   white-space: nowrap;
 
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
 }
@@ -1101,7 +1095,6 @@ body {
   height: 4px;
 
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-
           box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 
@@ -1137,9 +1130,7 @@ body {
   color: #ffffff;
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   background: transparent;
   border: 2px solid #ffffff;
@@ -1340,8 +1331,8 @@ body {
 
 .place-aligner > .place-photo {
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+             -ms-flex-order: 1;
+                      order: 1;
   width: 135px; 
   height: 90px;
   margin-top: 5px;
@@ -1361,8 +1352,8 @@ body {
 
 .place-aligner > .basic-info {
   -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+             -ms-flex-order: 2;
+                      order: 2;
 
   width: calc(811px - 515px - 30px);
   min-height: 95px;
@@ -1421,9 +1412,7 @@ body {
   width: calc(110px - 5px - 4.5px);
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   background-color: #81b3d2;
 }
@@ -1432,9 +1421,7 @@ body {
   width: calc(141px - 5px - 4px);
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   background-color: #766357;
 }
@@ -1463,8 +1450,8 @@ body {
 
 .assessment {
   -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+             -ms-flex-order: 3;
+                      order: 3;
 
   width: 110px;
  
@@ -1599,9 +1586,7 @@ body {
   font-size: 0;
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   background-color: #81b3d2;
 }
@@ -1672,9 +1657,7 @@ body {
   margin-left: 3px;
   
   -webkit-transition-duration: 150ms;
-  
        -o-transition-duration: 150ms;
-  
           transition-duration: 150ms;
   fill: #231f20;
 }
@@ -1707,7 +1690,6 @@ body {
   white-space: nowrap;
 
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
 }

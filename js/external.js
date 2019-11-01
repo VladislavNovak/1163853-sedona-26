@@ -1,29 +1,54 @@
-// скрипт начинает работать в момент загрузки документа:
-window.addEventListener("load", function(e) {
-	e.preventDefault();
+// проверяем доступность локального хранилища:
+function storageAvialable() {
+	try {
+		var storage = window.localStorage; 
+		var x = "__storage_test__"; 
+		storage.setItem(x, x);
+		storage.removeItem(x);
+		return true;
+	} catch(error) {
+		return false;
+	}
+}
+
+// выключение предварительно активированного элемента 
+// (в каждой из групп панели сортировки в hotels):
+
+// relatedItems - группа связанных элементов
+// events - список событий, которые вызывают последующие действия
+// targetItem - элемент( из группы связанных ), который нужно деактивировать
+// removeClass - класс, который нужно удалить из targetItem
+function deactivator(relatedItems, events, targetItem, removeClass) {
+	// перечень элементов, выбираем один...
+	relatedItems.forEach(function(item) {   
+		// перечень событий, выбираем одно...            
+		events.forEach(function(event) { 
+			// применяем к каждому элементу события по порядку...   
+			item.addEventListener(event, function(evt) {  
+				if(targetItem.classList.contains(removeClass)) {
+					// отключаем у заданного элемента класс со стилями     
+					targetItem.classList.remove(removeClass);
+				}
+				evt.preventDefault();
+			}); 
+		});
+	});
+}
+
+// выполняется и по событию DONContentLoaded, и после того, как DOM загружен:
+function executeMain() {
 	var popupOpener = document.querySelector(".popup-opener");
 	var bookingForm = document.querySelector(".booking-form");
-	// var bookingFormHidden = document.querySelector(".booking-form-hidden");
-	// var checkIn = document.querySelector("#check-in");
-	// var checkOut = document.querySelector("#check-out");
 	var checkIn = document.querySelector("[name=check-in]");
 	var checkOut = document.querySelector("[name=check-out]");
 	var adult = document.querySelector("[name=adult]");
+	var relatedSorts = document.querySelectorAll(".sort-types");
+	var targetSort = document.querySelector(".sort-types.sort-active-onload");
+	var relatedLinks = document.querySelectorAll(".updown-link");
+	var targetLink = document.querySelector(".updown-link.updown-active-onload");
+	var listEvents = ["click", "focus"];
 	// флаг: открывалась ли форма. Если еще не открывалась, то спрячем форму при загрузке страницы:
 	var isOpenerWasPressed = false;
-
-	// проверяем доступность локального хранилища:
-	function storageAvialable() {
-		try {
-			var storage = window.localStorage; 
-			var x = "__storage_test__"; 
-			storage.setItem(x, x);
-			storage.removeItem(x);
-			return true;
-		} catch(error) {
-			return false;
-		}
-	}
 
 	// если кнопка открытия/закрытия и сама форма существуют...
 	if(popupOpener && bookingForm) {
@@ -63,7 +88,7 @@ window.addEventListener("load", function(e) {
 				}
 
 				// отправляем данные на сервер после проверки валидности введённых данных:
-				bookingForm.addEventListener("submit", function(ev) {
+				bookingForm.addEventListener("submit", function(e) {
 					// если данные введены в необходимые input (поле children может остаться пустым)...
 					if(checkIn.value && checkOut.value && adult.value) {
 						if(storageAvialable()) {
@@ -78,18 +103,21 @@ window.addEventListener("load", function(e) {
 							bookingForm.classList.remove("booking-form-shake");
 						}
 						// если хотя бы один из полей с пустым значением анимируем отказ...
-						ev.preventDefault();
-						void bookingForm.offsetWidth;
+						e.preventDefault();
+						// без этого анимация не будет работать
+						// для можно использовать также void bookingForm.offsetWidth;
+						bookingForm.offsetWidth = bookingForm.offsetWidth;
+						// и переподключаем класс shake
 						bookingForm.classList.add("booking-form-shake");
 						checkIn.focus(); 
 					} 
 				});
 
 				// ! закрытие формы через ESC !
-				bookingForm.addEventListener("keydown", function(ev) {
+				bookingForm.addEventListener("keydown", function(e) {
 					// если форма открыта и нажата ESC...
-					if(ev.keyCode === 27 && bookingForm.classList.contains("booking-form") && bookingForm.classList.contains("booking-form-appear")) { 
-						ev.preventDefault();
+					if(e.keyCode === 27 && bookingForm.classList.contains("booking-form") && bookingForm.classList.contains("booking-form-appear")) { 
+						e.preventDefault();
 
 						// сначала сохраняем данные, введённые пользователем:
 						if(storageAvialable()) {
@@ -131,37 +159,24 @@ window.addEventListener("load", function(e) {
 
 		});
 	}
-	
-	//***
 
-	var relatedSorts = document.querySelectorAll(".sort-types");
-	var targetSort = document.querySelector(".sort-types.sort-active-onload");
-	var relatedLinks = document.querySelectorAll(".updown-link");
-	var targetLink = document.querySelector(".updown-link.updown-active-onload");
-	var listEvents = ["click", "focus"];
-
-	// relatedItems - группа связанных элементов
-	// events - список событий, которые вызывают последующие действия
-	// targetItem - элемент( из группы связанных ), который нужно деактивировать
-	// removeClass - класс, который нужно удалить из targetItem
-	function deactivator(relatedItems, events, targetItem, removeClass) {
-		// перечень элементов, выбираем один...
-		relatedItems.forEach(function(item) {   
-			// перечень событий, выбираем одно...            
-			events.forEach(function(event) { 
-				// применяем к каждому элементу события по порядку...   
-				item.addEventListener(event, function(evt) {  
-					if(targetItem.classList.contains(removeClass)) {
-						// отключаем у заданного элемента класс со стилями     
-						targetItem.classList.remove(removeClass);
-					}
-					evt.preventDefault();
-				}); 
-			});
-		});
-	}
-
+	// выключение предварительно активированного элемента
 	deactivator(relatedLinks, listEvents, targetLink, "updown-active-onload");
 	deactivator(relatedSorts, listEvents, targetSort, "sort-active-onload");
-	    
-});
+
+} 
+
+// readyState показывает текущее состояние загрузки:
+if(document.readyState === "loading") {
+	// если документ загружается, ждём события
+	document.addEventListener("DONContentLoaded", executeMain);
+} else {
+	// DOM готов
+	executeMain();
+}
+
+window.onbeforeunload = function() {
+	localStorage.setItem("checkInValue", "24 апреля 2017");
+	localStorage.setItem("checkOutValue", "4 июля 2017");
+	localStorage.setItem("adultValue", "2");
+};
