@@ -1,5 +1,6 @@
 // скрипт начинает работать в момент загрузки документа:
-window.addEventListener("load", function (evt) {
+window.addEventListener("load", function(e) {
+	e.preventDefault();
 	var popupOpener = document.querySelector(".popup-opener");
 	var bookingForm = document.querySelector(".booking-form");
 	// var bookingFormHidden = document.querySelector(".booking-form-hidden");
@@ -25,31 +26,31 @@ window.addEventListener("load", function (evt) {
 	}
 
 	// если кнопка открытия/закрытия и сама форма существуют...
-	if (popupOpener && bookingForm) {
+	if(popupOpener && bookingForm) {
 		// ... а форма ещё не открывалась...
-		if (isOpenerWasPressed == false) {
+		if(isOpenerWasPressed === false) {
 			// ... просто прячем форму. 
 			bookingForm.classList.remove("booking-form");
 			bookingForm.classList.add("booking-form-hidden");
 		}
 
 		// проверяем событие на кнопке открытия формы (в данном случае - клик):
-		popupOpener.addEventListener("click", function (evt) {
+		popupOpener.addEventListener("click", function(evt) {
 			evt.preventDefault();
 			// устанавливаем флаг дающий знать, что форма минимум однажды уже открывалась:
 			isOpenerWasPressed = true;
 			// если форма не открыта, открываем:
-			if (bookingForm.classList.contains("booking-form-hidden")) {
+			if(bookingForm.classList.contains("booking-form-hidden")) {
 				// удаляем скрытое состояние (none) и добавляем flex и animation:
 				bookingForm.classList.remove("booking-form-hidden"); 
 				bookingForm.classList.add("booking-form"); 
-				if (!bookingForm.classList.contains("booking-form-appear")) {
+				if(!bookingForm.classList.contains("booking-form-appear")) {
 					bookingForm.classList.add("booking-form-appear");
 				}
         
 				// localStorage - возвращаем сохранённые данные. 
 				// они могут понадобиться, если пользователь уже ввел какие-то данные
-				if (storageAvialable()) {
+				if(storageAvialable()) {
 					checkIn.value = localStorage.getItem("checkInValue");
 					checkOut.value = localStorage.getItem("checkOutValue");
 					adult.value = localStorage.getItem("adultValue");
@@ -57,15 +58,15 @@ window.addEventListener("load", function (evt) {
 				// и фокусируемся на первом input
 				checkIn.focus();
 
-				if (bookingForm.scrollHeight > 396 && bookingForm.scrollHeight > bookingForm.clientHeight) {
+				if(bookingForm.scrollHeight > 396 && bookingForm.scrollHeight > bookingForm.clientHeight) {
 					bookingForm.style.overflowY = "auto";
 				}
 
 				// отправляем данные на сервер после проверки валидности введённых данных:
-				bookingForm.addEventListener("submit", function(evt) {
-					// теперь проверяем, введены ли данные в необходимые input (поле children может остаться пустым)...
-					if (checkIn.value && checkOut.value && adult.value) {
-						if (storageAvialable()) {
+				bookingForm.addEventListener("submit", function(ev) {
+					// если данные введены в необходимые input (поле children может остаться пустым)...
+					if(checkIn.value && checkOut.value && adult.value) {
+						if(storageAvialable()) {
 							localStorage.setItem("checkInValue", checkIn.value);
 							localStorage.setItem("checkOutValue", checkOut.value);
 							localStorage.setItem("adultValue", adult.value);
@@ -77,7 +78,7 @@ window.addEventListener("load", function (evt) {
 							bookingForm.classList.remove("booking-form-shake");
 						}
 						// если хотя бы один из полей с пустым значением анимируем отказ...
-						evt.preventDefault();
+						ev.preventDefault();
 						void bookingForm.offsetWidth;
 						bookingForm.classList.add("booking-form-shake");
 						checkIn.focus(); 
@@ -85,19 +86,19 @@ window.addEventListener("load", function (evt) {
 				});
 
 				// ! закрытие формы через ESC !
-				bookingForm.addEventListener("keydown", function (evt) {
+				bookingForm.addEventListener("keydown", function(ev) {
 					// если форма открыта и нажата ESC...
-					if (evt.keyCode === 27 && bookingForm.classList.contains("booking-form") && bookingForm.classList.contains("booking-form-appear")) { 
-						evt.preventDefault();
+					if(ev.keyCode === 27 && bookingForm.classList.contains("booking-form") && bookingForm.classList.contains("booking-form-appear")) { 
+						ev.preventDefault();
 
 						// сначала сохраняем данные, введённые пользователем:
-						if (storageAvialable()) {
+						if(storageAvialable()) {
 							localStorage.setItem("checkInValue", checkIn.value);
 							localStorage.setItem("checkOutValue", checkOut.value);
 							localStorage.setItem("adultValue", adult.value);
 						}
-						// удаляем состояние shake (если есть) flex и animation и добавляем скрытое состояние (none) :
-						if (bookingForm.classList.contains("booking-form-shake")) {
+						// удаляем shake (если есть) flex и animation и добавляем скрытое состояние (none) :
+						if(bookingForm.classList.contains("booking-form-shake")) {
 							bookingForm.classList.remove("booking-form-shake");
 						}
 						bookingForm.classList.remove("booking-form-appear");
@@ -111,17 +112,17 @@ window.addEventListener("load", function (evt) {
 				// если же форма уже была открыта, то нам её нужно закрыть!
 
 				// сначала сохраняем данные, введённые пользователем:
-				if (storageAvialable()) {
+				if(storageAvialable()) {
 					localStorage.setItem("checkInValue", checkIn.value);
 					localStorage.setItem("checkOutValue", checkOut.value);
 					localStorage.setItem("adultValue", adult.value);
 				}
 
-				// удаляем состояние shake (если есть) flex и animation и добавляем скрытое состояние (none) :
-				if (bookingForm.classList.contains("booking-form-shake")) {
+				// удаляем shake (если есть) flex и animation и добавляем скрытое состояние (none) :
+				if(bookingForm.classList.contains("booking-form-shake")) {
 					bookingForm.classList.remove("booking-form-shake");
 				}
-				if( bookingForm.classList.contains("booking-form-appear") ) {
+				if(bookingForm.classList.contains("booking-form-appear") ) {
 					bookingForm.classList.remove("booking-form-appear");
 				}
 				bookingForm.classList.remove("booking-form");
@@ -137,7 +138,7 @@ window.addEventListener("load", function (evt) {
 	var targetSort = document.querySelector(".sort-types.sort-active-onload");
 	var relatedLinks = document.querySelectorAll(".updown-link");
 	var targetLink = document.querySelector(".updown-link.updown-active-onload");
-	var events = ["click", "focus"];
+	var listEvents = ["click", "focus"];
 
 	// relatedItems - группа связанных элементов
 	// events - список событий, которые вызывают последующие действия
@@ -145,14 +146,14 @@ window.addEventListener("load", function (evt) {
 	// removeClass - класс, который нужно удалить из targetItem
 	function deactivator(relatedItems, events, targetItem, removeClass) {
 		// перечень элементов, выбираем один...
-		relatedItems.forEach(function (item) {   
+		relatedItems.forEach(function(item) {   
 			// перечень событий, выбираем одно...            
-			events.forEach(function (event) { 
+			events.forEach(function(event) { 
 				// применяем к каждому элементу события по порядку...   
-				item.addEventListener(event, function (evt) {  
-					if (targetItem.classList.contains(removeClass)) {
+				item.addEventListener(event, function(evt) {  
+					if(targetItem.classList.contains(removeClass)) {
 						// отключаем у заданного элемента класс со стилями     
-						targetItem.classList.remove (removeClass);
+						targetItem.classList.remove(removeClass);
 					}
 					evt.preventDefault();
 				}); 
@@ -160,7 +161,7 @@ window.addEventListener("load", function (evt) {
 		});
 	}
 
-	deactivator(relatedLinks, events, targetLink, "updown-active-onload");
-	deactivator(relatedSorts, events, targetSort, "sort-active-onload");
+	deactivator(relatedLinks, listEvents, targetLink, "updown-active-onload");
+	deactivator(relatedSorts, listEvents, targetSort, "sort-active-onload");
 	    
 });
