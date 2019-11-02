@@ -970,7 +970,7 @@ body {
 
 .base-box:focus ~ .custom-box .outline, 
 .base-box:active ~ .custom-box .outline {
-  fill: #ff0000;
+  fill: #7fc9ff;
   fill-opacity: 1;
 }
 
@@ -1158,11 +1158,11 @@ body {
           justify-content: flex-start;
   
   min-height: 56px;
-  width: calc(1200px - 71.5px - 70px);
-  padding-left: 71.5px;
+  width: calc(1200px - 40.5px - 70px);
+  padding-left: 40.5px;
   padding-right: 70px;
-  padding-top: 15.5px;
-  padding-bottom: 15px;
+  padding-top: 20.5px;
+  padding-bottom: 10px;
   
   font-size: 12px;
   font-weight: normal;
@@ -1174,21 +1174,24 @@ body {
   background-color: #ffffff;
 }
 
-.sorting-block > p:nth-of-type(2) {
-  width: 150px;
+.head-sorting-block {
+  width: 130px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   
-  margin-top: 14px;
-  margin-bottom: 14px;
-  
+  text-align: center;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
 }
 
-.sorting-block > p:last-of-type {
-  width: 104px; 
-
-  margin-top: 20px;
+.text-sorting-block {
+  width: 86px; 
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-top: 15px;
   
   text-align: center;
 }
@@ -1203,16 +1206,36 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   
-  margin-top: 20px;
-  padding-left: 22.5px;
-  padding-right: 25px;
+  width: 749.5px;
+  margin-top: 15px;
+  padding: 0;
   
   list-style-type: none;
 }
 
-.sort-control-panel .sort-by {
-  width: 78px;
-  padding-left: 3px;
+.sort-by {
+    width: 80px;
+  padding-right: 5px;
+  padding-left: 3px;   
+  margin-right: 5px;
+
+  text-align: center;
+}
+
+.sort-by:nth-of-type(1),
+.sort-by:nth-of-type(9n) {
+  width: 66px;
+  padding-right: 4px;
+  padding-left: 9px;  
+  margin-left: 12px;
+}
+
+.sort-by:nth-of-type(2),
+.sort-by:nth-of-type(10n) {
+  width: 66px;
+  padding-right: 7px;
+  padding-left: 6px;   
+  margin-right: 12px;
 }
 
 .sort-by .sort-types {
@@ -1258,7 +1281,7 @@ body {
           justify-content: space-between;
 
   width: 35px;
-  padding-top: 24px;
+  padding-top: 19px;
   padding-right: 2px;
   padding-left: 3px;
 

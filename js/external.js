@@ -54,9 +54,15 @@ function executeMain() {
 	if(popupOpener && bookingForm) {
 		// ... а форма ещё не открывалась...
 		if(isOpenerWasPressed === false) {
-			// ... просто прячем форму. 
+			// ... просто прячем форму 
 			bookingForm.classList.remove("booking-form");
 			bookingForm.classList.add("booking-form-hidden");
+			// ... и для соответствующих input сохраняем начальные настройки:
+			if(storageAvialable()) {
+				localStorage.setItem("checkInValue", "24 апреля 2017");
+				localStorage.setItem("checkOutValue", "4 июля 2017");
+				localStorage.setItem("adultValue", "2");
+			}
 		}
 
 		// проверяем событие на кнопке открытия формы (в данном случае - клик):
@@ -176,6 +182,8 @@ if(document.readyState === "loading") {
 }
 
 window.onbeforeunload = function() {
+	// действует для chrome, IE, firefox. 
+	// Safary воспринимает как sessionStorage и не сохраняет между сеансами
 	localStorage.setItem("checkInValue", "24 апреля 2017");
 	localStorage.setItem("checkOutValue", "4 июля 2017");
 	localStorage.setItem("adultValue", "2");
