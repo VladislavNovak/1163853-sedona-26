@@ -61,9 +61,9 @@ function executeMain() {
 	// извлекаем значения из LS* и передаём их в inputs  
 	function getDataToInputs() {
 		if(storageAvialable()) {
-			input1.value = localStorage.getItem("savedInput1");
-			input2.value = localStorage.getItem("savedInput2");
-			input3.value = localStorage.getItem("savedInput3");
+			input1.value = localStorage.getItem("savedInput1") || "24 апреля 2017";
+			input2.value = localStorage.getItem("savedInput2") || "4 июля 2017";
+			input3.value = localStorage.getItem("savedInput3") || "2";
 		}
 	} 
 	// обрабатываем отправку формы:
